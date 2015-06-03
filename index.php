@@ -32,12 +32,23 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
    <body >
        
 <!--    login form   -->
-    <div id='login_form'>   
+    <div id='login_container'>   
         <a href="#" class='close'>X</a>
-        <form action="assets/login.php" name="form1" method="post" >
+        <form action="assets/login.php" name="login_form" method="post" id='login_form'>
+            LOGIN:<br/>
             Username<input type='text' placeholder="Username" name='username' width="50" required autofocus><br/>
             Password<input type='text' placeholder="Password" name='password' width="50" required>
-            <input type="submit" name="submit" value="log-in">
+            <input type="submit" name="submit" value="log-in"><br/>
+            <a href="#" id='register'>Sign up</a>
+        </form>
+        
+        <form action="assets/checkRegister.php" name="register_form" method="post" id='register_form'>
+            REGISTER:<br/>
+            Username<input type='text' placeholder="Username" name='username' width="50" required autofocus><br/>
+            Password<input type='text' placeholder="Password" name='password' width="50" required><br/>
+            Retype password<input type='text' placeholder="Retype password" name='re-password' width="50" required>
+            <input type="submit" name="submit" value="Sign up"><br/>
+            <a href="#" >Back</a>
         </form>
     </div>    
        

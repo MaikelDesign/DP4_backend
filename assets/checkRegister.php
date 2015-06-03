@@ -4,48 +4,74 @@ ini_set("display_errors", 1);
 
 session_start();
 
-
-/* if(isset($_SESSION['reg']) == false){ */
-
 	require('connectDB.php');
 
-	/*
-	session_start(); 
-	require ('db.php'); // username and password sent from form 
-	*/
-	$tbl_name = 'user';
+if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+
+    if(isset($_POST['username']) 
+       && isset($_POST['password']) 
+       && isset($_POST['re-password']) 
+       && $_POST['username'] != '' 
+       && $_POST['password'] != ''
+       && $_POST['re-password'] != ''){
+
+
+            $myusername= $_POST['username']; 
+            $mypassword= $_POST['password'];
+            $setpassword= $_POST['re-password'];
+
+            $tbl_name = 'users';
+
+            if($mypassword == $setpassword){
+        //		$password = md5($mypassword);
+                $password = $mypassword;
+        //		$datetime=date("y-m-d h:i:s"); //date time
+
+                $exist_sql="SELECT * FROM users WHERE user_name='$myusername'";
+                $exist_result=mysqli_query($con, $exist_sql);
+                $exist_count=mysqli_num_rows($exist_result);
+                
+                //if username doesn't exist
+                if($exist_count == 0){
+
+                    $sql="INSERT INTO $tbl_name (user_name, user_pass) VALUES('$myusername','$password')";
+                    $result=mysqli_query($con, $sql);
+
+                    if($result){
+                        $_SESSION['error'] = 'SUCCESS: Welcome to UDIT!';
+                        header('location:../index.php');
+                    }else{
+                        //error: username already exists
+                        $_SESSION['error'] = 'ERROR: Oops! something went wrong :(';
+                        header('location:../index.php');
+                    }
+                    
+                }
+                else{
+                    //error: username already exists.
+                    $_SESSION['error'] = "ERROR: Username already exists.";
+                    header('location:../index.php');
+                }
+                    
+                    
+            }else{
+                //error: passwords aren't the same.
+                $_SESSION['error'] = "ERROR: Passwords are not te same.";
+                header('location:../index.php');
+            }	
+    }    
+    else{
+        //error: not all fields are filled;
+        $_SESSION['error'] = 'ERROR: fill in all fields';
+        header('location:../index.php');
+    }    
 	
-	$myusername= $_POST['myusername']; 
-	$mypassword= $_POST['mypassword'];
-	$setpassword= $_POST['setpassword'];
-	
-	
-	if($mypassword == $setpassword){
-		$password = md5($mypassword);
-		$datetime=date("y-m-d h:i:s"); //date time
-		$sql="INSERT INTO $tbl_name (user_name, user_password, user_datetime) VALUES('$myusername','$password','$datetime')";
-		$result=mysqli_query($con, $sql);
-		if($result){
-			$_SESSION[$myusername];
-			header('location:../index.php');
-		}else{
-			session_unset();
-			header('location:register.php');
-			//fout bij registeren
-		}
-	}else{
-		//error wachtwoorden komen niet overeen;
-		header('location:register.php');
-		
-	}	
-	
-/*
-else{
-	session_unset();
-	header('location:register.php');
 }
-*/
-	
+else{
+    //error: no post request
+    $_SESSION['error'] = 'ERROR: no post is send.';
+    header('location:../index.php');    
+}
 
 
 

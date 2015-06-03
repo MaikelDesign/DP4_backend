@@ -47,7 +47,7 @@ table {
 
 
 /*//////////////////////////////  LOGIN FORM   /////////////////////////////////*/
-#login_form{
+#login_container{
     width: 30%;
     height: 300px;
     background-color: yellow;
@@ -56,5 +56,9 @@ table {
     margin: -150px 0 0 -25%;
     display:none;
     z-index: 2;
+}
+
+#register_form{
+    display:none;
 }
 
