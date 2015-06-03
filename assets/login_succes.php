@@ -7,7 +7,6 @@ ini_set("display_errors", 1);
 if(isset($_SESSION['logged_in']) == false){
 	header('location:../index.php');
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -22,6 +21,9 @@ if(isset($_SESSION['logged_in']) == false){
 		<p>Login Successful</p>
 		
 		<form action="logout.php" name="form1" method="post">
+            <input type='text' name='username' width="50">
+            <input type='text' name='username' width="50">
+            
 			<input type="submit" name="submit" value="log-out">
 		</form>
 	</body><!-- eind code-->
