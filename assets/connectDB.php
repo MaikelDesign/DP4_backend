@@ -1,4 +1,5 @@
 <?php
+//connect to database
 
 $host="localhost"; // Host name 
 $username="udid"; // Mysql username 

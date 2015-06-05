@@ -9,11 +9,9 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
 
     if(isset($_SESSION['error'])){
         echo '<script type="text/javascript"> alert("'.$_SESSION["error"].'");</script>';
-    }
+    }    
+?>   
 
-    
-    
-?>    
 <!DOCTYPE html>
 <html>
   <head>
