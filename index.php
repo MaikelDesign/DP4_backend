@@ -7,6 +7,7 @@ session_start();
 //if login not is set or false then normal
 if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
 
+    //if error than show alert
     if(isset($_SESSION['error'])){
         echo '<script type="text/javascript"> alert("'.$_SESSION["error"].'");</script>';
     }    
@@ -40,6 +41,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
             <a href="#" id='register'>Sign up</a>
         </form>
         
+<!--    user register form-->
         <form action="assets/checkRegister.php" name="register_form" method="post" id='register_form'>
             REGISTER User:<br/>
             First name<input type='text' placeholder="First name" name='firstName' width="50" required ><br/>
@@ -62,6 +64,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
             <a href="#" id='company'>Company sign up</a>
         </form>
         
+<!--    company register form-->
         <form action="assets/checkRegister.php" name="register_form" method="post" id='register_form_company'>
             REGISTER company:<br/>
             Username:<input type='text' placeholder="Username" name='com-username' width="50" required ><br/>
@@ -87,7 +90,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
        
 <!--    start grid   -->
     <div class="grid">
-    <div class="grid-item"><div class="circle"><a href='#' id='login'><img src="img/profiel1.jpg" class="circle"></a></div></div>
+    <div class="grid-item"><div class="circle" ><a href='#' id='login'><div style='background-color: black;' class="circle"></div></a></div></div>
     <div class="grid-item grid-item--width2 grid-item--height2"></div>
     <div class="grid-item grid-item--height3"></div>
     <div class="grid-item grid-item--height2"></div>
@@ -127,7 +130,7 @@ else{
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- scale for different screen sizes -->
-    <title>Build your own city | logged in</title>
+    <title>Build your own city | hello <?php if(isset($_SESSION['username'])){ echo $_SESSION['username']; } ?></title>
     <link href="css/stylesheet.css" rel="stylesheet">
     <link href="css/queries.css" rel="stylesheet">
 <!--		<link rel="icon" type="image/png" href="images/icon.png"/> icon in url bar -->
@@ -137,9 +140,25 @@ else{
     <script src="js/script.js"></script>
    </head>
    <body >
+       
+       
     <div class="grid">
-    <div class="grid-item" style='background-color:red;'><div class="circle" ><a href='assets/logout.php' id='logout'><img src="img/profiel1.jpg" class="circle"></a></div></div>
-    <div class="grid-item grid-item--width2 grid-item--height2"></div>
+    <div class="grid-item" style='background-color:red;'><div class="circle" ><a href='assets/logout.php' id='logout'><img src="img/uploads/<?php
+     
+     if(isset($_SESSION['profile_pic']) && $_SESSION['profile_pic'] != ''){
+         echo $_SESSION['profile_pic'];
+     }else{
+         echo 'default.jpg';
+     }
+                                                                                                                                
+    ?>" class="circle"></a></div></div>
+    <div class="grid-item grid-item--width2 grid-item--height2">
+        <form action="assets/upload_file.php" method="post" enctype="multipart/form-data">
+            Select image to upload:
+            <input type="file" name="file" id="fileToUpload">
+            <input type="submit" value="Upload Image" name="submit">
+        </form>    
+    </div>
     <div class="grid-item grid-item--height3"></div>
     <div class="grid-item grid-item--height2"></div>
     <div class="grid-item grid-item--width3"></div>
@@ -162,6 +181,8 @@ else{
     <div class="grid-item"></div>
     <div class="grid-item grid-item--height2"></div>
     </div>
+       
+       
    </body>
 </html>
 <?php
