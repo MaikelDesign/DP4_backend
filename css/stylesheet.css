@@ -58,7 +58,7 @@ table {
     z-index: 2;
 }
 
-#register_form{
+#register_form, #register_form_company{
     display:none;
 }
 

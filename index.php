@@ -35,18 +35,53 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
         <form action="assets/login.php" name="login_form" method="post" id='login_form'>
             LOGIN:<br/>
             Username<input type='text' placeholder="Username" name='username' width="50" required autofocus><br/>
-            Password<input type='text' placeholder="Password" name='password' width="50" required>
+            Password<input type='text' placeholder="Password" name='password' width="50" required><br/>
             <input type="submit" name="submit" value="log-in"><br/>
             <a href="#" id='register'>Sign up</a>
         </form>
         
         <form action="assets/checkRegister.php" name="register_form" method="post" id='register_form'>
-            REGISTER:<br/>
+            REGISTER User:<br/>
+            First name<input type='text' placeholder="First name" name='firstName' width="50" required ><br/>
+            Last name<input type='text' placeholder="Last name" name='lastName' width="50" required ><br/>
             Username<input type='text' placeholder="Username" name='username' width="50" required autofocus><br/>
-            Password<input type='text' placeholder="Password" name='password' width="50" required><br/>
-            Retype password<input type='text' placeholder="Retype password" name='re-password' width="50" required>
+            Password<input type='text' placeholder="Password" name='user-password' width="50" required><br/>
+            Retype password<input type='text' placeholder="Retype password" name='user-re-password' width="50" required><br/>
+            Mail address<input type='email' placeholder="E-mail" name='email' width="50" required><br/>
+<!--        City<input type='text' placeholder="City" name='city' width="50" required><br/>
+            Country<input type='text' placeholder="Country" name='country' width="50" required><br/> -->
+<!--        About yourself<input type='text' placeholder="info" name='about' width="50" required><br/>-->
+<!--        Profile picture:<input type='file' name='FileUpload' required><br/>-->
+<!--        CV<input type='text' placeholder="info cv" name='cv' width="50" required><br/>-->
+<!--        sector<input type='text' placeholder="Sector" name='sector' width="50" required><br/>-->
+            Interests:
+            <input type='text' placeholder="tags" name='tags' width="50" required><br/>  
+            <input type='text' name='form-type' value='user' hidden>
             <input type="submit" name="submit" value="Sign up"><br/>
-            <a href="#" >Back</a>
+            <a href="#" class='form_back'>Back</a>
+            <a href="#" id='company'>Company sign up</a>
+        </form>
+        
+        <form action="assets/checkRegister.php" name="register_form" method="post" id='register_form_company'>
+            REGISTER company:<br/>
+            Username:<input type='text' placeholder="Username" name='com-username' width="50" required ><br/>
+            Password<input type='text' placeholder="Password" name='com-password' width="50" required><br/>
+            Retype password<input type='text' placeholder="Retype password" name='com-re-password' width="50" required><br/>
+            Company name:<input type='text' placeholder="Company name" name='companyName' width="50" required autofocus><br/>
+            Mail address<input type='email' placeholder="E-mail" name='com-email' width="50" required><br/>
+            Contact person info:<br/>
+            First name<input type='text' placeholder="First name" name='firstName' width="50" required ><br/>
+            Last name<input type='text' placeholder="Last name" name='lastName' width="50" required ><br/>
+<!--        City<input type='text' placeholder="City" name='city' width="50" required><br/>
+            Country<input type='text' placeholder="Country" name='country' width="50" required><br/>  -->
+<!--        About yourself<input type='text' placeholder="info" name='about' width="50" required><br/>-->
+<!--        Company picture:<input type='file' name='FileUpload' required><br/>-->
+<!--        CV<input type='text' placeholder="Password" name='password' width="50" required><br/>-->            
+<!--        Sector<input type='text' placeholder="Password" name='password' width="50" required><br/>-->        
+            <input type='text' name='form-type' value='company' hidden>
+            <input type="submit" name="submit" value="Sign up"><br/>
+            <a href="#" class='form_back'>Back</a>
+            <a href="#" id='user'>User sign up</a>
         </form>
     </div>    
        
