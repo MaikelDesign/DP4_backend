@@ -15,19 +15,9 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- scale for different screen sizes -->
-    <title>Build your own city </title>
-    <link href="css/stylesheet.css" rel="stylesheet">
-    <link href="css/queries.css" rel="stylesheet">
-<!--		<link rel="icon" type="image/png" href="images/icon.png"/> icon in url bar -->
-    <script src="js/jquery_v1.11.1.js"></script>
-    <script src="js/jquery-ui-1.10.4.min.js"></script>
-	  <script src="js/js.js"></script>
-    <script src="js/script.js"></script>
-   </head>
+    <head>
+        <?php include 'head.php'; ?>
+    </head>
    <body >
        
 <!--    login form   -->
@@ -157,7 +147,11 @@ else{
             Select image to upload:
             <input type="file" name="file" id="fileToUpload">
             <input type="submit" value="Upload Image" name="submit">
-        </form>    
+        </form>
+
+        <?php 
+
+        ?>    
     </div>
     <div class="grid-item grid-item--height3"></div>
     <div class="grid-item grid-item--height2"></div>

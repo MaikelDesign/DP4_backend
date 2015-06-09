@@ -1,0 +1,388 @@
+/*Styling gehele pagina*/
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+
+}
+
+/*Styling gehele body*/
+body {
+	background-color: #F5F5F5;
+}
+
+.container {
+	margin: 0 auto;
+	width:960px;
+}
+
+/*Styling Header*/
+header {
+	width: 100%;
+	height: 45px;
+	background-color: #0486CC;
+	color: white;
+	padding: 7px;
+}
+
+/*Styling van de div op de index pagina*/
+#indexBox {
+	min-height: 300px;
+	width: 400px;
+	background-color: #2DA3E3;
+	text-align: center;
+
+	/*Benodigt voor het positioneren in het midden van de pagina*/
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/*Styling formulier*/
+#indexLog {
+	max-width: 50%;
+	/*Benodigt voor het positioneren in het midden van de pagina*/
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/*Styling input velden formulier*/
+input {
+	margin-top: 10px;
+	height:  27px;
+	width: 100.5%;
+	text-align: center;
+}
+
+/*Styling button in formulier*/
+.loginButton {
+	cursor: hand;
+	width: 100%;
+	background-color: #E3E3E3;
+	height: 27px;
+	border: 0;
+}
+
+.loginButton:hover {
+	background-color: white;
+}
+
+/*Styling knop registeren*/
+#registreerButton {
+	cursor: hand;
+	margin-top: 10px;
+	width: 100%;
+	background-color: #E3E3E3;
+	height: 23px;
+	font-size: 11px;
+	padding-top: 5px;
+}
+
+#registreerButton a {
+	color:black;
+	text-decoration: none;
+}
+
+
+#registreerButton:hover {
+	background-color: white;
+}
+
+/*Styling foutmelding*/
+.error {
+	background-color: #F59595;
+	border: 1px solid red;
+	padding: 7px;
+	min-height: 25px;
+	width: 700px;
+	color: red;
+
+	/*Benodigt voor het positioneren in het midden van de pagina*/
+	position: fixed;
+    top: 20%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/*Styling succes melding*/
+.succes {
+	background-color: #A4F595;
+	border: 1px solid green;
+	padding: 7px;
+	min-height: 25px;
+	width: 700px;
+	color: green;
+
+	/*Benodigt voor het positioneren in het midden van de pagina*/
+	position: fixed;
+    top: 20%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/*Styling navigatie*/
+
+nav {
+	background-color: #0486CC;
+	width:100%;
+	height:30px;
+}
+
+nav a {
+	color:white;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color:black;
+}
+nav ul li {
+	float:left;
+	padding: 0px 10px;
+	border-right:1px solid black;
+}
+
+nav ul li:last-child {
+	border-right:0px;
+}
+
+/*styling gebruiker in navigatie balk*/
+.gebruiker {
+	float:right;
+	padding:5px;
+}
+
+/*Styling profiel blok*/
+.profile  {
+	float: left;
+	width:324px;
+	min-height: 50px;
+	margin-top: 30px;
+	background-color: white;
+	box-shadow: 0px 2px 5px black;
+	margin-bottom: 5px;
+}
+
+/*Pak de eerste div in #profile*/
+.profile > div:nth-child(1) {
+	background-color: #2DA3E3;
+	border-bottom:1px solid black;
+	padding: 5px;
+}
+
+.profile div {
+	padding: 5px;
+}
+
+/*Styling feed*/
+
+#rssFeed {
+	width:575px;
+	float: right;
+	overflow: auto;
+	height: 485px;
+}
+
+
+.rssItem a {
+	text-decoration: none;
+	color:black;
+}
+
+.rssItem p {
+	font-size: 10px;
+	color: gray;
+	border-bottom:1px solid  #2DA3E3;
+}
+
+#filmOk {
+	width: 50px;
+}
+
+
+/*styling beheer omgeving*/
+#beheer {
+	width: 100%;
+	float:left;
+}
+
+.gebruikerItem span {
+	display: inline-block;
+	margin-right: 20px;
+	width: 150px;
+}
+
+.gebruikerItem:nth-child(odd) {
+	background-color: #E8E8E8;
+}
+
+/*Maakt de ID tab kleiner*/
+.gebruikerItem span:first-child {
+	width: 20px;
+}
+
+/*Maakt naam tab grooter*/
+.gebruikerItem span:nth-child(3) {
+	width: 200px;
+}
+/*Maakt de e-mail tab grooter*/
+.gebruikerItem span:nth-child(4) {
+	width: 250px;
+}
+
+.gebruikerItem a{
+	color: black;
+	text-decoration: none;
+}
+
+/*Styling button in formulier*/
+.verwijderButton {
+	cursor: hand;
+	width: 200px;
+	background-color: #E3E3E3;
+	height: 27px;
+	border: 0;
+	border: 1px solid  #2DA3E3;
+	box-shadow: 0px 2px 5px black;
+}
+
+.verwijderButton:hover {
+	background-color: white;
+}
+
+/*Styling van de films tab*/
+#filmTotaal {
+	width: 100%;
+}
+
+.filmTotaalCover {
+	height: 250px;
+	width:130px;
+	float:left;
+
+}
+
+.filmTotaalCover img {
+	height: 150px;
+	width: auto;
+
+}
+
+.filmTotaalItem {
+	width: 95%;
+	min-height: 50px;
+	float: left;
+	margin-top: 30px;
+}
+
+.filmTotaalItem:nth-child(odd) {
+	background-color: #E8E8E8;
+}
+
+.filmTotaalItem img{
+	float:left;
+}
+
+.filmTotaalItem h4 {
+	float:left;
+	clear: right;
+}
+
+.filmUitleg {
+	margin-top: 25px;
+}
+
+.date {
+	float:right;
+}
+
+/*Styling films je moet zien*/
+#seenFilm {
+	height:384px;
+	overflow: auto;
+}
+
+/*Styling uploaden*/
+#uploaden {
+	width: 100%;
+}
+
+#uploadForm {
+	text-align: center;
+}
+
+.filmKijken p {
+	font-size: 10px;
+	color: gray;
+	border-bottom:1px solid  #2DA3E3;
+}
+
+/*Styling contact pagina*/
+#contact {
+	min-height: 200px;
+	width: 50%;
+}
+
+#pasfoto {
+	height:auto;
+	float:left;
+	width: 20%;
+	padding: 7px;
+}
+
+#contactInfo {
+	padding-top: 55px;
+	width:70%;
+	float: left;
+}
+
+#apiDoc {
+	width: 100%;
+}
+
+#apiDoc  ul {
+	margin-top: 20px;
+}
+
+#apiDoc li {
+	margin-top: 10px;
+	list-style-type: none;
+}
+
+
+#apiDoc h4:nth-child(3) {
+	margin-top: 20px;
+}
+
+#apiDoc h4:nth-child(5) {
+	margin-top:40px;
+}
+
+.gray {
+	border: 1px solid gray;
+	background-color: #E3E3E3;
+}
+
+#apiContact {
+	float:right;
+
+}
+
+.output {
+	border: 1px solid gray;
+	background-color: #E3E3E3;
+	width: 50%;
+	padding: 7px;
+
+}
+
+.delete {
+	float: right;
+}
