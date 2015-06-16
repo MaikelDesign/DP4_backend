@@ -39,15 +39,7 @@
 			<div>
 				<h4>Beheer Profiel</h4>
 			</div>
-			<div class="userItem">
-				<span><b>ID</b></span>
-				<span><b>Gebruikersnaam</b></span>
-				<span><b>Voor Naam</b></span>
-				<span><b>Achternaam</b></span>
-				<span><b>E-mail Adres</b></span>
-				<span></span>
-			</div>
-			<?php checkAccounts();?>
+			<?php checkUser();?>
 		</div>	
 
 	</div>	

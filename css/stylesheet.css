@@ -63,6 +63,12 @@ table {
 }
 
 /*//////////////////////////////  PROFILE EDIT PAGE   /////////////////////////////////*/
+
+.userItem {
+	float: left;
+	margin-left: 50px;
+}
+
 .userItem span {
 	padding-left: 50px;
 }
