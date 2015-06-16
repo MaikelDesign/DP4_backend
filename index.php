@@ -16,7 +16,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
 <!DOCTYPE html>
 <html>
     <head>
-        <?php include 'head.php'; ?>
+        <?php include 'assets/head.php'; ?>
     </head>
    <body >
        

@@ -4,6 +4,8 @@
  *
  * @author Patrick Reijnen, Maikel Verbeek, Stef van der Loo, Boris Vellekoop, Sam van de wal
  */
+
+include 'functions.php';
 ?>
 
     <meta charset="utf-8">
