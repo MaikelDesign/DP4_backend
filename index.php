@@ -16,8 +16,18 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
 <!DOCTYPE html>
 <html>
     <head>
-        <?php include 'head.php'; ?>
+        <?php include 'assets/head.php'; ?>
     </head>
+    <header>
+        <nav>
+            <ul>
+                <li class="menu1"><a href="#">Menu1</a></li>
+                <li class="menu2"><a href="#">Menu2</a></li>
+                <li class="menu3"><a href="#">Menu3</a></li>
+                <li class="menu4"><a href="#">Menu4</a></li>
+            </ul>
+        </nav>
+    </header>    
    <body >
        
 <!--    login form   -->
@@ -79,31 +89,35 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
     </div>    
        
 <!--    start grid   -->
-    <div class="grid">
-    <div class="grid-item"><div class="circle" ><a href='#' id='login'><div style='background-color: black;' class="circle"></div></a></div></div>
-    <div class="grid-item grid-item--width2 grid-item--height2"></div>
-    <div class="grid-item grid-item--height3"></div>
-    <div class="grid-item grid-item--height2"></div>
-    <div class="grid-item grid-item--width3"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item grid-item--height2"></div>
-    <div class="grid-item grid-item--width2 grid-item--height3"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item grid-item--height2"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item grid-item--width2 grid-item--height2"></div>
-    <div class="grid-item grid-item--width2"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item grid-item--height2"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item grid-item--height3"></div>
-    <div class="grid-item grid-item--height2"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item grid-item--height2"></div>
-    </div>
+        <section class="container">
+              <div class="grid">
+              <div class="grid-item"><div class="circle" ><a href='#' id='login'><div style='background-color: black;' class="circle"></div></a></div></div>
+              <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              <div class="grid-item grid-item--width3 grid-item--height3"></div>
+              <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              <div class="grid-item grid-item--width3"></div>
+              <div class="grid-item"></div>
+              <div class="grid-item"></div>
+              <div class="grid-item grid-item--height2"></div>
+              <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              <div class="grid-item"></div>
+              <div class="grid-item grid-item--height2"></div>
+              <div class="grid-item"></div>
+              <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              <div class="grid-item grid-item--width2"></div>
+              <div class="grid-item"></div>
+              <div class="grid-item grid-item--height2"></div>
+              <div class="grid-item"></div>
+              <div class="grid-item"></div>
+              <div class="grid-item grid-item--width3 grid-item--height2"></div>
+              <div class="grid-item grid-item--height2"></div>
+              <div class="grid-item"></div>
+              <div class="grid-item"></div>
+              <div class="grid-item grid-item--height2"></div>
+            </div>
+        </section>
+       
+       
    </body>
 </html>
 
@@ -128,10 +142,21 @@ else{
     <script src="js/jquery-ui-1.10.4.min.js"></script>
 	  <script src="js/js.js"></script>
     <script src="js/script.js"></script>
+    <script src='http://masonry.desandro.com/masonry.pkgd.js'></script>  
    </head>
+    <header>
+        <nav>
+            <ul>
+                <li class="menu1"><a href="#">Menu1</a></li>
+                <li class="menu2"><a href="#">Menu2</a></li>
+                <li class="menu3"><a href="#">Menu3</a></li>
+                <li class="menu4"><a href="#">Menu4</a></li>
+            </ul>
+        </nav>
+    </header>    
    <body >
        
-       
+    <section class="container">
     <div class="grid">
     <div class="grid-item" style='background-color:red;'><div class="circle" ><a href='assets/logout.php' id='logout'><img src="img/uploads/<?php
      
@@ -152,29 +177,31 @@ else{
         <?php 
 
         ?>    
-    </div>
-    <div class="grid-item grid-item--height3"></div>
-    <div class="grid-item grid-item--height2"></div>
-    <div class="grid-item grid-item--width3"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item grid-item--height2"></div>
-    <div class="grid-item grid-item--width2 grid-item--height3"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item grid-item--height2"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item grid-item--width2 grid-item--height2"></div>
-    <div class="grid-item grid-item--width2"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item grid-item--height2"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item grid-item--height3"></div>
-    <div class="grid-item grid-item--height2"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item grid-item--height2"></div>
-    </div>
+
+              <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              <div class="grid-item grid-item--width3 grid-item--height3"></div>
+              <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              <div class="grid-item grid-item--width3"></div>
+              <div class="grid-item"></div>
+              <div class="grid-item"></div>
+              <div class="grid-item grid-item--height2"></div>
+              <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              <div class="grid-item"></div>
+              <div class="grid-item grid-item--height2"></div>
+              <div class="grid-item"></div>
+              <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              <div class="grid-item grid-item--width2"></div>
+              <div class="grid-item"></div>
+              <div class="grid-item grid-item--height2"></div>
+              <div class="grid-item"></div>
+              <div class="grid-item"></div>
+              <div class="grid-item grid-item--width3 grid-item--height2"></div>
+              <div class="grid-item grid-item--height2"></div>
+              <div class="grid-item"></div>
+              <div class="grid-item"></div>
+              <div class="grid-item grid-item--height2"></div>
+            </div>
+        </section>
        
        
    </body>

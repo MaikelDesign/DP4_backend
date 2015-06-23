@@ -53,7 +53,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                         $sql="INSERT INTO $tbl_name (user_name, user_pass, user_mail, user_firstname, user_lastname) VALUES('$myusername','$password','$email','$firstName','$lastName')";
                         $result=mysqli_query($con, $sql);
 
-                        if($result){
+                                        //check in users table
+                        $sql_info= "SELECT * FROM users WHERE user_name='$myUsername' and user_pass='$myPassword'";        
+                        $info_result=mysqli_query($con, $sql_info);
+                        $count=mysqli_num_rows($result); // If result matched $myusername and $mypassword, table row must be 1 row    
+                        
+                        if($result && $count == 1){
+                            
+                            //data in sessions
+                            while($row = mysqli_fetch_assoc($result)){
+                                $_SESSION['user_id'] = $row['user_id'];
+                                $_SESSION['username'] = $row['company_name'];        
+                            }    
+                            $_SESSION['user-type'] = $tbl_name;
+                            
                             $_SESSION['error'] = 'SUCCESS: Welcome to UDIT!';
                             header('location:../index.php');
                         }else{
@@ -127,8 +140,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
                         $sql="INSERT INTO $tbl_name (company_name, company_pass, company_mail, company_contact_firstname, company_contact_lastname) VALUES('$myusername','$password','$email','$firstName','$lastName')";
                         $result=mysqli_query($con, $sql);
-
-                        if($result){
+                        
+                        //check in users table
+                        $sql_info= "SELECT * FROM users WHERE user_name='$myUsername' and user_pass='$myPassword'";        
+                        $info_result=mysqli_query($con, $sql_info);
+                        $count=mysqli_num_rows($result); // If result matched $myusername and $mypassword, table row must be 1 row     
+                              
+                        
+                        if($result && $count == 1){
+                      
+                            //data in sessions
+                            while($row = mysqli_fetch_assoc($result)){
+                                $_SESSION['user_id'] = $row['user_id'];
+                                $_SESSION['username'] = $row['company_name'];        
+                            }    
+                            $_SESSION['user-type'] = $tbl_name;
+                            
                             $_SESSION['error'] = 'SUCCESS: Welcome to UDIT!';
                             header('location:../index.php');
                         }else{

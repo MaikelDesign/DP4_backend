@@ -17,3 +17,4 @@
     <script src="js/jquery-ui-1.10.4.min.js"></script>
 	  <script src="js/js.js"></script>
     <script src="js/script.js"></script>
+    <script src='http://masonry.desandro.com/masonry.pkgd.js'></script>
