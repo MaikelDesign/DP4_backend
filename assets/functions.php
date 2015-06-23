@@ -9,10 +9,10 @@
  */
 
 	include'connectDB.php';
-	session_start();
+//	session_start();
 
 //Session user or company
-$_SESSION['user-type'] = 'user';
+//$_SESSION['user-type'] = 'user';
 
 
 /**

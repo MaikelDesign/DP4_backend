@@ -21,13 +21,13 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
     <header>
         <nav>
             <ul>
-                <li class="menu1"><a href="#">Menu1</a></li>
-                <li class="menu2"><a href="#">Menu2</a></li>
-                <li class="menu3"><a href="#">Menu3</a></li>
-                <li class="menu4"><a href="#">Menu4</a></li>
+                <li class="menu1"><a href="#"></a></li>
+                <li class="menu2"><a href="#"></a></li>
+                <li class="menu3"><a href="#"></a></li>
+                <li class="menu4"><a href="#"></a></li>
             </ul>
         </nav>
-    </header>    
+    </header>  
    <body >
        
 <!--    login form   -->
@@ -88,35 +88,42 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
         </form>
     </div>    
        
-<!--    start grid   -->
+<!--    start grid   -->   
         <section class="container">
-              <div class="grid">
-              <div class="grid-item"><div class="circle" ><a href='#' id='login'><div style='background-color: black;' class="circle"></div></a></div></div>
+          <div class="grid">
+              <div class="grid-item"></div>
+              <!--              <div class="grid-item"><div class="circle" ><a href='#' id='login'><div style='background-color: black;' class="circle"></div></a></div></div>-->
+
+              <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
+              <div class="grid-item verwijder"></div>
               <div class="grid-item grid-item--width2 grid-item--height2"></div>
-              <div class="grid-item grid-item--width3 grid-item--height3"></div>
-              <div class="grid-item grid-item--width2 grid-item--height2"></div>
-              <div class="grid-item grid-item--width3"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item grid-item--height2"></div>
-              <div class="grid-item grid-item--width2 grid-item--height2"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item grid-item--height2"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item grid-item--width2 grid-item--height2"></div>
-              <div class="grid-item grid-item--width2"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item grid-item--height2"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
+              <div class="grid-item verwijder"></div>
+              <div class="grid-item verwijder"></div>
               <div class="grid-item grid-item--width3 grid-item--height2"></div>
-              <div class="grid-item grid-item--height2"></div>
+              <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
               <div class="grid-item"></div>
               <div class="grid-item"></div>
+              <!-- 10 -->
+              <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              <div class="grid-item"></div>
+              <div class="grid-item"></div>
+              <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              <div class="grid-item grid-item--width2 grid-item--height2"></div>
               <div class="grid-item grid-item--height2"></div>
-            </div>
-        </section>
-       
+              <div class="grid-item grid-item--width3 grid-item--height3"></div>
+              <div class="grid-item verwijder"></div>
+              <div class="grid-item"></div>
+              <div class="grid-item grid-item--height2"></div>
+              <!-- 20 -->
+              <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
+              <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
+              <div class="grid-item grid-item--width3 grid-item--height3"></div>
+              <div class="grid-item grid-item--height2"></div>
+              <div class="grid-item"></div>
+              <div class="grid-item verwijder"></div>
+              <div class="grid-item grid-item--height2 verwijder"></div>
+          </div> <!-- /grid -->
+      </section>
        
    </body>
 </html>
@@ -126,88 +133,165 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
 
 //else logged in version
 else{
-?>
+    //if error than show alert
+    if(isset($_SESSION['error'])){
+        echo '<script type="text/javascript"> alert("'.$_SESSION["error"].'");</script>';
+    }    
+    ?>
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- scale for different screen sizes -->
-    <title>Build your own city | hello <?php if(isset($_SESSION['username'])){ echo $_SESSION['username']; } ?></title>
-    <link href="css/stylesheet.css" rel="stylesheet">
-    <link href="css/queries.css" rel="stylesheet">
-<!--		<link rel="icon" type="image/png" href="images/icon.png"/> icon in url bar -->
-    <script src="js/jquery_v1.11.1.js"></script>
-    <script src="js/jquery-ui-1.10.4.min.js"></script>
-	  <script src="js/js.js"></script>
-    <script src="js/script.js"></script>
-    <script src='http://masonry.desandro.com/masonry.pkgd.js'></script>  
-   </head>
-    <header>
-        <nav>
-            <ul>
-                <li class="menu1"><a href="#">Menu1</a></li>
-                <li class="menu2"><a href="#">Menu2</a></li>
-                <li class="menu3"><a href="#">Menu3</a></li>
-                <li class="menu4"><a href="#">Menu4</a></li>
-            </ul>
-        </nav>
-    </header>    
-   <body >
-       
-    <section class="container">
-    <div class="grid">
-    <div class="grid-item" style='background-color:red;'><div class="circle" ><a href='assets/logout.php' id='logout'><img src="img/uploads/<?php
-     
-     if(isset($_SESSION['profile_pic']) && $_SESSION['profile_pic'] != ''){
-         echo $_SESSION['profile_pic'];
-     }else{
-         echo 'default.jpg';
-     }
-                                                                                                                                
-    ?>" class="circle"></a></div></div>
-    <div class="grid-item grid-item--width2 grid-item--height2">
-        <form action="assets/upload_file.php" method="post" enctype="multipart/form-data">
-            Select image to upload:
-            <input type="file" name="file" id="fileToUpload">
-            <input type="submit" value="Upload Image" name="submit">
-        </form>
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <?php include 'assets/head.php'; ?>
+        </head>
+    <?php
+    //check if user is 'user' 
+    if(isset($_SESSION['user-type']) && $_SESSION['user-type'] == 'user'){
+    ?>
+        <header>
+                <nav>
+                    <ul>
+                        <li class="menu1"><a href="#"></a></li>
+                        <li class="menu2"><a href="#"></a></li>
+                        <li class="menu3"><a href="#"></a></li>
+                        <li class="menu4"><a href="#"></a></li>
+                    </ul>
+                </nav>
+            </header> 
+           <body >
 
-        <?php 
+            <section class="container">
+            <div class="grid">
+            <div class="grid-item" style='background-color:red;'>user<div class="circle" ><a href='assets/logout.php' id='logout'><img src="img/uploads/<?php
 
-        ?>    
+             if(isset($_SESSION['profile_pic']) && $_SESSION['profile_pic'] != ''){
+                 echo $_SESSION['profile_pic'];
+             }else{
+                 echo 'default.jpg';
+             }
 
-              <div class="grid-item grid-item--width2 grid-item--height2"></div>
-              <div class="grid-item grid-item--width3 grid-item--height3"></div>
-              <div class="grid-item grid-item--width2 grid-item--height2"></div>
-              <div class="grid-item grid-item--width3"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item grid-item--height2"></div>
-              <div class="grid-item grid-item--width2 grid-item--height2"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item grid-item--height2"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item grid-item--width2 grid-item--height2"></div>
-              <div class="grid-item grid-item--width2"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item grid-item--height2"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item grid-item--width3 grid-item--height2"></div>
-              <div class="grid-item grid-item--height2"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item grid-item--height2"></div>
-            </div>
-        </section>
-       
-       
-   </body>
-</html>
-<?php
-}    
+            ?>" class="circle"></a></div></div>
+            <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
+                <form action="assets/upload_file.php" method="post" enctype="multipart/form-data">
+                    Select image to upload:
+                    <input type="file" name="file" id="fileToUpload">
+                    <input type="submit" value="Upload Image" name="submit">
+                </form>
+
+                <?php 
+
+                ?>    
+
+                      <div class="grid-item verwijder"></div>
+                      <div class="grid-item grid-item--width2 grid-item--height2"></div>
+                      <div class="grid-item verwijder"></div>
+                      <div class="grid-item verwijder"></div>
+                      <div class="grid-item grid-item--width3 grid-item--height2"></div>
+                      <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <!-- 10 -->
+                      <div class="grid-item grid-item--width2 grid-item--height2"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item grid-item--width2 grid-item--height2"></div>
+                      <div class="grid-item grid-item--width2 grid-item--height2"></div>
+                      <div class="grid-item grid-item--height2"></div>
+                      <div class="grid-item grid-item--width3 grid-item--height3"></div>
+                      <div class="grid-item verwijder"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item grid-item--height2"></div>
+                      <!-- 20 -->
+                      <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
+                      <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
+                      <div class="grid-item grid-item--width3 grid-item--height3"></div>
+                      <div class="grid-item grid-item--height2"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item verwijder"></div>
+                      <div class="grid-item grid-item--height2 verwijder"></div>
+                  </div> <!-- /grid -->
+              </section>
+
+
+           </body>
+        </html>    
+
+    <?php    
+    }
+    // check if user is company
+    if(isset($_SESSION['user-type']) && $_SESSION['user-type'] == 'company'){
+    ?>    
     
+            <header>
+                <nav>
+                    <ul>
+                        <li class="menu1"><a href="#"></a></li>
+                        <li class="menu2"><a href="#"></a></li>
+                        <li class="menu3"><a href="#"></a></li>
+                        <li class="menu4"><a href="#"></a></li>
+                    </ul>
+                </nav>
+            </header> 
+           <body >
+
+            <section class="container">
+            <div class="grid">
+                <div class="grid-item" style='background-color:red;'>company<div class="circle" ><a href='assets/logout.php' id='logout'><img src="img/uploads/<?php
+
+             if(isset($_SESSION['profile_pic']) && $_SESSION['profile_pic'] != ''){
+                 echo $_SESSION['profile_pic'];
+             }else{
+                 echo 'default.jpg';
+             }
+
+            ?>" class="circle"></a></div></div>
+            <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
+                <form action="assets/upload_file.php" method="post" enctype="multipart/form-data">
+                    Select image to upload:
+                    <input type="file" name="file" id="fileToUpload">
+                    <input type="submit" value="Upload Image" name="submit">
+                </form>
+
+                <?php 
+
+                ?>    
+
+                      <div class="grid-item verwijder"></div>
+                      <div class="grid-item grid-item--width2 grid-item--height2"></div>
+                      <div class="grid-item verwijder"></div>
+                      <div class="grid-item verwijder"></div>
+                      <div class="grid-item grid-item--width3 grid-item--height2"></div>
+                      <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <!-- 10 -->
+                      <div class="grid-item grid-item--width2 grid-item--height2"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item grid-item--width2 grid-item--height2"></div>
+                      <div class="grid-item grid-item--width2 grid-item--height2"></div>
+                      <div class="grid-item grid-item--height2"></div>
+                      <div class="grid-item grid-item--width3 grid-item--height3"></div>
+                      <div class="grid-item verwijder"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item grid-item--height2"></div>
+                      <!-- 20 -->
+                      <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
+                      <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
+                      <div class="grid-item grid-item--width3 grid-item--height3"></div>
+                      <div class="grid-item grid-item--height2"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item verwijder"></div>
+                      <div class="grid-item grid-item--height2 verwijder"></div>
+                  </div> <!-- /grid -->
+              </section>
+
+
+           </body>
+        </html>   
+
+    <?php
+    }
+}    
 ?>
 

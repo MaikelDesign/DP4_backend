@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         $myPassword = $_POST['password'];
         
         //check in users table
-        $sql= "SELECT * FROM users WHERE user_name='$myUsername' and user_pass='$myPassword'";        
+        $sql = "SELECT * FROM users WHERE user_name='$myUsername' and user_pass='$myPassword'";        
         $result=mysqli_query($con, $sql);
         $count=mysqli_num_rows($result); // If result matched $myusername and $mypassword, table row must be 1 row     
         
