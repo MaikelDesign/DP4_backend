@@ -159,10 +159,9 @@ else{
                 </nav>
             </header> 
            <body >
-
             <section class="container">
             <div class="grid">
-            <div class="grid-item" style='background-color:red;'>user<div class="circle" ><a href='assets/logout.php' id='logout'><img src="img/uploads/<?php
+            <div class="grid-item" style='background-color:red;'>user<div class="circle" ><a href='assets/admin.php' id='logout'><img src="img/uploads/<?php
 
              if(isset($_SESSION['profile_pic']) && $_SESSION['profile_pic'] != ''){
                  echo $_SESSION['profile_pic'];
@@ -170,7 +169,10 @@ else{
                  echo 'default.jpg';
              }
 
-            ?>" class="circle"></a></div></div>
+            ?>" class="circle"></a>
+                </div>
+                <a href="assets/logout.php">logout</a>
+            </div>
             <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
                 <form action="assets/upload_file.php" method="post" enctype="multipart/form-data">
                     Select image to upload:
@@ -233,18 +235,20 @@ else{
                 </nav>
             </header> 
            <body >
-
             <section class="container">
             <div class="grid">
-                <div class="grid-item" style='background-color:red;'>company<div class="circle" ><a href='assets/logout.php' id='logout'><img src="img/uploads/<?php
+                <div class="grid-item" style='background-color:red;'>company<div class="circle" ><a href='assets/admin.php' id='logout'><img src="img/uploads/<?php
 
-             if(isset($_SESSION['profile_pic']) && $_SESSION['profile_pic'] != ''){
-                 echo $_SESSION['profile_pic'];
-             }else{
+//             if(isset($_SESSION['profile_pic']) && $_SESSION['profile_pic'] != ''){
+//                 echo $_SESSION['profile_pic'];
+//             }else{
                  echo 'default.jpg';
-             }
+//             }
 
-            ?>" class="circle"></a></div></div>
+            ?>" class="circle"></a>
+                    </div>
+                    <a href="assets/logout.php">logout</a>
+                </div>
             <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
                 <form action="assets/upload_file.php" method="post" enctype="multipart/form-data">
                     Select image to upload:

@@ -9,7 +9,6 @@
  */
 
 	include'connectDB.php';
-//	session_start();
 
 //Session user or company
 //$_SESSION['user-type'] = 'user';
@@ -22,8 +21,8 @@
  */
 function checkUser() {
 	global $con;
-	$userId =  1; //$_SESSION['user_id'];
-
+	$userId =  $_SESSION['user_id']; //$_SESSION['user_id'];
+    $edit = $_GET['edit'];
 	//If user type is a company.
 	if ($_SESSION['user-type'] == 'company'){
 		$result = mysqli_query($con, "SELECT * FROM `company` WHERE `company_id` = $userId ");
@@ -44,19 +43,44 @@ function checkUser() {
 					<div><b>Sector</b></div>
 					</div>
 				";
+            
+            // check if edit button is clicked
+            if($edit == ''){
+             //company data
+			 echo "<div class='userItem'>" . $edit . "<div>" . $row['company_id'] . "</div><div>" . $row['company_name'] . "</div><div>" . $row['company_contact_firstname'] . "</div><div>" . $row['company_contact_lastname'] . "</div><div>" . $row['company_mail'] . "</div><div>" . $row['company_location'] . "</div><div>" . $row['company_picture'] . "</div><div>" . $row['company_cv'] . "</div><div>" . $row['company_window_pic'] . "</div><div>" . $row['company_sector'] . "</div></div>";
+            }
+            else if($edit != ''){
+                // Set values in edit form
+                echo "<div class='userItem'>
+                        <div>" . $row['company_id'] . "</div>
+                        <img scr='../img/" . $row['company_picture'] . "' alt='company profile pic' /><br/>
+                        Profile image<br/>
+                        <img scr='../img/" . $row['company_window_pic'] . "' alt='company window pic' /><br/>
+                        Window image<br/>
+                        <form action='profile_edit.php' method='post' name='edit-form'><br/>
+                            <input type='number' name='user-id' value='" . $userId . "' hidden/>
+                            Company name: <input type='text' name='cUsername' width='50' value='" . $row['company_name'] . "'/><br/>
+                            Contact first name: <input type='text' name='cFirstName' width='50' value='" . $row['company_contact_firstname'] . "'/><br/>
+                            Contact last name: <input type='text' name='cLastName' width='50' value='" . $row['company_contact_lastname'] . "'/><br/>
+                            e-mail: <input type='text' name='email' width='50' value='" . $row['company_mail'] . "'/><br/>
+                            Location: <input type='text' name='location' width='50' value='" . $row['company_location'] . "'/><br/> 
+                            CV: <input type='text' name='cv' width='50' value='" . $row['company_cv'] . "'/><br/>
+                            Sector: <input type='text' name='sector' width='50' value='" . $row['company_sector'] . "'/><br/>
+                            <input type='submit' value='Submit'/>
+                        </form>
+                    </div>";
+            }
 
-			//company data
-			echo "<div class='userItem'><div>" . $row['company_id'] . "</div><div>" . $row['company_name'] . "</div><div>" . $row['company_contact_firstname'] . "</div><div>" . $row['company_contact_lastname'] . "</div><div>" . $row['company_mail'] . "</div><div>" . $row['company_location'] . "</div><div>" . $row['company_picture'] . "</div><div>" . $row['company_cv'] . "</div><div>" . $row['company_window_pic'] . "</div><div>" . $row['company_sector'] . "</div></div>";
 		
 
 		} //If user type is a user.
-	} else if ($_SESSION['user-type'] == 'user'){
+	}
+    else if ($_SESSION['user-type'] == 'user'){
 		$result = mysqli_query($con, "SELECT * FROM `users` WHERE `user_id` = $userId ");
 
-		while ($row = mysqli_fetch_array($result)) {
+        while ($row = mysqli_fetch_array($result)) {
 
-			
-			echo "	<div class='userItem'>
+			     echo "	<div class='userItem'>
 						<div><b>ID</b></div>
 						<div><b>Gebruikersnaam</b></div>
 						<div><b>Voornaam</b></div>
@@ -73,8 +97,32 @@ function checkUser() {
 
 				";
 
-				echo "<div class='userItem'><div>" . $row['user_id'] . "</div><div>" . $row['user_name'] . "</div><div>" . $row['user_firstname'] . "</div><div>" . $row['user_lastname'] . "</div><div>" . $row['user_mail'] . "</div><div>" . $row['user_contact_info'] . "</div><div>" . $row['user_location'] . "</div><div>" . $row['user_picture'] . "</div><div>" . $row['user_cv'] . "</div><div>" . $row['user_interests'] . "</div><div>" . $row['user_sector'] . "</div></div>";
-
+            // check if edit button is clicked
+            if($edit == ''){
+             //user data
+	           echo "<div class='userItem'><div>" . $row['user_id'] . "</div><div>" . $row['user_name'] . "</div><div>" . $row['user_firstname'] . "</div><div>" . $row['user_lastname'] . "</div><div>" . $row['user_mail'] . "</div><div>" . $row['user_contact_info'] . "</div><div>" . $row['user_location'] . "</div><div>" . $row['user_picture'] . "</div><div>" . $row['user_cv'] . "</div><div>" . $row['user_interests'] . "</div><div>" . $row['user_sector'] . "</div></div>";
+            }
+            else if($edit != ''){
+                // Set values in edit form
+                echo "<div class='userItem'>
+                        <div>" . $row['user_id'] . "</div>
+                        <img scr='../img/" . $row['user_picture'] . "' alt='company profile pic' /><br/>
+                        Profile image<br/>
+                        <form action='profile_edit.php' method='post' name='edit-form'><br/>
+                            <input type='number' name='user-id' value='" . $userId . "' hidden/>
+                            Username: <input type='text' name='username' width='50' value='" . $row['user_name'] . "'/><br/>
+                            First name: <input type='text' name='firstName' width='50' value='" . $row['user_firstname'] . "'/><br/>
+                            Last name: <input type='text' name='lastName' width='50' value='" . $row['user_lastname'] . "'/><br/>
+                            e-mail: <input type='text' name='email' width='50' value='" . $row['user_mail'] . "'/><br/>
+                            Location: <input type='text' name='location' width='50' value='" . $row['user_location'] . "'/><br/> 
+                            CV: <input type='text' name='cv' width='50' value='" . $row['user_cv'] . "'/><br/>
+                            Sector: <input type='text' name='sector' width='50' value='" . $row['user_sector'] . "'/><br/>
+                            Info: <input type='text' name='info' width='50' value='" . $row['user_contact_info'] . "'/><br/>
+                            <input type='submit' value='Submit'/>
+                        </form>
+                    </div>";
+            }
+            
 		}
 	}
 }
