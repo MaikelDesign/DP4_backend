@@ -59,20 +59,7 @@
             <div class="grid">
               <div class="profiel">
                 <?php checkUser();?>
-<!--                 <div class="een">
-                    <img src="../img/profiel2.jpg" width="100%">
-                    <p>Freek</p>
-                    <p>31 jaar</p>
-                    <p>Accountmanager voor medici en vrije beroepen ABN AMRO Bank N.V.</p>
-                    <p>Amsterdam</p>
-
-                </div>
-                <div class="twee">
-                    <p>augustus 2006 – heden (8 jaar 11 maanden)'s-Hertogenbosch
-                    ABN AMRO wil de adviesbank worden en blijven voor alle klanten in het eigen marktgebied. De klant voelt zich echt klant door het geven van een warm welkom, een anno nu dienstverlening en een persoonlijk en deskundig advies waarbij het belang van de klant centraal staat.</p>
-
-                </div> -->
-                
+                <a href='admin.php?edit=true' >Edit Profile</a>
                 <div class="drie">
                     <div class="blogs">
                             <div class="tabs">
@@ -82,14 +69,14 @@
                                    <label for="tab-1">ICT</label>
                                    
                                    <div class="content">
-                                       <p>Blogs van freek</p>
-                                        <p>Als accountmanager voor medici en vrije beroepen ben ik partner in business, waarbij de wensen en behoefte van de cliënt als uitgangspunt worden
+                                       <p>Blogs Items</p>
+                                        <p>You will find blog items here.</p>
                                    </div> 
                                </div>
                                 
                                <div class="tab">
                                    <input type="radio" id="tab-2" name="tab-group-1">
-                                   <label for="tab-2">ABN AMBRO</label>
+                                   <label for="tab-2">ABN AMRO</label>
                                    
                                    <div class="content">
                                        <p>tab 2</p>
@@ -114,17 +101,17 @@
         
                                <div class="tab">
                                    <input type="radio" id="tab-4" name="tab-group-4" checked>
-                                   <label for="tab-4">Jan</label>
+                                   <label for="tab-4">Martin L.</label>
                                    
                                    <div class="content">
-                                       <p>Blogs van freek</p>
-                                        <p>hee jan alles goed</p>
+                                       <p>Chat Window</p>
+                                        <p>Hello Martin, are you available?</p>
                                    </div> 
                                </div>
                                 
                                <div class="tab">
                                    <input type="radio" id="tab-5" name="tab-group-5">
-                                   <label for="tab-5">Piet</label>
+                                   <label for="tab-5">Pete S.</label>
                                    
                                    <div class="content">
                                        <p>tab 2</p>
@@ -134,7 +121,7 @@
                                 
                                 <div class="tab">
                                    <input type="radio" id="tab-6" name="tab-group-6">
-                                   <label for="tab-6">Kees</label>
+                                   <label for="tab-6">Dave P.</label>
                                  
                                    <div class="content">
                                        <p>tab 3</p>
