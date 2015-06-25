@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -28,7 +29,7 @@
             <div class="grid">
               <div class="profiel">
                 <div class="een">
-                    <img src="img/profiel2.jpg" width="100%">
+                    <img src="../img/profiel2.jpg" width="100%">
                     <p>Freek</p>
                     <p>31 jaar</p>
                     <p>Accountmanager voor medici en vrije beroepen ABN AMRO Bank N.V.</p>

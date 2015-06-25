@@ -50,8 +50,105 @@
                 <?php checkUser();?>
             </div>	
 
-        </div>	
 
+<section class="container">
+            <div class="grid">
+              <div class="profiel">
+                <div class="een">
+                    <img src="../img/profiel2.jpg" width="100%">
+                    <p>Freek</p>
+                    <p>31 jaar</p>
+                    <p>Accountmanager voor medici en vrije beroepen ABN AMRO Bank N.V.</p>
+                    <p>Amsterdam</p>
+
+                </div>
+                <div class="twee">
+                    <p>augustus 2006 – heden (8 jaar 11 maanden)'s-Hertogenbosch
+                    ABN AMRO wil de adviesbank worden en blijven voor alle klanten in het eigen marktgebied. De klant voelt zich echt klant door het geven van een warm welkom, een anno nu dienstverlening en een persoonlijk en deskundig advies waarbij het belang van de klant centraal staat.</p>
+
+                </div>
+                <div class="drie">
+                    <div class="blogs">
+                            <div class="tabs">
+        
+                               <div class="tab">
+                                   <input type="radio" id="tab-1" name="tab-group-1" checked>
+                                   <label for="tab-1">ICT</label>
+                                   
+                                   <div class="content">
+                                       <p>Blogs van freek</p>
+                                        <p>Als accountmanager voor medici en vrije beroepen ben ik partner in business, waarbij de wensen en behoefte van de cliënt als uitgangspunt worden
+                                   </div> 
+                               </div>
+                                
+                               <div class="tab">
+                                   <input type="radio" id="tab-2" name="tab-group-1">
+                                   <label for="tab-2">ABN AMBRO</label>
+                                   
+                                   <div class="content">
+                                       <p>tab 2</p>
+                                       
+                                   </div> 
+                               </div>
+                                
+                                <div class="tab">
+                                   <input type="radio" id="tab-3" name="tab-group-1">
+                                   <label for="tab-3">PHILIPS</label>
+                                 
+                                   <div class="content">
+                                       <p>tab 3</p>
+                                   </div> 
+                               </div>
+                                
+                            </div>
+
+                    </div>
+                    <div class="blogs">
+                            <div class="tabs">
+        
+                               <div class="tab">
+                                   <input type="radio" id="tab-4" name="tab-group-4" checked>
+                                   <label for="tab-4">Jan</label>
+                                   
+                                   <div class="content">
+                                       <p>Blogs van freek</p>
+                                        <p>hee jan alles goed</p>
+                                   </div> 
+                               </div>
+                                
+                               <div class="tab">
+                                   <input type="radio" id="tab-5" name="tab-group-5">
+                                   <label for="tab-5">Piet</label>
+                                   
+                                   <div class="content">
+                                       <p>tab 2</p>
+                                       
+                                   </div> 
+                               </div>
+                                
+                                <div class="tab">
+                                   <input type="radio" id="tab-6" name="tab-group-6">
+                                   <label for="tab-6">Kees</label>
+                                 
+                                   <div class="content">
+                                       <p>tab 3</p>
+                                   </div> 
+                               </div>
+                                
+                            </div>
+
+                    </div>
+                    <div class="input">
+                        <input type="text" name="message">
+                    </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+      </section>
+    <script src="../js/demo.js"></script>
     </body>
 </html>
 
