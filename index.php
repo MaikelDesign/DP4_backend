@@ -30,18 +30,24 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
     </header>  
    <body >
        
-<!--    login form   -->
-    <div id='login_container'>   
-        <a href="#" class='close'>X</a>
-        <form action="assets/login.php" name="login_form" method="post" id='login_form'>
+  <div id='login_container'>  
+      <div class="login"> 
+        <a href="#" id='close'>X</a>
+
+        
+        <form action="assets/login.php" name="login_form" method="post" id='login_form'><p>
             LOGIN:<br/>
             Username<input type='text' placeholder="Username" name='username' width="50" required autofocus><br/>
             Password<input type='text' placeholder="Password" name='password' width="50" required><br/>
-            <input type="submit" name="submit" value="log-in"><br/>
-            <a href="#" id='register'>Sign up</a>
+            <input type="submit" name="submit" value="log-in"/><br/>
+            <a href="#" id='registerProf'>Register Profile</a></p><br/>
+            <a href="#" id='registerCom'>Register Company</a></p>
         </form>
-        
+      </div>
+    
+    
 <!--    user register form-->
+      <div class="register-profile"> 
         <form action="assets/checkRegister.php" name="register_form" method="post" id='register_form'>
             REGISTER User:<br/>
             First name<input type='text' placeholder="First name" name='firstName' width="50" required ><br/>
@@ -60,12 +66,13 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
             <input type='text' placeholder="tags" name='tags' width="50" required><br/>  
             <input type='text' name='form-type' value='user' hidden>
             <input type="submit" name="submit" value="Sign up"><br/>
-            <a href="#" class='form_back'>Back</a>
-            <a href="#" id='company'>Company sign up</a>
+            <a href="#" class='userBack'>Back</a><br/>
         </form>
-        
+      </div>
+    
 <!--    company register form-->
-        <form action="assets/checkRegister.php" name="register_form" method="post" id='register_form_company'>
+    <div class="register-company">
+        <form action="assets/checkRegister.php" name="register_form" method="post" id='register_form_company'><p>
             REGISTER company:<br/>
             Username:<input type='text' placeholder="Username" name='com-username' width="50" required ><br/>
             Password<input type='text' placeholder="Password" name='com-password' width="50" required><br/>
@@ -83,10 +90,11 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
 <!--        Sector<input type='text' placeholder="Password" name='password' width="50" required><br/>-->        
             <input type='text' name='form-type' value='company' hidden>
             <input type="submit" name="submit" value="Sign up"><br/>
-            <a href="#" class='form_back'>Back</a>
-            <a href="#" id='user'>User sign up</a>
+            <a href="#" class='compBack'>Back</a>
         </form>
     </div>    
+
+</div>
        
 <!--    start grid   -->   
         <section class="container">

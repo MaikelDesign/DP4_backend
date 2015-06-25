@@ -35,10 +35,10 @@
     <header>
         <nav>
             <ul>
-                <li class="menu1"><a href="#"></a></li>
-                <li class="menu2"><a href="#"></a></li>
-                <li class="menu3"><a href="#"></a></li>
-                <li class="menu4"><a href="#"></a></li>
+                <li class="menu1"><a href="pages/profiel.html" class="knop"><h1 class="tekstHeader">NEWS</h1></a></li>
+                <li class="menu2"><a href="pages.company.html" class="knop"><h1 class="tekstHeader">DISTRICT</h1></a></li>
+                <li class="menu3"><a href="#" class="knop"><h1 class="tekstHeader"></h1></a></li>
+                <li class="menu4"><a href="#" class="knop"><h1 class="tekstHeader1"><?php if(isset($_SESSION['username']) && $_SESSION['username'] != ''){ echo $_SESSION['username']; } ?></h1></a></li>
             </ul>
         </nav>
     </header>  

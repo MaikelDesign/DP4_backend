@@ -20,11 +20,35 @@ $(document).ready(function(){
         $('#login_container').show();
     });
     
-    
-    
-    $('.close').click(function(e){
+    $('#close').click(function(e){
         e.preventDefault();
-        $(this).parent().hide();
+        $('#login_container').hide();
+        $('.register-profile').hide();
+        $('.register-company').hide();
     });
 
+    $('#registerProf').click(function(e){
+        e.preventDefault();
+        $('.login').hide();
+        $('.register-profile').show();
+    });
+    
+    $('#registerCom').click(function(e){
+        e.preventDefault();
+        $('.login').hide();
+        $('.register-company').show();
+    });
+    
+    $('.userBack').click(function(e){
+        e.preventDefault();
+        $('.login').show();
+        $('.register-profile').hide();
+    });
+    
+    $('.compBack').click(function(e){
+        e.preventDefault();
+        $('.login').show();
+        $('.register-company').hide();
+    });
+    
 });
