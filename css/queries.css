@@ -191,7 +191,7 @@ ul {
   margin-left: -27vw;
 }
 .logo{
-  width: 25vw;
+  width: 23vw;
 }
 
     
@@ -414,6 +414,7 @@ input{
   background-image: none;
   text-align: left;
   padding: 10px;
+  opacity: 0.97;
 }
 
 .smalleTitel{
@@ -439,16 +440,35 @@ input{
 }
 
     .smalleOnderschrift{
+  display: none;
+/*
   color: white;
   font-size: 1.5vw;
   line-height: 100%;
   font-weight: 300;
+*/
 }
 
+.kleinOnderschrift{
+    display: inline-block;
+    color: white;
+    font-size: 2.5vw;
+    line-height: 3vw;
+    font-weight: 300;
+    margin-top: 5%;
+}
+    
 .readMore{
-  font-size: 1.5vw;
-  color:white;
+  font-size: 2.5vw;
   font-weight: 600;
+  color:#85d5fc;
+  font-weight: 600;
+   position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-bottom: 5%;
+  padding-right: 5%;
+    
 }
 
     
@@ -529,7 +549,7 @@ input{
   margin-left: -18.5vw;
 }
 .logo{
-  width: 17vw;
+  width: 15vw;
 }
     
   .grid-item{
@@ -794,12 +814,24 @@ input{
   font-size: 1.1vw;
   line-height: 1.3vw;
   font-weight: 300;
+   display: inline-block;
 }
+
+.kleinOnderschrift{
+  display: none;
+}
+
     
-    .readMore{
+.readMore{
   font-size: 1.1vw;
-  color:white;
   font-weight: 600;
+  color:#85d5fc;
+  font-weight: 600;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-bottom: 5%;
+  padding-right: 5%;
 }
 
 
