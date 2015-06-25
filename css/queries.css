@@ -14,10 +14,7 @@ html{
 body { font-family: sans-serif; }
 
 a {
-    color: #4C9CF1;
-    text-decoration: none;
-    font-weight: bold;
- 
+    text-decoration: none; 
 }
 
 header {
@@ -69,31 +66,25 @@ h4{
 /* ---- grid ---- */
 .container{
   width: 100%;
-  overflow: scroll;
 }
-
-
-.grid::-webkit-scrollbar { width: 0 !important }
-.grid { -ms-overflow-style: none; }
-.grid { overflow: -moz-scrollbars-none; }
 
 
 .grid {
-  counter-reset: grid-item;
+/*  counter-reset: grid-item;*/
   margin-left: auto;
   margin-right: auto;
     overflow: scroll;
-
 }
 
-/* clearfix */
+.grid::-webkit-scrollbar { width: 0 !important }
+.grid { -ms-overflow-style: none; }
+
 .profiel{
   background: #85d5fc;
   margin: 1%;
   width: 98%;
   height: 500px;
 }
-
 /* ---- grid-item ---- */
 
 .grid-item {
@@ -110,8 +101,10 @@ h4{
 .grid-item--height3 { }
 
 .grid-item:before {
+/*
   counter-increment: grid-item;
   content: counter(grid-item);
+*/
   display: block;
   color: white;
   padding-top: 0.2em;
@@ -136,16 +129,16 @@ ul {
   padding: 0;
 }
   .container{
-  margin-top: 30vw;
+  margin-top: 20vw;
 }
   .grid {
     width: 90vw;
-    height: 80vh;
+    height: 85vh;
   }
 
   header {
     width: 100vw;
-    height: 30vw;
+    height: 20vw;
 }
   .menu3{
     display: none;
@@ -153,7 +146,7 @@ ul {
 
   .menu4{
     width: 28vw;
-    height: 28vw;
+    height: 18vw;
     display: inline-block;
     background-color: #85d5fc;
     -webkit-border-top-left-radius: 20vw;
@@ -167,16 +160,16 @@ ul {
   .menu1, .menu2{
     display: inline-block;
     width: 28vw;
-    height: 28vw;
+    height: 18vw;
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 0 0 28vw 28vw;
+    border-width: 0 0 18vw 28vw;
     border-color: transparent transparent #85d5fc transparent;
     margin: 0.5vw 1.0vw 0.5vw 1.0vw;
   }
 
-        .tekstHeader{
+.tekstHeader{
   color: white;
   position: absolute;
   font-size: 4vw;
@@ -189,8 +182,6 @@ ul {
   padding-top: 35%;
   }
 
-
-
   .knop{
   position: absolute;
   margin-left: -27vw;
@@ -200,17 +191,29 @@ ul {
   .grid-item {
   width: 29vw;
   height: 29vw; 
-  margin: 0.5vw;
+  margin: 0.5vw 0.5vw 0.5vw 0.5vw;
   background-image: url("../img/raam-1.png"); background-size: 100% auto; background-repeat: no-repeat;
 
 }
 .grid-item--width2 { width: 59vw; background-color: #41697c; background-image: url("../img/raam-2.png"); background-size: 100% auto; background-repeat: no-repeat;}
-.grid-item--width3 { width: 59vw; height: 59vw; background-color: #a6bdc8; background-image: url("../img/raam-3.png"); background-size: 100% auto; background-repeat: no-repeat;}
+.grid-item--width3 { width: 59vw; height: 59vw; background-color: #a6bdc8; background-image: url("../img/raam-3.png"); background-size: 100% auto; background-repeat: no-repeat; float: right;}
 
 .grid-item--height2 { }
 .grid-item--height3 { }
 
-
+    
+/*
+  .grid-item{
+      width: 19vw;
+  height: 19vw;  
+   margin: 0.5vw 0.5vw 0.5vw 0.5vw;
+   background-image: url("../img/raam-1.png"); background-size: 100% auto; background-repeat: no-repeat;
+}
+.grid-item--width2 { width: 39vw; background-color: #41697c; background-image: url("../img/raam-2.png"); background-size: 100% auto; background-repeat: no-repeat;}
+.grid-item--width3 { width: 39vw; height:39vw; background-color: #a6bdc8;background-image: url("../img/raam-3.png"); background-size: 100% auto; background-repeat: no-repeat; float: right;}
+    
+    
+*/
  .verwijder{
   display: none;
  }
@@ -229,7 +232,6 @@ ul {
 .card__front,
 .card__back {
   position: absolute;
-
 }
 
 .card__front,
@@ -265,6 +267,7 @@ ul {
   position: relative;
   float: left;
   width: 59vw; 
+  height: 29vw;    
   text-align: center;
   margin: 0.5vw 0.5vw 0.5vw 0.5vw;
 }
@@ -348,7 +351,7 @@ ul {
           transform: rotateY(0);
 }
     
-    .profiel{
+.profiel{
   background: #85d5fc;
   margin: 1%;
   width: 98%;
@@ -419,9 +422,7 @@ h4{
   color: white;
   margin-top: 10px;
   font-size: 2vw;
-
 }
-
 
 }
 
@@ -436,17 +437,17 @@ h4{
   margin-right: auto;
 }
   .container{
-  margin-top: 20vw;
+  margin-top: 15vw;
 }
 
   .grid {
     width: 80vw;
-    height: 60vh;
+    height: 72vh;
   }
 
   header {
     width: 100vw;
-    height: 20vw;
+    height: 15vw;
   }
 
   .menu3{
@@ -459,7 +460,7 @@ h4{
 
   .menu4{
     width: 19vw;
-    height: 19vw;
+    height: 14vw;
     display: inline-block;
     background-color: #85d5fc;
     -webkit-border-top-left-radius: 10vw;
@@ -473,17 +474,17 @@ h4{
   }
   .menu1, .menu2, .menu3{
     width: 19vw;
-    height: 19vw;
+    height: 14vw;
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 0 0 19vw 19vw;
+    border-width: 0 0 14vw 19vw;
     border-color: transparent transparent #85d5fc transparent;
     margin: 0.5vw 0.25vw 0.5vw 0.25vw;
     position: relative;
   }
 
-      .tekstHeader{
+.tekstHeader{
   color: white;
   font-size:2.5vw;
   }
@@ -510,7 +511,7 @@ h4{
 .grid-item--width2 { width: 39vw; background-color: #41697c; background-image: url("../img/raam-2.png"); background-size: 100% auto; background-repeat: no-repeat;}
 .grid-item--width3 { width: 39vw; height:39vw; background-color: #a6bdc8;background-image: url("../img/raam-3.png"); background-size: 100% auto; background-repeat: no-repeat; float: right;}
 
-}
+
 
 /* --- CARDS --- */
 
@@ -564,6 +565,7 @@ h4{
   position: relative;
   float: left;
   width: 39vw; 
+  height: 19vw;    
   text-align: center;
   margin: 0.5vw 0.5vw 0.5vw 0.5vw;
 }
@@ -656,9 +658,9 @@ h4{
 
 .profiel{
   background: #85d5fc;
-  margin-top: 0%;
+  margin: 1%;
   width: 98%;
-  height: 800px;
+  height: 500px;
 }
 
 .een{
@@ -690,9 +692,6 @@ h4{
 .content{
   overflow: scroll;
 }
-.content::-webkit-scrollbar { width: 0 !important }
-.content { -ms-overflow-style: none; }
-.content { overflow: -moz-scrollbars-none; }
 
 .message{
   width: 100%;
@@ -732,8 +731,32 @@ input{
 
 }
 
+.draai{
+  background-color: #707070;
+  background-image: none;
+  text-align: left;
+  padding: 10px;
+}
 
+h3{
+  color: white;
+  margin-top: 10px;
+  font-size: 1.3vw;
+  line-height: 110%;
+}
 
+img{
+  display: block;
+}
+
+h4{
+  color: white;
+  margin-top: 10px;
+  font-size: 2vw;
+
+}
+
+}
 
 
 .tabs {
@@ -779,34 +802,6 @@ input{
       color:white;
     }
 
-.draai{
-  background-color: #707070;
-  background-image: none;
-  text-align: left;
-  padding: 10px;
-}
-
-h3{
-  color: white;
-  margin-top: 10px;
-  font-size: 1.3vw;
-  line-height: 110%;
-}
-
-img{
-  display: block;
-}
-
-h4{
-  color: white;
-  margin-top: 10px;
-  font-size: 2vw;
-
-}
-
-
-
-}
 
 
 
