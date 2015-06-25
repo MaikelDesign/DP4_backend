@@ -21,8 +21,8 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
     <header>
         <nav>
             <ul>
-                <li class="menu1"><a href="#"></a></li>
-                <li class="menu2"><a href="#"></a></li>
+                <li class="menu1"><a href="pages/profiel.html"></a></li>
+                <li class="menu2"><a href="pages.company.html"></a></li>
                 <li class="menu3"><a href="#"></a></li>
                 <li class="menu4"><a href="#"></a></li>
             </ul>
@@ -91,39 +91,154 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
 <!--    start grid   -->   
         <section class="container">
           <div class="grid">
-              <div class="grid-item"></div>
-              <!--              <div class="grid-item"><div class="circle" ><a href='#' id='login'><div style='background-color: black;' class="circle"></div></a></div></div>-->
+            <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item"></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
 
-              <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
-              <div class="grid-item verwijder"></div>
-              <div class="grid-item grid-item--width2 grid-item--height2"></div>
-              <div class="grid-item verwijder"></div>
-              <div class="grid-item verwijder"></div>
-              <div class="grid-item grid-item--width3 grid-item--height2"></div>
-              <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <!-- 10 -->
-              <div class="grid-item grid-item--width2 grid-item--height2"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item grid-item--width2 grid-item--height2"></div>
-              <div class="grid-item grid-item--width2 grid-item--height2"></div>
-              <div class="grid-item grid-item--height2"></div>
-              <div class="grid-item grid-item--width3 grid-item--height3"></div>
-              <div class="grid-item verwijder"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item grid-item--height2"></div>
-              <!-- 20 -->
-              <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
-              <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
-              <div class="grid-item grid-item--width3 grid-item--height3"></div>
-              <div class="grid-item grid-item--height2"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item verwijder"></div>
-              <div class="grid-item grid-item--height2 verwijder"></div>
+            <div class="card1 effect__click">
+              <div class="card1__front">
+                <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
+              </div>
+              <div class="card1__back">
+                <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
+              </div>
+            </div> <!-- Blokje lang -->
+
+            <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item verwijder"></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item verwijder"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card1 effect__click">
+              <div class="card1__front">
+                <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              </div>
+              <div class="card1__back">
+                <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              </div>
+            </div> <!-- Blokje lang -->
+
+            <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item verwijder"></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item verwijder"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item verwijder"></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item verwijder"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card2 effect__click">
+              <div class="card2__front">
+                <div class="grid-item grid-item--width3 grid-item--height2"></div>
+              </div>
+              <div class="card2__back">
+                <div class="grid-item grid-item--width3 grid-item--height2"></div>
+              </div>
+            </div> <!-- Blokje groot -->
+
+            <div class="card2 effect__click">
+              <div class="card2__front">
+                <div class="grid-item grid-item--width3 grid-item--height2"></div>
+              </div>
+              <div class="card2__back">
+                <div class="grid-item grid-item--width3 grid-item--height2"></div>
+              </div>
+            </div> <!-- Blokje groot -->
+
+            <div class="card1 effect__click">
+              <div class="card1__front">
+                <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
+              </div>
+              <div class="card1__back">
+                <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
+              </div>
+            </div> <!-- Blokje lang -->
+
+            <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item"></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item"></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card1 effect__click">
+              <div class="card1__front">
+                 <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              </div>
+              <div class="card1__back">
+                 <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              </div>
+            </div> <!-- Blokje lang -->
+
+             <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item"></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item"></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card1 effect__click">
+              <div class="card1__front">
+                 <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              </div>
+              <div class="card1__back">
+                 <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              </div>
+            </div> <!-- Blokje lang -->
+
+             <div class="card1 effect__click">
+              <div class="card1__front">
+                 <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              </div>
+              <div class="card1__back">
+                 <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              </div>
+            </div> <!-- Blokje lang -->
+            
           </div> <!-- /grid -->
       </section>
+        <script src="js/demo.js"></script>
+
        
    </body>
 </html>
@@ -158,62 +273,170 @@ else{
                     </ul>
                 </nav>
             </header> 
-           <body >
-            <section class="container">
-            <div class="grid">
-            <div class="grid-item" style='background-color:red;'>user<div class="circle" ><a href='assets/admin.php' id='logout'><img src="img/uploads/<?php
+           <body >  
 
-             if(isset($_SESSION['profile_pic']) && $_SESSION['profile_pic'] != ''){
-                 echo $_SESSION['profile_pic'];
-             }else{
-                 echo 'default.jpg';
-             }
+<!--    start grid   -->   
+        <section class="container">
+          <div class="grid">
+            <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item" style='background-color:red;'>user<div class="circle" ><a href='assets/admin.php' id='logout'><img src="img/uploads/<?php
 
-            ?>" class="circle"></a>
-                </div>
-                <a href="assets/logout.php">logout</a>
-            </div>
-            <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
-                <form action="assets/upload_file.php" method="post" enctype="multipart/form-data">
-                    Select image to upload:
-                    <input type="file" name="file" id="fileToUpload">
-                    <input type="submit" value="Upload Image" name="submit">
-                </form>
+                             if(isset($_SESSION['profile_pic']) && $_SESSION['profile_pic'] != ''){
+                                 echo $_SESSION['profile_pic'];
+                             }else{
+                                 echo 'default.jpg';
+                             }
 
-                <?php 
+                            ?>" class="circle"></a>
+                                </div>
+                                <a href="assets/logout.php">logout</a>
+                </div>              </div>
+              <div class="card__back">
+                <div class="grid-item"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
 
-                ?>    
+            <div class="card1 effect__click">
+              <div class="card1__front">
+                <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
+              </div>
+              <div class="card1__back">
+                <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
+              </div>
+            </div> <!-- Blokje lang -->
 
-                      <div class="grid-item verwijder"></div>
-                      <div class="grid-item grid-item--width2 grid-item--height2"></div>
-                      <div class="grid-item verwijder"></div>
-                      <div class="grid-item verwijder"></div>
-                      <div class="grid-item grid-item--width3 grid-item--height2"></div>
-                      <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
-                      <div class="grid-item"></div>
-                      <div class="grid-item"></div>
-                      <!-- 10 -->
-                      <div class="grid-item grid-item--width2 grid-item--height2"></div>
-                      <div class="grid-item"></div>
-                      <div class="grid-item"></div>
-                      <div class="grid-item grid-item--width2 grid-item--height2"></div>
-                      <div class="grid-item grid-item--width2 grid-item--height2"></div>
-                      <div class="grid-item grid-item--height2"></div>
-                      <div class="grid-item grid-item--width3 grid-item--height3"></div>
-                      <div class="grid-item verwijder"></div>
-                      <div class="grid-item"></div>
-                      <div class="grid-item grid-item--height2"></div>
-                      <!-- 20 -->
-                      <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
-                      <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
-                      <div class="grid-item grid-item--width3 grid-item--height3"></div>
-                      <div class="grid-item grid-item--height2"></div>
-                      <div class="grid-item"></div>
-                      <div class="grid-item verwijder"></div>
-                      <div class="grid-item grid-item--height2 verwijder"></div>
-                  </div> <!-- /grid -->
-              </section>
+            <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item verwijder"></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item verwijder"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
 
+            <div class="card1 effect__click">
+              <div class="card1__front">
+                <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              </div>
+              <div class="card1__back">
+                <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              </div>
+            </div> <!-- Blokje lang -->
+
+            <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item verwijder"></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item verwijder"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item verwijder"></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item verwijder"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card2 effect__click">
+              <div class="card2__front">
+                <div class="grid-item grid-item--width3 grid-item--height2"></div>
+              </div>
+              <div class="card2__back">
+                <div class="grid-item grid-item--width3 grid-item--height2"></div>
+              </div>
+            </div> <!-- Blokje groot -->
+
+            <div class="card2 effect__click">
+              <div class="card2__front">
+                <div class="grid-item grid-item--width3 grid-item--height2"></div>
+              </div>
+              <div class="card2__back">
+                <div class="grid-item grid-item--width3 grid-item--height2"></div>
+              </div>
+            </div> <!-- Blokje groot -->
+
+            <div class="card1 effect__click">
+              <div class="card1__front">
+                <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
+              </div>
+              <div class="card1__back">
+                <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
+              </div>
+            </div> <!-- Blokje lang -->
+
+            <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item"></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item"></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card1 effect__click">
+              <div class="card1__front">
+                 <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              </div>
+              <div class="card1__back">
+                 <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              </div>
+            </div> <!-- Blokje lang -->
+
+             <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item"></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item"></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card1 effect__click">
+              <div class="card1__front">
+                 <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              </div>
+              <div class="card1__back">
+                 <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              </div>
+            </div> <!-- Blokje lang -->
+
+             <div class="card1 effect__click">
+              <div class="card1__front">
+                 <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              </div>
+              <div class="card1__back">
+                 <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              </div>
+            </div> <!-- Blokje lang -->
+            
+          </div> <!-- /grid -->
+      </section>
+
+
+        <script src="js/demo.js"></script>
 
            </body>
         </html>    
@@ -235,61 +458,166 @@ else{
                 </nav>
             </header> 
            <body >
-            <section class="container">
-            <div class="grid">
-                <div class="grid-item" style='background-color:red;'>company<div class="circle" ><a href='assets/admin.php' id='logout'><img src="img/uploads/<?php
+           <!--    start grid   -->   
+        <section class="container">
+          <div class="grid">
+            <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item" style='background-color:red;'>user<div class="circle" ><a href='assets/admin.php' id='logout'><img src="img/uploads/<?php
 
-//             if(isset($_SESSION['profile_pic']) && $_SESSION['profile_pic'] != ''){
-//                 echo $_SESSION['profile_pic'];
-//             }else{
-                 echo 'default.jpg';
-//             }
+                             if(isset($_SESSION['profile_pic']) && $_SESSION['profile_pic'] != ''){
+                                 echo $_SESSION['profile_pic'];
+                             }else{
+                                 echo 'default.jpg';
+                             }
 
-            ?>" class="circle"></a>
-                    </div>
-                    <a href="assets/logout.php">logout</a>
-                </div>
-            <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
-                <form action="assets/upload_file.php" method="post" enctype="multipart/form-data">
-                    Select image to upload:
-                    <input type="file" name="file" id="fileToUpload">
-                    <input type="submit" value="Upload Image" name="submit">
-                </form>
+                            ?>" class="circle"></a>
+                                </div>
+                                <a href="assets/logout.php">logout</a>
+                </div>              </div>
+              <div class="card__back">
+                <div class="grid-item"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
 
-                <?php 
+            <div class="card1 effect__click">
+              <div class="card1__front">
+                <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
+              </div>
+              <div class="card1__back">
+                <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
+              </div>
+            </div> <!-- Blokje lang -->
 
-                ?>    
+            <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item verwijder"></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item verwijder"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
 
-                      <div class="grid-item verwijder"></div>
-                      <div class="grid-item grid-item--width2 grid-item--height2"></div>
-                      <div class="grid-item verwijder"></div>
-                      <div class="grid-item verwijder"></div>
-                      <div class="grid-item grid-item--width3 grid-item--height2"></div>
-                      <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
-                      <div class="grid-item"></div>
-                      <div class="grid-item"></div>
-                      <!-- 10 -->
-                      <div class="grid-item grid-item--width2 grid-item--height2"></div>
-                      <div class="grid-item"></div>
-                      <div class="grid-item"></div>
-                      <div class="grid-item grid-item--width2 grid-item--height2"></div>
-                      <div class="grid-item grid-item--width2 grid-item--height2"></div>
-                      <div class="grid-item grid-item--height2"></div>
-                      <div class="grid-item grid-item--width3 grid-item--height3"></div>
-                      <div class="grid-item verwijder"></div>
-                      <div class="grid-item"></div>
-                      <div class="grid-item grid-item--height2"></div>
-                      <!-- 20 -->
-                      <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
-                      <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
-                      <div class="grid-item grid-item--width3 grid-item--height3"></div>
-                      <div class="grid-item grid-item--height2"></div>
-                      <div class="grid-item"></div>
-                      <div class="grid-item verwijder"></div>
-                      <div class="grid-item grid-item--height2 verwijder"></div>
-                  </div> <!-- /grid -->
-              </section>
+            <div class="card1 effect__click">
+              <div class="card1__front">
+                <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              </div>
+              <div class="card1__back">
+                <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              </div>
+            </div> <!-- Blokje lang -->
 
+            <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item verwijder"></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item verwijder"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item verwijder"></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item verwijder"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card2 effect__click">
+              <div class="card2__front">
+                <div class="grid-item grid-item--width3 grid-item--height2"></div>
+              </div>
+              <div class="card2__back">
+                <div class="grid-item grid-item--width3 grid-item--height2"></div>
+              </div>
+            </div> <!-- Blokje groot -->
+
+            <div class="card2 effect__click">
+              <div class="card2__front">
+                <div class="grid-item grid-item--width3 grid-item--height2"></div>
+              </div>
+              <div class="card2__back">
+                <div class="grid-item grid-item--width3 grid-item--height2"></div>
+              </div>
+            </div> <!-- Blokje groot -->
+
+            <div class="card1 effect__click">
+              <div class="card1__front">
+                <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
+              </div>
+              <div class="card1__back">
+                <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
+              </div>
+            </div> <!-- Blokje lang -->
+
+            <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item"></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item"></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card1 effect__click">
+              <div class="card1__front">
+                 <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              </div>
+              <div class="card1__back">
+                 <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              </div>
+            </div> <!-- Blokje lang -->
+
+             <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item"></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item"></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card1 effect__click">
+              <div class="card1__front">
+                 <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              </div>
+              <div class="card1__back">
+                 <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              </div>
+            </div> <!-- Blokje lang -->
+
+             <div class="card1 effect__click">
+              <div class="card1__front">
+                 <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              </div>
+              <div class="card1__back">
+                 <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              </div>
+            </div> <!-- Blokje lang -->
+            
+          </div> <!-- /grid -->
+      </section>
+        <script src="js/demo.js"></script>
 
            </body>
         </html>   
