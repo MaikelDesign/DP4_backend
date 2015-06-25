@@ -573,9 +573,9 @@ input{
 
 .profiel{
   background: #85d5fc;
-  margin: 1%;
+  margin-top: 0%;
   width: 98%;
-  height: 500px;
+  height: 800px;
 }
 
 .een{
@@ -654,9 +654,7 @@ input{
       display: none;   
     }
     .content {
-      position: absolute;
       top: 28px;
-      left: 0;
       background: #41697c;
       right: 0;
       bottom: 0;
