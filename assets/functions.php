@@ -119,6 +119,7 @@ function checkUser() {
                echo "
                         <div class='een'>
                             <img src='../img/profiel2.jpg' width='100%''>
+                            <a href='admin.php?edit=true' >Edit Profile</a>
                             <p>" . $row['user_firstname'] .  " " . $row['user_lastname'] . "</p>
                             <p>" . $row['user_location'] . "</p>
                             <p><a href='http://" . $row['user_cv'] . "' target='_blank'>LinkedIn</a></p>

@@ -60,7 +60,6 @@
             <div class="grid">
               <div class="profiel">
                 <?php checkUser();?>
-                <a href='admin.php?edit=true' >Edit Profile</a>
                 <div class="drie">
                     <div class="blogs">
                             <div class="tabs">
