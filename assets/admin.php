@@ -28,6 +28,8 @@
         <script src="../js/jquery_v1.11.1.js"></script>
         <script src="../js/jquery-ui-1.10.4.min.js"></script>
           <script src="../js/js.js"></script>
+
+              <script src='http://masonry.desandro.com/masonry.pkgd.js'></script>
     </head>
     <header>
         <nav>
@@ -41,20 +43,23 @@
     </header>  
     <body id="admin">
 
-        <div class="container">
+
+<!--         <div class="container">
 
             <div>
                 <div>
                     <h4>Beheer Profiel</h4><a href="admin.php?edit=true" >Edit</a>
                 </div>
                 <?php checkUser();?>
-            </div>	
+            </div> -->	
+
 
 
 <section class="container">
             <div class="grid">
               <div class="profiel">
-                <div class="een">
+                <?php checkUser();?>
+<!--                 <div class="een">
                     <img src="../img/profiel2.jpg" width="100%">
                     <p>Freek</p>
                     <p>31 jaar</p>
@@ -66,7 +71,8 @@
                     <p>augustus 2006 – heden (8 jaar 11 maanden)'s-Hertogenbosch
                     ABN AMRO wil de adviesbank worden en blijven voor alle klanten in het eigen marktgebied. De klant voelt zich echt klant door het geven van een warm welkom, een anno nu dienstverlening en een persoonlijk en deskundig advies waarbij het belang van de klant centraal staat.</p>
 
-                </div>
+                </div> -->
+                
                 <div class="drie">
                     <div class="blogs">
                             <div class="tabs">

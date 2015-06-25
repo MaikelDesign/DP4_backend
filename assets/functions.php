@@ -80,27 +80,41 @@ function checkUser() {
 
         while ($row = mysqli_fetch_array($result)) {
 
-			     echo "	<div class='userItem'>
-						<div><b>ID</b></div>
-						<div><b>Gebruikersnaam</b></div>
-						<div><b>Voornaam</b></div>
-						<div><b>Achternaam</b></div>
-						<div><b>E-mail Adres</b></div>
-						<div><b>Contact Info</b></div>
-						<div><b>Locatie</b></div>
-						<div><b>Profiel Foto</b></div>
-						<div><b>CV</b></div>
-						<div><b>Interesses</b></div>
-						<div><b>Sector</b></div>
-						<div><a href='edit.php'><b>Aanpassen</b></a></div>
-					</div>
+			 //     echo "	<div class='userItem'>
+				// 		<div><b>ID</b></div>
+				// 		<div><b>Gebruikersnaam</b></div>
+				// 		<div><b>Voornaam</b></div>
+				// 		<div><b>Achternaam</b></div>
+				// 		<div><b>E-mail Adres</b></div>
+				// 		<div><b>Contact Info</b></div>
+				// 		<div><b>Locatie</b></div>
+				// 		<div><b>Profiel Foto</b></div>
+				// 		<div><b>CV</b></div>
+				// 		<div><b>Interesses</b></div>
+				// 		<div><b>Sector</b></div>
+				// 		<div><a href='edit.php'><b>Aanpassen</b></a></div>
+				// 	</div>
 
-				";
+				// ";
 
             // check if edit button is clicked
             if($edit == ''){
              //user data
-	           echo "<div class='userItem'><div>" . $row['user_id'] . "</div><div>" . $row['user_name'] . "</div><div>" . $row['user_firstname'] . "</div><div>" . $row['user_lastname'] . "</div><div>" . $row['user_mail'] . "</div><div>" . $row['user_contact_info'] . "</div><div>" . $row['user_location'] . "</div><div>" . $row['user_picture'] . "</div><div>" . $row['user_cv'] . "</div><div>" . $row['user_interests'] . "</div><div>" . $row['user_sector'] . "</div></div>";
+	 //          echo "<div class='userItem'><div>" . $row['user_id'] . "</div><div>" . $row['user_name'] . "</div><div>" . $row['user_firstname'] . "</div><div>" . $row['user_lastname'] . "</div><div>" . $row['user_mail'] . "</div><div>" . $row['user_contact_info'] . "</div><div>" . $row['user_location'] . "</div><div>" . $row['user_picture'] . "</div><div>" . $row['user_cv'] . "</div><div>" . $row['user_interests'] . "</div><div>" . $row['user_sector'] . "</div></div>";
+
+               echo "
+                        <div class='een'>
+                            <img src='../img/profiel2.jpg' width='100%''>
+                            <a href='admin.php?edit=true' >Edit Profile</a>
+                            <p>" . $row['user_firstname'] .  " " . $row['user_lastname'] . "</p>
+                            <p>" . $row['user_location'] . "</p>
+                            <p><a href='http://" . $row['user_cv'] . "' target='_blank'>LinkedIn</a></p>
+                        </div>
+
+                        <div class='twee'>
+                            <p>" . $row['user_contact_info'] . "</p>
+                        </div>
+                    ";
             }
             else if($edit != ''){
                 // Set values in edit form
@@ -115,7 +129,7 @@ function checkUser() {
                             Last name: <input type='text' name='lastName' width='50' value='" . $row['user_lastname'] . "'/><br/>
                             e-mail: <input type='text' name='email' width='50' value='" . $row['user_mail'] . "'/><br/>
                             Location: <input type='text' name='location' width='50' value='" . $row['user_location'] . "'/><br/> 
-                            CV: <input type='text' name='cv' width='50' value='" . $row['user_cv'] . "'/><br/>
+                            CV: <input type='text' name='LinkedIn Profile' width='50' value='" . $row['user_cv'] . "'/><br/>
                             Sector: <input type='text' name='sector' width='50' value='" . $row['user_sector'] . "'/><br/>
                             Info: <input type='text' name='info' width='50' value='" . $row['user_contact_info'] . "'/><br/>
                             <input type='submit' value='Submit'/>
