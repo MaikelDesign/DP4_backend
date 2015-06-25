@@ -11,7 +11,7 @@ html{
   background-size: cover;
 }
 
-body { font-family: sans-serif; }
+body { font-family: 'Open Sans', sans-serif; }
 
 a {
     text-decoration: none; 
@@ -113,12 +113,16 @@ h4{
 }
 
 .draai{
-  background-color: #41697c;
   background-image: none;
 }
 
-h3{
-  font-size: 1em;
+.menu4 a:nth-child(2){
+  position: absolute;
+  z-index: 2;
+  top: 82%;
+  margin-left: -10%;
+  color: white;
+  font-size: 1.5em;
 }
 
 /*
@@ -185,6 +189,9 @@ ul {
   .knop{
   position: absolute;
   margin-left: -27vw;
+}
+.logo{
+  width: 25vw;
 }
 
     
@@ -409,21 +416,43 @@ input{
   padding: 10px;
 }
 
-h3{
+.smalleTitel{
   color: white;
-  margin-top: 10px;
-  font-size: 50%;
-}
-img{
-  display: none;
+  padding-top: 10px;
+  font-size: 4vw;
+  line-height: 5.5vw;
+  font-weight: 300;
+  margin-left: 5%;
+  margin-right: 5%;
+
 }
 
-h4{
+.bredeTitel{
   color: white;
-  margin-top: 10px;
-  font-size: 2vw;
+  padding-top: 10px;
+  font-size: 5vw;
+  line-height: 5.5vw;
+  font-weight: 300;
+  margin-left: 5%;
+  margin-right: 5%;
+
 }
 
+    .smalleOnderschrift{
+  color: white;
+  font-size: 1.5vw;
+  line-height: 100%;
+  font-weight: 300;
+}
+
+.readMore{
+  font-size: 1.5vw;
+  color:white;
+  font-weight: 600;
+}
+
+    
+    
 }
 
 
@@ -499,8 +528,9 @@ h4{
   position: absolute;
   margin-left: -18.5vw;
 }
-
-
+.logo{
+  width: 17vw;
+}
     
   .grid-item{
       width: 19vw;
@@ -713,7 +743,6 @@ input{
     margin: 0px 0px 5px 0px;
     border: 1px solid #41697c;
     background: #41697c;
-    font-family: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial;
     color: white;
     font-size: 14px;
     -webkit-font-smoothing: antialiased;
@@ -736,25 +765,43 @@ input{
   background-image: none;
   text-align: left;
   padding: 10px;
+  opacity: 0.97;    
 }
 
-h3{
+.smalleTitel{
   color: white;
-  margin-top: 10px;
-  font-size: 1.3vw;
-  line-height: 110%;
-}
-
-img{
-  display: block;
-}
-
-h4{
-  color: white;
-  margin-top: 10px;
+  padding-top: 10px;
   font-size: 2vw;
+  line-height: 3vw;
+  font-weight: 300;
+  margin-left: 5%;
+  margin-right: 5%;
 
 }
+
+.bredeTitel{
+  color: white;
+  padding-top: 10px;
+  font-size: 2.5vw;
+  line-height: 3vw;
+  font-weight: 300;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.smalleOnderschrift{
+  color: white;
+  font-size: 1.1vw;
+  line-height: 1.3vw;
+  font-weight: 300;
+}
+    
+    .readMore{
+  font-size: 1.1vw;
+  color:white;
+  font-weight: 600;
+}
+
 
 }
 

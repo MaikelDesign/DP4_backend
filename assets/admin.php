@@ -22,6 +22,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- scale for different screen sizes -->
         <title>Build your own city </title>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,300,400' rel='stylesheet' type='text/css'>
         <link href="../css/stylesheet.css" rel="stylesheet">
         <link href="../css/queries.css" rel="stylesheet">
     <!--		<link rel="icon" type="image/png" href="images/icon.png"/> icon in url bar -->
