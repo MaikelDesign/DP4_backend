@@ -52,6 +52,7 @@ li {
 /* ---- grid ---- */
 .container{
   width: 100%;
+  overflow: scroll;
 }
 
 .grid {
@@ -97,7 +98,7 @@ li {
 /*
 /* Larger than mobile */
 @media screen and (min-width: 100px) {
-  ul {
+ul {
   text-align: center;
   padding: 0;
 }
@@ -155,11 +156,147 @@ li {
 
 .grid-item--height2 { }
 .grid-item--height3 { }
-}
- 
+
+
  .verwijder{
   display: none;
  }
+
+
+.card {
+  position: relative;
+  float: left;
+  margin: 0.5vw 0.5vw 0.5vw 0.5vw;
+  width: 29vw;
+  height: 29vw; 
+  text-align: center;
+}
+
+/* card fronts and backs */
+.card__front,
+.card__back {
+  position: absolute;
+
+}
+
+.card__front,
+.card__back {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.3s;
+          transition: transform 0.3s;
+}
+
+.card__front {
+}
+
+.card__back {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+
+/* click effect */
+.card.effect__click.flipped .card__front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card.effect__click.flipped .card__back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+
+
+.card1 {
+  position: relative;
+  float: left;
+  width: 59vw; 
+  text-align: center;
+  margin: 0.5vw 0.5vw 0.5vw 0.5vw;
+}
+
+/* card fronts and backs */
+.card1__front,
+.card1__back {
+  position: absolute;
+
+}
+
+.card1__front,
+.card1__back {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.3s;
+          transition: transform 0.3s;
+}
+
+.card1__front {
+}
+
+.card1__back {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+
+/* click effect */
+.card1.effect__click.flipped .card1__front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card1.effect__click.flipped .card1__back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+
+.card2 {
+  position: relative;
+  float: left;
+  width: 59vw; 
+  height:59vw;
+  text-align: center;
+  margin: 0.5vw 0.5vw 0.5vw 0.5vw;
+}
+
+/* card fronts and backs */
+.card2__front,
+.card2__back {
+  position: absolute;
+
+}
+
+.card2__front,
+.card2__back {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.3s;
+          transition: transform 0.3s;
+}
+
+.card2__front {
+}
+
+.card2__back {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+
+/* click effect */
+.card2.effect__click.flipped .card2__front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card2.effect__click.flipped .card2__back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+
+}
+
 
 /* Larger than Desktop HD */
 @media screen and (min-width: 780px) {
@@ -226,6 +363,145 @@ li {
 .grid-item--width3 { width: 39vw; height:39vw; background-color: #a6bdc8;background-image: url("../img/raam-3.png"); background-size: 100% auto; background-repeat: no-repeat; float: right;}
 
 }
+
+/* --- CARDS --- */
+
+
+.card {
+  position: relative;
+  float: left;
+  margin: 0.5vw 0.5vw 0.5vw 0.5vw;
+  width: 19vw;
+  height: 19vw; 
+  text-align: center;
+}
+
+/* card fronts and backs */
+.card__front,
+.card__back {
+  position: absolute;
+
+}
+
+.card__front,
+.card__back {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.3s;
+          transition: transform 0.3s;
+}
+
+.card__front {
+}
+
+.card__back {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+
+/* click effect */
+.card.effect__click.flipped .card__front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card.effect__click.flipped .card__back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+
+
+.card1 {
+  position: relative;
+  float: left;
+  width: 39vw; 
+  text-align: center;
+  margin: 0.5vw 0.5vw 0.5vw 0.5vw;
+}
+
+/* card fronts and backs */
+.card1__front,
+.card1__back {
+  position: absolute;
+
+}
+
+.card1__front,
+.card1__back {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.3s;
+          transition: transform 0.3s;
+}
+
+.card1__front {
+}
+
+.card1__back {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+
+/* click effect */
+.card1.effect__click.flipped .card1__front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card1.effect__click.flipped .card1__back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+
+.card2 {
+  position: relative;
+  float: left;
+  width: 39vw; 
+  height:39vw;
+  text-align: center;
+  margin: 0.5vw 0.5vw 0.5vw 0.5vw;
+}
+
+/* card fronts and backs */
+.card2__front,
+.card2__back {
+  position: absolute;
+
+}
+
+.card2__front,
+.card2__back {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.3s;
+          transition: transform 0.3s;
+}
+
+.card2__front {
+}
+
+.card2__back {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+
+/* click effect */
+.card2.effect__click.flipped .card2__front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card2.effect__click.flipped .card2__back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+
+
+}
+
 
 
 
