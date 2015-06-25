@@ -53,6 +53,18 @@ p{
   margin-top: 10px;
 }
 
+h2{
+  color: white;
+  margin-top: 10px;
+  font-size: 4vw;
+}
+
+h4{
+  color: white;
+  margin-top: 10px;
+  font-size: 2vw;
+
+}
 
 /* ---- grid ---- */
 .container{
@@ -108,10 +120,13 @@ p{
 }
 
 .draai{
-  background-color: red;
+  background-color: #41697c;
   background-image: none;
 }
 
+h3{
+  font-size: 1em;
+}
 
 /*
 /* Larger than mobile */
@@ -364,6 +379,28 @@ input{
   width: 100%;
 }
 
+.draai{
+  background-color: #707070;
+  background-image: none;
+  text-align: left;
+  padding: 10px;
+}
+
+h3{
+  color: white;
+  margin-top: 10px;
+  font-size: 50%;
+}
+img{
+  display: none;
+}
+
+h4{
+  color: white;
+  margin-top: 10px;
+  font-size: 2vw;
+
+}
 
 
 }
@@ -702,6 +739,30 @@ input{
       color:white;
     }
 
+.draai{
+  background-color: #707070;
+  background-image: none;
+  text-align: left;
+  padding: 10px;
+}
+
+h3{
+  color: white;
+  margin-top: 10px;
+  font-size: 1.3vw;
+  line-height: 110%;
+}
+
+img{
+  display: block;
+}
+
+h4{
+  color: white;
+  margin-top: 10px;
+  font-size: 2vw;
+
+}
 
 
 

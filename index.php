@@ -93,28 +93,32 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
           <div class="grid">
             <div class="card effect__click">
               <div class="card__front">
-                <div class="grid-item"></div>
+                <div class="grid-item"><h2>PHILIPS</h2></div>
               </div>
               <div class="card__back">
-                <div class="grid-item"></div>
+                    <div class="grid-item draai"><img src="img/philips3.png" width="100%"><h3>With main focus on Health and Well-being, we serve professional and consumer markets through three overlapping sectors:</h3><h3>
+                    Healthcare<br/>
+                    Lighting and Consumer Lifestyle<a href="pages/company.html">Read more...</a></h3><br/>
+                  </div>
               </div>
             </div> <!-- Blokje vierkant -->
 
             <div class="card1 effect__click">
               <div class="card1__front">
-                <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
+                <div class="grid-item grid-item--width2 grid-item--height2 verwijder"><h4>CYCLING LANE FOR SMART GUYS OPEN</h4></div>
               </div>
               <div class="card1__back">
-                <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
+                <div class="grid-item grid-item--width2 grid-item--height2 verwijder draai"><h3>EINDHOVEN - A new bicycle lanes around Eindhoven opened Thursday. The Slow Lane, as the cycle is called a cycle connection must be for knowledge among the various high-tech industrial parks in the region. <a href="http://www.omroepbrabant.nl/?news/231693982/Fietspad+voor+slimmeriken+geopend+Slowlane+verbindt+hightechbedrijven+rond+Eindhoven.aspx">Read more...</a></h3></div>
               </div>
             </div> <!-- Blokje lang -->
 
             <div class="card effect__click">
               <div class="card__front">
-                <div class="grid-item verwijder"></div>
+                <div class="grid-item"><h4>ANALOG</h4></div>
               </div>
               <div class="card__back">
-                <div class="grid-item verwijder"></div>
+                <div class="grid-item verwijder draai"><img src="img/analog1.png" width="100%"><h3>A better design experience. A more dynamic automotive experience. ADI Automotive Audio Bus (A2B) technology delivers both—enabling high fidelity audio, <a href="http://www.analog.com/en/index.html">Read more...</a></h3><br/>
+              </div>
               </div>
             </div> <!-- Blokje vierkant -->
 
