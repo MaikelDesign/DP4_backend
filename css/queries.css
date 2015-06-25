@@ -43,7 +43,7 @@ li {
 .circle {
 	border-radius: 50%;
 	width: 116px;
-	height: 116px;
+	height : 116px;
 	background-color: #f5f5f5; 
 	/* width and height can be anything, as long as they're equal */
 }
@@ -147,7 +147,7 @@ ul {
     width: 100vw;
     height: 30vw;
 }
-  .menu1{
+  .menu3{
     display: none;
   }
 
@@ -164,9 +164,8 @@ ul {
     border-top-right-radius: 20vw;
     margin: 0.5vw 0.5vw 0.5vw 0.5vw;
   }
-  .menu3, .menu2{
+  .menu1, .menu2{
     display: inline-block;
-
     width: 28vw;
     height: 28vw;
     width: 0;
@@ -177,6 +176,27 @@ ul {
     margin: 0.5vw 1.0vw 0.5vw 1.0vw;
   }
 
+        .tekstHeader{
+  color: white;
+  position: absolute;
+  font-size: 4vw;
+  }
+
+  .tekstHeader1{
+  color: white;
+  font-size: 4vw;
+  margin-left: 20.5vw;
+  padding-top: 35%;
+  }
+
+
+
+  .knop{
+  position: absolute;
+  margin-left: -27vw;
+}
+
+    
   .grid-item {
   width: 29vw;
   height: 29vw; 
@@ -429,7 +449,7 @@ h4{
     height: 20vw;
   }
 
-  .menu1{
+  .menu3{
     display: inline-block;
   }
 
@@ -449,6 +469,7 @@ h4{
     border-top-left-radius: 10vw;
     border-top-right-radius: 10vw;
     margin: 0.5vw 0.25vw 0.5vw 0.25vw;
+    position: relative;
   }
   .menu1, .menu2, .menu3{
     width: 19vw;
@@ -459,8 +480,27 @@ h4{
     border-width: 0 0 19vw 19vw;
     border-color: transparent transparent #85d5fc transparent;
     margin: 0.5vw 0.25vw 0.5vw 0.25vw;
+    position: relative;
   }
 
+      .tekstHeader{
+  color: white;
+  font-size:2.5vw;
+  }
+  .tekstHeader1{
+  color: white;
+  font-size:2.5vw;
+  margin-left: 14.5vw;
+  padding-top: 45%;
+  }
+
+  .knop{
+  position: absolute;
+  margin-left: -18.5vw;
+}
+
+
+    
   .grid-item{
       width: 19vw;
   height: 19vw;  
