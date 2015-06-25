@@ -30,24 +30,37 @@ function checkUser() {
 		while ($row = mysqli_fetch_array($result)) {
 
 			//Make up div's.
-			echo "	<div class='userItem'>
-					<div><b>ID</b></div>
-					<div><b>Gebruikersnaam</b></div>
-					<div><b>Voornaam</b></div>
-					<div><b>Achternaam</b></div>
-					<div><b>E-mail Adres</b></div>
-					<div><b>Locatie</b></div>
-					<div><b>Bedrijf Foto</b></div>
-					<div><b>Bedrijf CV</b></div>
-					<div><b>Bedrijf raam Foto</b></div>
-					<div><b>Sector</b></div>
-					</div>
-				";
+			// echo "	<div class='userItem'>
+			// 		<div><b>ID</b></div>
+			// 		<div><b>Gebruikersnaam</b></div>
+			// 		<div><b>Voornaam</b></div>
+			// 		<div><b>Achternaam</b></div>
+			// 		<div><b>E-mail Adres</b></div>
+			// 		<div><b>Locatie</b></div>
+			// 		<div><b>Bedrijf Foto</b></div>
+			// 		<div><b>Bedrijf CV</b></div>
+			// 		<div><b>Bedrijf raam Foto</b></div>
+			// 		<div><b>Sector</b></div>
+			// 		</div>
+			// 	";
             
             // check if edit button is clicked
             if($edit == ''){
              //company data
-			 echo "<div class='userItem'>" . $edit . "<div>" . $row['company_id'] . "</div><div>" . $row['company_name'] . "</div><div>" . $row['company_contact_firstname'] . "</div><div>" . $row['company_contact_lastname'] . "</div><div>" . $row['company_mail'] . "</div><div>" . $row['company_location'] . "</div><div>" . $row['company_picture'] . "</div><div>" . $row['company_cv'] . "</div><div>" . $row['company_window_pic'] . "</div><div>" . $row['company_sector'] . "</div></div>";
+			// echo "<div class='userItem'>" . $edit . "<div>" . $row['company_id'] . "</div><div>" . $row['company_name'] . "</div><div>" . $row['company_contact_firstname'] . "</div><div>" . $row['company_contact_lastname'] . "</div><div>" . $row['company_mail'] . "</div><div>" . $row['company_location'] . "</div><div>" . $row['company_picture'] . "</div><div>" . $row['company_cv'] . "</div><div>" . $row['company_window_pic'] . "</div><div>" . $row['company_sector'] . "</div></div>";
+
+                echo "
+                        <div class='een'>
+                            <img src='../img/gebouw1.jpg' width='100%''>
+                            <p>" . $row['company_name'] . "</p>
+                            <p>" . $row['company_location'] . "</p>
+                            <p><a href='http://" . $row['company_cv'] . "' target='_blank'>Website</a></p>
+                        </div>
+
+                        <div class='twee'>
+                            <p>" . $row['company_sector'] . "</p>
+                        </div>
+                    ";
             }
             else if($edit != ''){
                 // Set values in edit form
@@ -105,7 +118,6 @@ function checkUser() {
                echo "
                         <div class='een'>
                             <img src='../img/profiel2.jpg' width='100%''>
-                            <a href='admin.php?edit=true' >Edit Profile</a>
                             <p>" . $row['user_firstname'] .  " " . $row['user_lastname'] . "</p>
                             <p>" . $row['user_location'] . "</p>
                             <p><a href='http://" . $row['user_cv'] . "' target='_blank'>LinkedIn</a></p>
