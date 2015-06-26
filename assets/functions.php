@@ -64,25 +64,44 @@ function checkUser() {
             }
             else if($edit != ''){
                 // Set values in edit form
-                echo "<div class='userItem'>
-                        <div>" . $row['company_id'] . "</div>
-                        <img src='../img/profiel2.jpg' width='100%'>
-//                        <img scr='../img/" . $row['company_picture'] . "' alt='company profile pic' /><br/>
-                        Profile image<br/>
-                        <img scr='../img/" . $row['company_window_pic'] . "' alt='company window pic' /><br/>
-                        Window image<br/>
-                        <form action='profile_edit.php' method='post' name='edit-form'><br/>
-                            <input type='number' name='user-id' value='" . $userId . "' hidden/>
-                            Company name: <input type='text' name='cUsername' width='50' value='" . $row['company_name'] . "'/><br/>
-                            Contact first name: <input type='text' name='cFirstName' width='50' value='" . $row['company_contact_firstname'] . "'/><br/>
-                            Contact last name: <input type='text' name='cLastName' width='50' value='" . $row['company_contact_lastname'] . "'/><br/>
-                            e-mail: <input type='text' name='email' width='50' value='" . $row['company_mail'] . "'/><br/>
-                            Location: <input type='text' name='location' width='50' value='" . $row['company_location'] . "'/><br/> 
-                            CV: <input type='text' name='cv' width='50' value='" . $row['company_cv'] . "'/><br/>
-                            Sector: <input type='text' name='sector' width='50' value='" . $row['company_sector'] . "'/><br/>
-                            <input type='submit' value='Submit'/>
-                        </form>
-                    </div>";
+                // echo "<div class='userItem'>
+                //         <div>" . $row['company_id'] . "</div>
+                //         <img src='../img/profiel2.jpg' width='100%'>
+                //         <img scr='../img/" . $row['company_picture'] . "' alt='company profile pic' /><br/>
+                //         Profile image<br/>
+                //         <img scr='../img/" . $row['company_window_pic'] . "' alt='company window pic' /><br/>
+                //         Window image<br/>
+                //         <form action='profile_edit.php' method='post' name='edit-form'><br/>
+                //             <input type='number' name='user-id' value='" . $userId . "' hidden/>
+                //             Company name: <input type='text' name='cUsername' width='50' value='" . $row['company_name'] . "'/><br/>
+                //             Contact first name: <input type='text' name='cFirstName' width='50' value='" . $row['company_contact_firstname'] . "'/><br/>
+                //             Contact last name: <input type='text' name='cLastName' width='50' value='" . $row['company_contact_lastname'] . "'/><br/>
+                //             e-mail: <input type='text' name='email' width='50' value='" . $row['company_mail'] . "'/><br/>
+                //             Location: <input type='text' name='location' width='50' value='" . $row['company_location'] . "'/><br/> 
+                //             CV: <input type='text' name='cv' width='50' value='" . $row['company_cv'] . "'/><br/>
+                //             Sector: <input type='text' name='sector' width='50' value='" . $row['company_sector'] . "'/><br/>
+                //             <input type='submit' value='Submit'/>
+                //         </form>
+                //     </div>";
+
+                echo "
+                        <div class='een'>
+                            <img src='../img/gebouw1.jpg' width='100%''>
+                            <a href='admin.php' >Exit edit</a>
+                            <form action='profile_edit.php' method='post' name='edit-form'><br/>
+                                <input type='number' name='user-id' value='" . $userId . "' hidden/><br/>
+                                <input type='text' name='firstName' value='" . $row['company_name'] .  "' ><br/>
+                                <input type='text' name='location' value='"  . $row['company_location'] . "'><br/>
+                                <input type='text' name='cv' value='http://" . $row['company_cv'] . "'>'<br/>
+                        </div>
+
+                        <div class='twee'>
+                                <input type='text' name='info' value='" . $row['company_contact_firstname'] . "'/><br/>
+                                <input type='submit' value='submit'/>
+                            </form>
+                            
+                        </div>
+                    ";
             }
 
 		
@@ -125,7 +144,7 @@ function checkUser() {
                         </div>
 
                         <div class='twee'>
-                            <p>" . $row['user_contact_info'] . "</p>
+                            <p>" . $row['company_contact_firstname'] . "</p>
                         </div>
                     ";
             }
