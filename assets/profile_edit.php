@@ -58,6 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                && isset($_POST['location']) 
                && isset($_POST['cv']) 
                && isset($_POST['sector']) 
+               && isset($_POST['info']) 
                && $_POST['user-id'] != '' 
                && $_POST['cUsername'] != '' 
                && $_POST['cFirstName'] != ''
@@ -66,8 +67,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                && $_POST['location'] != ''
                && $_POST['cv'] != ''
                && $_POST['sector'] != ''
+               && $_POST['info'] != ''
             ){
-                                       echo 'test';
 
                 // set variables
                 $username  = $_POST['cUsername'];
@@ -78,10 +79,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                 $cv = $_POST['cv'];
                 $sector = $_POST['sector'];
                 $id = $_POST['user-id'];
+                $info = $_POST['info'];
                 $tbl_name = 'company';
 
                 
-                $sql = "UPDATE $tbl_name SET company_name='$username', company_mail='$email', company_location='$location', company_contact_firstname='$firstName', company_contact_lastname='$lastName', company_cv='$cv', company_sector='$sector' WHERE company_id='$id'";
+                $sql = "UPDATE $tbl_name SET company_name='$username', company_mail='$email', company_location='$location', company_contact_firstname='$firstName', company_contact_lastname='$lastName', company_cv='$cv', company_sector='$sector', company_info='$info' WHERE company_id='$id'";
                 $result=mysqli_query($con, $sql);
 
                 if($result){
