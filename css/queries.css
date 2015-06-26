@@ -209,6 +209,12 @@ ul {
 .logo{
   width: 23vw;
 }
+    
+.maps {
+  width: 40vw;
+  margin-top: 5%;
+}
+    
 
     
   .grid-item {
@@ -607,6 +613,8 @@ input{
   padding-right: 10%;    
 }
 
+    
+    
 #login_container{
     margin-top: 20vw;
 }    
@@ -674,15 +682,30 @@ input{
     position: relative;
   }
 
-.tekstHeader{
+  .tekstHeader{
   color: white;
   font-size:2.5vw;
   }
+
   .tekstHeader1{
   color: white;
   font-size:2.5vw;
   margin-left: 14.5vw;
   padding-top: 45%;
+  }
+
+  .tekstHeader2{
+  color: white;
+  font-size:2.5vw;
+  margin-left: 7.3vw;
+  padding-top: 55%;
+  }
+
+  .tekstHeader3{
+  color: white;
+  font-size:2.5vw;
+  margin-left: 10.4vw;
+  padding-top: 56%;
   }
 
   .knop{
@@ -1036,7 +1059,6 @@ input{
     
 .readMore{
   font-size: 1.1vw;
-  font-weight: 600;
   color:#85d5fc;
   font-weight: 600;
   position: absolute;
@@ -1046,6 +1068,20 @@ input{
   padding-right: 5%;
 }
 
+.readMore1{
+  font-size: 1.1vw;
+  color:#85d5fc;
+  font-weight: 600;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-bottom: 10%;
+  padding-right: 10%;
+}
+
+.maps {
+  width: 20vw;
+}
 
 }
 

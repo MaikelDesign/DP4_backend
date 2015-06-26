@@ -104,7 +104,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
                 <div class="grid-item"><h1 class="smalleTitel">PHILIPS</h1></div>
               </div>
               <div class="card__back">
-                                 <div class="grid-item draai"><img src="img/Philips-Logo.png" class="logo"><p class="smalleOnderschrift">With main focus on Health and Well-being, we serve professional and consumer markets through three overlapping sectors: Healthcare Lighting and Consumer Lifestyle.</p><p class="kleinOnderschrift">Here you can read some specific information about this company.</p><a href="pages/company.html" class="readMore1">[READ MORE ...]</a>
+                <div class="grid-item draai"><img src="img/Philips-Logo.png" class="logo"><p class="smalleOnderschrift">With main focus on Health and Well-being, we serve professional and consumer markets through three overlapping sectors: Healthcare Lighting and Consumer Lifestyle.</p><p class="kleinOnderschrift">Here you can read some specific information about this company.</p><a href="pages/company.html" class="readMore1">[READ MORE ...]</a>
                   </div>
               </div>
             </div> <!-- Blokje vierkant -->
@@ -367,8 +367,9 @@ else{
                 <div class="grid-item grid-item--width3 grid-item--height2"><h1 class="bredeTitel">VAN DER LANDEN</h1></div>
               </div>
               <div class="card2__back">
-                <div class="grid-item grid-item--width3 grid-item--height2"></div>
-              </div>
+        <div class="grid-item grid-item--width3 grid-item--height2 draai"><h1 class="bredeTitel1">VAN DER LANDEN</h1><p class="smalleOnderschrift">As a tier-1 contract manufacturing partner, we at VDL ETG (Enabling Technologies Group), believe that with support of our work the world can create breakthroughs in fighting diseases, develop new energy solutions, study space, understand details of cells and molecules, increase power of communication and even research where it all began with a Big-Bang.</p><p class="kleinOnderschrift">Here you can read some specific information about this company.</p><a href="pages/company.html" class="readMore">[READ MORE ...]</a>
+                  <img src="img/maps.png" class="maps">
+                </div>              </div>
             </div> <!-- Blokje groot -->
 
             <div class="card2 effect__click verwijder">
