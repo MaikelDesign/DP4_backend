@@ -73,7 +73,8 @@ h4{
 /*  counter-reset: grid-item;*/
   margin-left: auto;
   margin-right: auto;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .grid::-webkit-scrollbar { width: 0 !important }
@@ -186,6 +187,21 @@ ul {
   padding-top: 35%;
   }
 
+   .tekstHeader2{
+  color: white;
+  font-size:4vw;
+  margin-left: 9.1vw;
+  padding-top: 44%;
+  }
+
+  .tekstHeader3{
+  color: white;
+  font-size:4vw;
+  margin-left: 14.2vw;
+  padding-top: 45%;
+  }
+    
+    
   .knop{
   position: absolute;
   margin-left: -27vw;
@@ -386,13 +402,6 @@ ul {
   padding: 20px;
 }
 
-.vier{
-    float: left;
-  background: #85d5fc;
-  width: 100%;
-  padding: 20px;
-}
-    
     
 .content{
   overflow: scroll;
@@ -557,6 +566,11 @@ input{
   font-weight: 600;
 
 }
+    
+.readMore1{
+  font-size: 2.5vw;
+  color:#85d5fc;
+}    
 
 .login{
         margin-left: auto;
@@ -586,7 +600,11 @@ input{
   padding: 20px;
   display:none;
   margin-top: 20vw;
-    
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-bottom: 10%;
+  padding-right: 10%;    
 }
 
 #login_container{
@@ -612,6 +630,9 @@ input{
   .grid {
     width: 80vw;
     height: 72vh;
+    margin-left: auto;
+    margin-right: auto;  
+
   }
 
   header {
@@ -638,7 +659,7 @@ input{
     -moz-border-radius-topright: 10vw;
     border-top-left-radius: 10vw;
     border-top-right-radius: 10vw;
-    margin: 0.5vw 0.25vw 0.5vw 0.25vw;
+    margin: 0.5vw 0vw 0.5vw 0.4vw;
     position: relative;
   }
   .menu1, .menu2, .menu3{
@@ -649,7 +670,7 @@ input{
     border-style: solid;
     border-width: 0 0 14vw 19vw;
     border-color: transparent transparent #85d5fc transparent;
-    margin: 0.5vw 0.25vw 0.5vw 0.25vw;
+    margin: 0.5vw 0vw 0.5vw 0.7vw;
     position: relative;
   }
 

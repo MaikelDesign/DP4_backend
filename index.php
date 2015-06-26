@@ -21,8 +21,8 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
     <header>
         <nav>
             <ul>
-                <li class="menu1"><a href="pages/profiel.html" class="knop"><h1 class="tekstHeader">NEWS</h1></a></li>
-                <li class="menu2"><a href="pages.company.html" class="knop"><h1 class="tekstHeader">DISTRICT</h1></a></li>
+                <li class="menu1"><a href="pages/profiel.html" class="knop"><h1 class="tekstHeader3">NEWS</h1></a></li>
+                <li class="menu2"><a href="pages.company.html" class="knop"><h1 class="tekstHeader2">DISTRICT</h1></a></li>
                 <li class="menu3"><a href="#" class="knop"><h1 class="tekstHeader"></h1></a></li>
                 <li class="menu4"><a href="#" class="knop"><h1 class="tekstHeader1">LOGIN</h1></a></li>
             </ul>
@@ -104,9 +104,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
                 <div class="grid-item"><h1 class="smalleTitel">PHILIPS</h1></div>
               </div>
               <div class="card__back">
-                                   <div class="grid-item draai"><img src="img/philips3.png" class="logo"><p class="smalleOnderschrift">With main focus on Health and Well-being, we serve professional and consumer markets through three overlapping sectors:
-                Healthcare Lighting and Consumer Lifestyle.</p><a href="pages/company.html" class="readMore">Read more...</a>
-
+                                 <div class="grid-item draai"><img src="img/Philips-Logo.png" class="logo"><p class="smalleOnderschrift">With main focus on Health and Well-being, we serve professional and consumer markets through three overlapping sectors: Healthcare Lighting and Consumer Lifestyle.</p><p class="kleinOnderschrift">Here you can read some specific information about this company.</p><a href="pages/company.html" class="readMore1">[READ MORE ...]</a>
                   </div>
               </div>
             </div> <!-- Blokje vierkant -->
@@ -278,8 +276,8 @@ else{
         <header>
                 <nav>
                     <ul>
-                   <li class="menu1"><a href="pages/profiel.html" class="knop"><h1 class="tekstHeader">NEWS</h1></a></li>
-                <li class="menu2"><a href="pages.company.html" class="knop"><h1 class="tekstHeader">DISTRICT</h1></a></li>
+                <li class="menu1"><a href="pages/profiel.html" class="knop"><h1 class="tekstHeader3">NEWS</h1></a></li>
+                <li class="menu2"><a href="pages.company.html" class="knop"><h1 class="tekstHeader2">DISTRICT</h1></a></li>
                 <li class="menu3"><a href="#" class="knop"><h1 class="tekstHeader"></h1></a></li>
                 <li class="menu4"><a href="assets/admin.php" class="knop"><h1 class="tekstHeader1">HI <?php if(isset($_SESSION['username']) && $_SESSION['username'] != ''){ echo $_SESSION['username']; } ?></h1></a></li>
 
@@ -470,8 +468,8 @@ else{
             <header>
                 <nav>
                     <ul>
-                        <li class="menu1"><a href="pages/profiel.html" class="knop"><h1 class="tekstHeader">NEWS</h1></a></li>
-                        <li class="menu2"><a href="pages.company.html" class="knop"><h1 class="tekstHeader">DISTRICT</h1></a></li>
+                        <li class="menu1"><a href="pages/profiel.html" class="knop"><h1 class="tekstHeader3">NEWS</h1></a></li>
+                        <li class="menu2"><a href="pages.company.html" class="knop"><h1 class="tekstHeader2">DISTRICT</h1></a></li>
                         <li class="menu3"><a href="#" class="knop"><h1 class="tekstHeader"></h1></a></li>
                         <li class="menu4">
                             <a href="assets/admin.php" class="knop">
