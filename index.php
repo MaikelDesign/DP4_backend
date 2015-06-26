@@ -21,10 +21,10 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
     <header>
         <nav>
             <ul>
-                <li class="menu1"><a href="pages/profiel.html" class="knop"><h1 class="tekstHeader3">NEWS</h1></a></li>
+                <li class="menu1"><a href="pages/profiel.html" class="knop"><h1 class="tekstHeader3">FEED</h1></a></li>
                 <li class="menu2"><a href="pages.company.html" class="knop"><h1 class="tekstHeader2">DISTRICT</h1></a></li>
                 <li class="menu3"><a href="#" class="knop"><h1 class="tekstHeader"></h1></a></li>
-                <li class="menu4"><a href="#" class="knop"><h1 class="tekstHeader1">LOGIN</h1></a></li>
+                <li class="menu4"><a href="#" class="knop"><h1 class="tekstHeader4">LOGIN</h1></a></li>
             </ul>
         </nav>
     </header>  
@@ -276,11 +276,10 @@ else{
         <header>
                 <nav>
                     <ul>
-                <li class="menu1"><a href="pages/profiel.html" class="knop"><h1 class="tekstHeader3">NEWS</h1></a></li>
+                 <li class="menu1"><a href="pages/profiel.html" class="knop"><h1 class="tekstHeader3">FEED</h1></a></li>
                 <li class="menu2"><a href="pages.company.html" class="knop"><h1 class="tekstHeader2">DISTRICT</h1></a></li>
                 <li class="menu3"><a href="#" class="knop"><h1 class="tekstHeader"></h1></a></li>
-                <li class="menu4"><a href="assets/admin.php" class="knop"><h1 class="tekstHeader1">HI <?php if(isset($_SESSION['username']) && $_SESSION['username'] != ''){ echo $_SESSION['username']; } ?></h1></a></li>
-
+                <li class="menu4"><a href="assets/logout.php" class="knop"><h1 class="tekstHeader1"><img src="img/profiel2.jpg" class="profielfoto">LOGOUT</h1></a></li>
                     </ul>
                 </nav>
             </header> 
@@ -469,7 +468,7 @@ else{
             <header>
                 <nav>
                     <ul>
-                        <li class="menu1"><a href="pages/profiel.html" class="knop"><h1 class="tekstHeader3">NEWS</h1></a></li>
+                        <li class="menu1"><a href="pages/profiel.html" class="knop"><h1 class="tekstHeader3">FEED</h1></a></li>
                         <li class="menu2"><a href="pages.company.html" class="knop"><h1 class="tekstHeader2">DISTRICT</h1></a></li>
                         <li class="menu3"><a href="#" class="knop"><h1 class="tekstHeader"></h1></a></li>
                         <li class="menu4">
