@@ -21,7 +21,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
     <header>
         <nav>
             <ul>
-                <li class="menu1"><a href="pages/profiel.html" class="knop"><h1 class="tekstHeader3">FEED</h1></a></li>
+                <li class="menu1"><a href="index.php" class="knop"><h1 class="tekstHeader3">FEED</h1></a></li>
                 <li class="menu2"><a href="pages.company.html" class="knop"><h1 class="tekstHeader2">DISTRICT</h1></a></li>
                 <li class="menu3"><a href="#" class="knop"><h1 class="tekstHeader"></h1></a></li>
                 <li class="menu4"><a href="#" class="knop"><h1 class="tekstHeader4">LOGIN</h1></a></li>
@@ -279,10 +279,10 @@ else{
         <header>
                 <nav>
                     <ul>
-                 <li class="menu1"><a href="pages/profiel.html" class="knop"><h1 class="tekstHeader3">FEED</h1></a></li>
+                 <li class="menu1"><a href="index.php" class="knop"><h1 class="tekstHeader3">FEED</h1></a></li>
                 <li class="menu2"><a href="pages.company.html" class="knop"><h1 class="tekstHeader2">DISTRICT</h1></a></li>
                 <li class="menu3"><a href="#" class="knop"><h1 class="tekstHeader"></h1></a></li>
-                <li class="menu4"><h1 class="tekstHeader1"><a href="assets/admin.php" class="knop"><img src="img/profiel2.jpg" class="profielfoto"></a><a href="assets/logout.php">LOGOUT</a></h1></a></li>
+                <li class="menu4"><h1 class="tekstHeader1"><a href="assets/admin.php" class="logimg"><img src="img/profiel2.jpg" class="profielfoto" ></a><a href="assets/logout.php" class='logknop tekstHeader1'>LOGOUT</a></h1></a></li>
                     </ul>
                 </nav>
             </header> 
@@ -471,7 +471,7 @@ else{
             <header>
                 <nav>
                     <ul>
-                        <li class="menu1"><a href="pages/profiel.html" class="knop"><h1 class="tekstHeader3">FEED</h1></a></li>
+                        <li class="menu1"><a href="index.php" class="knop"><h1 class="tekstHeader3">FEED</h1></a></li>
                         <li class="menu2"><a href="pages.company.html" class="knop"><h1 class="tekstHeader2">DISTRICT</h1></a></li>
                         <li class="menu3"><a href="#" class="knop"><h1 class="tekstHeader"></h1></a></li>
                         <li class="menu4">

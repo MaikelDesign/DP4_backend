@@ -66,7 +66,6 @@ function checkUser() {
             }
             else if($edit != ''){
                 // Set values in edit form
-<<<<<<< HEAD
                 // echo "<div class='userItem'>
                 //         <div>" . $row['company_id'] . "</div>
                 //         <img src='../img/profiel2.jpg' width='100%'>
@@ -101,8 +100,7 @@ function checkUser() {
                         <div class='twee'>
                                 <input type='text' name='info' value='" . $row['company_contact_firstname'] . "'/><br/>
                                 <input type='submit' value='submit'/>
-=======
-//                echo "<div class='userItem'>
+                echo "<div class='userItem'>
 ////                        <img scr='../img/" . $row['company_picture'] . "' alt='company profile pic' /><br/>
 //                        Profile image<br/>
 //                        <img scr='../img/" . $row['company_window_pic'] . "' alt='company window pic' /><br/>
@@ -138,7 +136,6 @@ function checkUser() {
                                 Sector: <input type='text' name='sector' width='50' value='" . $row['company_sector'] . "'/><br/>
                                 Company info: <input type='text' name='info' width='50' value='" . $row['company_info'] . "'/><br/>
                                 <input type='submit' value='Submit'/>
->>>>>>> 1dce1980875b3c9c1ea0119aa5d0325a56b835d1
                             </form>
                             
                         </div>
