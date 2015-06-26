@@ -11,7 +11,7 @@ html{
   background-size: cover;
 }
 
-body { font-family: 'Open Sans', sans-serif; }
+body { font-family: 'Open Sans', sans-serif; color: white;}
 
 a {
     text-decoration: none; 
@@ -84,7 +84,7 @@ h4{
   background: #85d5fc;
   margin: 1%;
   width: 98%;
-  height: 500px;
+  height: auto;
 }
 /* ---- grid-item ---- */
 
@@ -125,6 +125,9 @@ ul {
   text-align: center;
   padding: 0;
 }
+span{
+  font-weight: 600;
+}    
   .container{
   margin-top: 20vw;
 }
@@ -176,7 +179,7 @@ ul {
   color: white;
 font-size: 4vw;
 margin-left: 18.5vw;
-padding-top: 33%;
+/*padding-top: 33%;*/
   }
 
    .tekstHeader2{
@@ -201,6 +204,7 @@ padding-top: 33%;
   margin-left: 20.5vw;
   padding-top: 35%;
 }
+
     
   .profielfoto{
     width: 10vw;
@@ -388,23 +392,20 @@ padding-top: 33%;
 
 .een{
   float: left;
-  background: #85d5fc;
-  width: 100%;
-  padding: 20px;
+ 
 }
+
+.een > img{
+  width: 100%;
+}
+
 
 .twee{
   float: left;
-  background: #85d5fc;
-  width: 100%;
-  padding: 20px;
 }
 
 .drie{
   float: left;
-  background: #85d5fc;
-  width: 100%;
-  padding: 20px;
 }
 
     
@@ -420,16 +421,6 @@ padding-top: 33%;
   padding: 10px;
 }
 
-.input{
-  width: 100%;
-  height: 40px;
-  background-color: #41697c;
-  padding: 10px;
-}
-
-input{
-  width: 100%;
-}
 
 .draai{
   background-color: #707070;
@@ -540,7 +531,7 @@ input{
   padding: 10px;
 }
 
-input{
+#login_container input{
     float: left;
     width: 100%;
     height: 20px;
@@ -551,7 +542,7 @@ input{
     font-size: 14px;
     -webkit-font-smoothing: antialiased;
     border-radius: 2px;
-    /* geen selectie */
+     geen selectie 
     outline: none;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -582,6 +573,18 @@ input{
   color:#41697c;
   font-weight: 600;
 
+}
+    
+    .logknop{
+  position: absolute;
+  margin-left: -17vw;
+  margin-top: 12vw;
+}    
+
+.logimg{
+  position: absolute;
+  margin-top: 1vw;
+  margin-left: -14.5vw;    
 }
 
 .login{
@@ -697,7 +700,7 @@ input{
   color: white;
 font-size: 2.5vw;
 margin-left: 13.4vw;
-padding-top: 42%;
+/*padding-top: 26%;*/
 }
 
   .tekstHeader2{
@@ -721,6 +724,18 @@ padding-top: 42%;
   padding-top: 45%;
   }
     
+ /* --- profiel pagina --- */ 
+ .profielList{
+  text-align: left;
+  width: 17.5vw;
+  padding: 1.5vw 0.5vw 1.5vw 0.5vw ;
+  background-color: #41697c;
+
+ }
+ .profielList > li {
+  display: block;
+ }    
+    
   .profielfoto {
 width: 7.5vw;
 -webkit-border-radius: 60px;
@@ -734,13 +749,32 @@ margin-left: 6.5%;
 .logknop{
   position: absolute;
   margin-left: -12vw;
+  margin-top: 10vw;
 }    
 
 .logimg{
   position: absolute;
-  margin-top: -4vw;
+  margin-top: 1vw;
   margin-left: -10.5vw;    
 }    
+
+.profielOmschrijving{
+  text-align: left;
+  width: 17.5vw;
+  padding: 0.5vw;
+  background-color: #41697c;
+  margin-top: 1vw;
+    height: 24vw;
+} 
+/*
+
+input{
+   width: 33vw;
+  height: 2vw;
+  margin-bottom: -1vw;
+  background-color: white;
+}    
+*/
     
   .knop{
   position: absolute;
@@ -904,46 +938,28 @@ margin-left: 6.5%;
   clear: both;
 }
 
+
 .profiel{
-  background: #85d5fc;
+  background: rgba(112, 112, 112, 0.97);
   margin: 1%;
   width: 98%;
-  height: 500px;
+  
 }
 
 .een{
-  float: left;
-  background: #85d5fc;
-  width: 25%;
-  padding: 20px;
-}
+   /* float: left; */
+  /* background: #85d5fc; */
+  width: 18.5vw;
+  padding: 0.5vw;
+  margin-top: 0.5vw;
 
-.twee{
-  float: left;
-  background: #85d5fc;
-  width: 25%;
-  padding: 20px;
 }
 
 .drie{
-  float: left;
-  background: #85d5fc;
-  width: 50%;
-  padding: 20px;
-}
+width: 42vw;
+  padding-left: 0.5vw;
+  margin-top: 0.7vw
 
-.vier{
-  float: left;
-  background: #85d5fc;
-  width: 25%;
-  padding: 20px;
-
-}
-
-    
-.blogs{
-  width: 100%;
-  height: 150px;
 }
 
 .content{
@@ -952,16 +968,10 @@ margin-left: 6.5%;
 
 .message{
   width: 100%;
-  background: #41697c;
   padding: 10px;
 }
 
-.input{
-  width: 100%;
-  height: 40px;
-  background-color: #41697c;
-  padding: 10px;
-}
+
     
 #register{
   font-size: 1.1vw;
@@ -1024,24 +1034,6 @@ margin-left: 6.5%;
     margin-top: 15vw;
 }
     
-
-input{
-    float: left;
-    width: 200px;
-    height: 20px;
-    margin: 0px 0px 5px 0px;
-    border: 1px solid #41697c;
-    background: #41697c;
-    color: white;
-    font-size: 14px;
-    -webkit-font-smoothing: antialiased;
-    border-radius: 2px;
-    /* geen selectie */
-    outline: none;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
 
 .submit{
   background: #a6bdc8;
@@ -1130,10 +1122,11 @@ input{
 
 
 .tabs {
-      position: relative;   
-      min-height: 150px; /* This part sucks */
-      clear: both;
-      margin: 25px 0;
+     position: relative;
+     min-height: 11.1vw;
+  /* clear: both; */
+  margin-top: 1vw;
+
     }
     .tab {
       float: left;
@@ -1141,11 +1134,10 @@ input{
     .tab label {
       background: #41697c; 
       padding: 10px; 
-      border: 1px  solid #85d5fc; 
       border-radius: 5px 5px 0px 0px; 
-      margin-left: -1px; 
       position: relative;
-      left: 1px; 
+        margin-right: 0.2vw;
+        left: 1px; 
     }
     .tab [type=radio] {
       display: none;   
@@ -1159,6 +1151,11 @@ input{
       bottom: 0;
       padding: 20px;
     }
+    .content > p {
+      padding-bottom: 1vw;
+          }
+
+
     [type=radio]:checked ~ label {
       background: #41697c;
       border-bottom: 1px solid #41697c;
@@ -1171,6 +1168,26 @@ input{
     label{
       color:white;
     }
+
+.technologie{
+  background-color: #85D5FC;
+}
+
+.creatief{
+  background-color: #47697A;
+}
+
+.wetenschap{
+  background-color: #A4BAC6;
+}
+
+.vrijetijd{
+  background-color: #D0EAF9;
+}
+
+.persoon{
+  background-color: #275770;
+}
 
 
 

@@ -22,7 +22,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
         <nav>
             <ul>
                 <li class="menu1"><a href="index.php" class="knop"><h1 class="tekstHeader3">FEED</h1></a></li>
-                <li class="menu2"><a href="pages.company.html" class="knop"><h1 class="tekstHeader2">DISTRICT</h1></a></li>
+                <li class="menu2"><a href="index.php?district=true" class="knop"><h1 class="tekstHeader2">DISTRICT</h1></a></li>
                 <li class="menu3"><a href="#" class="knop"><h1 class="tekstHeader"></h1></a></li>
                 <li class="menu4"><a href="#" class="knop"><h1 class="tekstHeader4">LOGIN</h1></a></li>
             </ul>
@@ -50,6 +50,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
       <div class="register-profile"> 
         <form action="assets/checkRegister.php" name="register_form" method="post" id='register_form'>
             REGISTER User:<br/>
+            <input type='text' name='form-type' value="user" hidden ><br/>            
             First name<input type='text' placeholder="First name" name='firstName' width="50" required ><br/>
             Last name<input type='text' placeholder="Last name" name='lastName' width="50" required ><br/>
             Username<input type='text' placeholder="Username" name='username' width="50" required autofocus><br/>
@@ -74,6 +75,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
     <div class="register-company">
         <form action="assets/checkRegister.php" name="register_form" method="post" id='register_form_company'><p>
             REGISTER company:<br/>
+            <input type='text' name='form-type' value="company" hidden ><br/>
             Username:<input type='text' placeholder="Username" name='com-username' width="50" required ><br/>
             Password<input type='text' placeholder="Password" name='com-password' width="50" required><br/>
             Retype password<input type='text' placeholder="Retype password" name='com-re-password' width="50" required><br/>
@@ -95,23 +97,24 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
     </div>    
 
 </div>
-       
+      
+<?php if(!isset($_GET['district'])){ ?>    
 <!--    start grid   -->   
          <section class="container">
           <div class="grid">
             <div class="card effect__click">
               <div class="card__front">
-                <div class="grid-item"><h1 class="smalleTitel">PHILIPS</h1></div>
+                <div class="grid-item technologie"><h1 class="smalleTitel">MEDTRONIC</h1></div>
               </div>
               <div class="card__back">
-                <div class="grid-item draai"><img src="img/Philips-Logo.png" class="logo"><p class="smalleOnderschrift">With main focus on Health and Well-being, we serve professional and consumer markets through three overlapping sectors: Healthcare Lighting and Consumer Lifestyle.</p><p class="kleinOnderschrift">Here you can read some specific information about this company.</p><a href="pages/company.html" class="readMore1">[READ MORE ...]</a>
+                <div class="grid-item">
               </div>
               </div>
             </div> <!-- Blokje vierkant -->
 
             <div class="card1 effect__click verwijder">
               <div class="card1__front">
-                <div class="grid-item grid-item--width2 grid-item--height2 verwijder"><h1 class="bredeTitel">CYCLING LANE FOR SMART GUYS OPEN</h1></div>
+                <div class="grid-item grid-item--width2 grid-item--height2 verwijder vrijetijd"><h1 class="bredeTitel">CYCLING LANE FOR SMART GUYS OPEN</h1></div>
               </div>
               <div class="card1__back">
                 <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
@@ -120,7 +123,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
 
             <div class="card effect__click verwijder">
               <div class="card__front">
-                <div class="grid-item"><h1 class="smalleTitel">ANALOG DEVICES</h1></div>
+                <div class="grid-item creatief"><h1 class="smalleTitel">TAC EINDHOVEN</h1></div>
               </div>
               <div class="card__back">
                 <div class="grid-item verwijder"></a>
@@ -130,7 +133,169 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
 
             <div class="card1 effect__click">
               <div class="card1__front">
-                <div class="grid-item grid-item--width2 grid-item--height2"><h1 class="bredeTitel">CAMPUS INDUSTRY CONNECTION</h1></div>
+                <div class="grid-item vrijetijd grid-item--width2 grid-item--height2 persoon"><h1 class="bredeTitel">CAMPUS INDUSTRY CONNECTION</h1></div>
+              </div>
+              <div class="card1__back">
+                <div class="grid-item grid-item--width2 grid-item--height2">
+                </div>
+              </div>
+            </div> <!-- Blokje lang -->
+
+            <div class="card effect__click verwijder">
+              <div class="card__front">
+                <div class="grid-item verwijder technologie"><h1 class="smalleTitel">CANON</h1></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item verwijder"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card effect__click verwijder">
+              <div class="card__front">
+                <div class="grid-item verwijder technologie"><h1 class="smalleTitel">NXP SOFTWARE</h1></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item verwijder"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card2 effect__click">
+              <div class="card2__front">
+                <div class="grid-item grid-item--width3 grid-item--height2 technologie"><h1 class="bredeTitel">VAN DER LANDEN</h1></div>
+              </div>
+              <div class="card2__back">
+                <div class="grid-item grid-item--width3 grid-item--height2">
+                </div>
+              </div>
+            </div> <!-- Blokje groot -->
+
+            <div class="card2 effect__click verwijder">
+              <div class="card2__front">
+                <div class="grid-item grid-item--width3 grid-item--height2 verwijder technologie"><h1 class="bredeTitel">INTEL</h1></div>
+              </div>
+              <div class="card2__back">
+                <div class="grid-item grid-item--width3 grid-item--height2 verwijder"></div>
+              </div>
+            </div> <!-- Blokje groot -->
+
+            <div class="card1 effect__click verwijder">
+              <div class="card1__front">
+                <div class="grid-item grid-item--width2 grid-item--height2 verwijder persoon"><h1 class="bredeTitel">STARTUPBOOTCAMP HIGHTECHXL SELECTION DAYS</h1></div>
+              </div>
+              <div class="card1__back">
+                <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
+              </div>
+            </div> <!-- Blokje lang -->
+
+            <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item wetenschap"><h1 class="smalleTitel">HEALTHCARE</h1></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item wetenschap"><h1 class="smalleTitel">FALCK</h1></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card1 effect__click">
+              <div class="card1__front">
+                 <div class="grid-item grid-item--width2 grid-item--height2 vrijetijd"><h1 class="bredeTitel">HAPPY SUMMER FESTIVAL</h1></div>
+              </div>
+              <div class="card1__back">
+                 <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              </div>
+            </div> <!-- Blokje lang -->
+
+             <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item technologie"><h1 class="smalleTitel">FAULHABER</h1></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item creatief"><h1 class="smalleTitel">KONTUR</h1></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card1 effect__click">
+              <div class="card1__front">
+                 <div class="grid-item grid-item--width2 grid-item--height2 creatief"><h1 class="bredeTitel">THE DIGITAL FUTURE OF B2B</h1></div>
+              </div>
+              <div class="card1__back">
+                 <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              </div>
+            </div> <!-- Blokje lang -->
+
+             <div class="card1 effect__click verwijder">
+              <div class="card1__front">
+                 <div class="grid-item grid-item--width2 grid-item--height2 verwijder vrijetijd"><h1 class="bredeTitel">TOASTMASTERS</h1></div>
+              </div>
+              <div class="card1__back">
+                 <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
+              </div>
+            </div> <!-- Blokje lang -->
+
+          </div> <!-- /grid -->
+      </section>
+
+<?php 
+    }
+    else if(isset($_GET['district'])){
+           
+    
+
+?>
+<!--if district-->
+    
+    <section class="container">
+          <div class="grid">
+            <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item technologie"><h1 class="smalleTitel">PHILIPS</h1></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item draai"><img src="img/Philips-Logo.png" class="logo"><p class="smalleOnderschrift">With main focus on Health and Well-being, we serve professional and consumer markets through three overlapping sectors: Healthcare Lighting and Consumer Lifestyle.</p><p class="kleinOnderschrift">Here you can read some specific information about this company.</p><a href="pages/company.html" class="readMore1">[READ MORE ...]</a>
+              </div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card1 effect__click verwijder">
+              <div class="card1__front">
+                <div class="grid-item grid-item--width2 grid-item--height2 verwijder vrijetijd"><h1 class="bredeTitel">CYCLING LANE FOR SMART GUYS OPEN</h1></div>
+              </div>
+              <div class="card1__back">
+                <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
+              </div>
+            </div> <!-- Blokje lang -->
+
+            <div class="card effect__click verwijder">
+              <div class="card__front">
+                <div class="grid-item technologie"><h1 class="smalleTitel">ANALOG DEVICES</h1></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item verwijder"></a>
+              </div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card1 effect__click">
+              <div class="card1__front">
+                <div class="grid-item grid-item--width2 grid-item--height2 persoon"><h1 class="bredeTitel">CAMPUS INDUSTRY CONNECTION</h1></div>
               </div>
               <div class="card1__back">
                 <div class="grid-item grid-item--width2 grid-item--height2 draai"><h1 class="bredeTitel1">CAMPUS INDUSTRY CONNECTION</h1><p class="smalleOnderschrift">Campus Connection Industry has shown a unique network which R & D engineers working on campus or in the industry meet. Knowledge exchange of technology to foster collaboration and business development in the broadest sense is key.</p><p class="kleinOnderschrift">Here you can read some specific information about this company.</p><a href="pages/company.html" class="readMore">[READ MORE ...]</a>
@@ -140,7 +305,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
 
             <div class="card effect__click verwijder">
               <div class="card__front">
-                <div class="grid-item verwijder"><h1 class="smalleTitel">CANON</h1></div>
+                <div class="grid-item verwijder technologie"><h1 class="smalleTitel">CANON</h1></div>
               </div>
               <div class="card__back">
                 <div class="grid-item verwijder"></div>
@@ -149,7 +314,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
 
             <div class="card effect__click verwijder">
               <div class="card__front">
-                <div class="grid-item verwijder"><h1 class="smalleTitel">NXP SOFTWARE</h1></div>
+                <div class="grid-item verwijder technologie"><h1 class="smalleTitel">NXP SOFTWARE</h1></div>
               </div>
               <div class="card__back">
                 <div class="grid-item verwijder"></div>
@@ -158,7 +323,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
 
             <div class="card2 effect__click">
               <div class="card2__front">
-                <div class="grid-item grid-item--width3 grid-item--height2"><h1 class="bredeTitel">VAN DER LANDEN</h1></div>
+                <div class="grid-item grid-item--width3 grid-item--height2 technologie"><h1 class="bredeTitel">VAN DER LANDEN</h1></div>
               </div>
               <div class="card2__back">
                 <div class="grid-item grid-item--width3 grid-item--height2 draai"><h1 class="bredeTitel1">VAN DER LANDEN</h1><p class="smalleOnderschrift">As a tier-1 contract manufacturing partner, we at VDL ETG (Enabling Technologies Group), believe that with support of our work the world can create breakthroughs in fighting diseases, develop new energy solutions, study space, understand details of cells and molecules, increase power of communication and even research where it all began with a Big-Bang.</p><p class="kleinOnderschrift">Here you can read some specific information about this company.</p><a href="pages/company.html" class="readMore">[READ MORE ...]</a>
@@ -169,7 +334,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
 
             <div class="card2 effect__click verwijder">
               <div class="card2__front">
-                <div class="grid-item grid-item--width3 grid-item--height2 verwijder"><h1 class="bredeTitel">INTEL</h1></div>
+                <div class="grid-item grid-item--width3 grid-item--height2 verwijder technologie"><h1 class="bredeTitel">INTEL</h1></div>
               </div>
               <div class="card2__back">
                 <div class="grid-item grid-item--width3 grid-item--height2 verwijder"></div>
@@ -178,7 +343,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
 
             <div class="card1 effect__click verwijder">
               <div class="card1__front">
-                <div class="grid-item grid-item--width2 grid-item--height2 verwijder"><h1 class="bredeTitel">STARTUPBOOTCAMP HIGHTECHXL SELECTION DAYS</h1></div>
+                <div class="grid-item grid-item--width2 grid-item--height2 verwijder persoon"><h1 class="bredeTitel">STARTUPBOOTCAMP HIGHTECHXL SELECTION DAYS</h1></div>
               </div>
               <div class="card1__back">
                 <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
@@ -187,7 +352,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
 
             <div class="card effect__click">
               <div class="card__front">
-                <div class="grid-item"><h1 class="smalleTitel">HEALTHCARE</h1></div>
+                <div class="grid-item wetenschap"><h1 class="smalleTitel">HEALTHCARE</h1></div>
               </div>
               <div class="card__back">
                 <div class="grid-item"></div>
@@ -196,7 +361,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
 
             <div class="card effect__click">
               <div class="card__front">
-                <div class="grid-item"><h1 class="smalleTitel">FALCK</h1></div>
+                <div class="grid-item wetenschap"><h1 class="smalleTitel">FALCK</h1></div>
               </div>
               <div class="card__back">
                 <div class="grid-item"></div>
@@ -205,7 +370,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
 
             <div class="card1 effect__click">
               <div class="card1__front">
-                 <div class="grid-item grid-item--width2 grid-item--height2"><h1 class="bredeTitel">HAPPY SUMMER FESTIVAL</h1></div>
+                 <div class="grid-item grid-item--width2 grid-item--height2 vrijetijd"><h1 class="bredeTitel">HAPPY SUMMER FESTIVAL</h1></div>
               </div>
               <div class="card1__back">
                  <div class="grid-item grid-item--width2 grid-item--height2"></div>
@@ -214,7 +379,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
 
              <div class="card effect__click">
               <div class="card__front">
-                <div class="grid-item"><h1 class="smalleTitel">FAULHABER</h1></div>
+                <div class="grid-item technologie"><h1 class="smalleTitel">FAULHABER</h1></div>
               </div>
               <div class="card__back">
                 <div class="grid-item"></div>
@@ -223,7 +388,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
 
             <div class="card effect__click">
               <div class="card__front">
-                <div class="grid-item"><h1 class="smalleTitel">KONTUR</h1></div>
+                <div class="grid-item creatief"><h1 class="smalleTitel">KONTUR</h1></div>
               </div>
               <div class="card__back">
                 <div class="grid-item"></div>
@@ -232,7 +397,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
 
             <div class="card1 effect__click">
               <div class="card1__front">
-                 <div class="grid-item grid-item--width2 grid-item--height2"><h1 class="bredeTitel">THE DIGITAL FUTURE OF B2B</h1></div>
+                 <div class="grid-item grid-item--width2 grid-item--height2 creatief"><h1 class="bredeTitel">THE DIGITAL FUTURE OF B2B</h1></div>
               </div>
               <div class="card1__back">
                  <div class="grid-item grid-item--width2 grid-item--height2"></div>
@@ -241,7 +406,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
 
              <div class="card1 effect__click verwijder">
               <div class="card1__front">
-                 <div class="grid-item grid-item--width2 grid-item--height2 verwijder"><h1 class="bredeTitel">TOASTMASTERS</h1></div>
+                 <div class="grid-item grid-item--width2 grid-item--height2 verwijder vrijetijd"><h1 class="bredeTitel">TOASTMASTERS</h1></div>
               </div>
               <div class="card1__back">
                  <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
@@ -250,6 +415,8 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
 
           </div> <!-- /grid -->
       </section>
+
+<?php } ?>
         <script src="js/demo.js"></script>
 
        
@@ -279,8 +446,8 @@ else{
         <header>
                 <nav>
                     <ul>
-                 <li class="menu1"><a href="index.php" class="knop"><h1 class="tekstHeader3">FEED</h1></a></li>
-                <li class="menu2"><a href="pages.company.html" class="knop"><h1 class="tekstHeader2">DISTRICT</h1></a></li>
+                <li class="menu1"><a href="index.php" class="knop"><h1 class="tekstHeader3">FEED</h1></a></li>
+                <li class="menu2"><a href="index.php?district=true" class="knop"><h1 class="tekstHeader2">DISTRICT</h1></a></li>
                 <li class="menu3"><a href="#" class="knop"><h1 class="tekstHeader"></h1></a></li>
                 <li class="menu4"><h1 class="tekstHeader1"><a href="assets/admin.php" class="logimg"><img src="img/profiel2.jpg" class="profielfoto" ></a><a href="assets/logout.php" class='logknop tekstHeader1'>LOGOUT</a></h1></a></li>
                     </ul>
@@ -303,22 +470,23 @@ else{
                 </div>              
 -->
        
+<?php if(!isset($_GET['district'])){ ?>    
 <!--    start grid   -->   
          <section class="container">
           <div class="grid">
             <div class="card effect__click">
               <div class="card__front">
-                <div class="grid-item"><h1 class="smalleTitel">PHILIPS</h1></div>
+                <div class="grid-item technologie"><h1 class="smalleTitel">MEDTRONIC</h1></div>
               </div>
               <div class="card__back">
-                <div class="grid-item draai"><img src="img/Philips-Logo.png" class="logo"><p class="smalleOnderschrift">With main focus on Health and Well-being, we serve professional and consumer markets through three overlapping sectors: Healthcare Lighting and Consumer Lifestyle.</p><p class="kleinOnderschrift">Here you can read some specific information about this company.</p><a href="pages/company.html" class="readMore1">[READ MORE ...]</a>
+                <div class="grid-item">
               </div>
               </div>
             </div> <!-- Blokje vierkant -->
 
             <div class="card1 effect__click verwijder">
               <div class="card1__front">
-                <div class="grid-item grid-item--width2 grid-item--height2 verwijder"><h1 class="bredeTitel">CYCLING LANE FOR SMART GUYS OPEN</h1></div>
+                <div class="grid-item grid-item--width2 grid-item--height2 verwijder vrijetijd"><h1 class="bredeTitel">CYCLING LANE FOR SMART GUYS OPEN</h1></div>
               </div>
               <div class="card1__back">
                 <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
@@ -327,7 +495,7 @@ else{
 
             <div class="card effect__click verwijder">
               <div class="card__front">
-                <div class="grid-item"><h1 class="smalleTitel">ANALOG DEVICES</h1></div>
+                <div class="grid-item creatief"><h1 class="smalleTitel">TAC EINDHOVEN</h1></div>
               </div>
               <div class="card__back">
                 <div class="grid-item verwijder"></a>
@@ -337,7 +505,169 @@ else{
 
             <div class="card1 effect__click">
               <div class="card1__front">
-                <div class="grid-item grid-item--width2 grid-item--height2"><h1 class="bredeTitel">CAMPUS INDUSTRY CONNECTION</h1></div>
+                <div class="grid-item vrijetijd grid-item--width2 grid-item--height2 persoon"><h1 class="bredeTitel">CAMPUS INDUSTRY CONNECTION</h1></div>
+              </div>
+              <div class="card1__back">
+                <div class="grid-item grid-item--width2 grid-item--height2">
+                </div>
+              </div>
+            </div> <!-- Blokje lang -->
+
+            <div class="card effect__click verwijder">
+              <div class="card__front">
+                <div class="grid-item verwijder technologie"><h1 class="smalleTitel">CANON</h1></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item verwijder"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card effect__click verwijder">
+              <div class="card__front">
+                <div class="grid-item verwijder technologie"><h1 class="smalleTitel">NXP SOFTWARE</h1></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item verwijder"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card2 effect__click">
+              <div class="card2__front">
+                <div class="grid-item grid-item--width3 grid-item--height2 technologie"><h1 class="bredeTitel">VAN DER LANDEN</h1></div>
+              </div>
+              <div class="card2__back">
+                <div class="grid-item grid-item--width3 grid-item--height2">
+                </div>
+              </div>
+            </div> <!-- Blokje groot -->
+
+            <div class="card2 effect__click verwijder">
+              <div class="card2__front">
+                <div class="grid-item grid-item--width3 grid-item--height2 verwijder technologie"><h1 class="bredeTitel">INTEL</h1></div>
+              </div>
+              <div class="card2__back">
+                <div class="grid-item grid-item--width3 grid-item--height2 verwijder"></div>
+              </div>
+            </div> <!-- Blokje groot -->
+
+            <div class="card1 effect__click verwijder">
+              <div class="card1__front">
+                <div class="grid-item grid-item--width2 grid-item--height2 verwijder persoon"><h1 class="bredeTitel">STARTUPBOOTCAMP HIGHTECHXL SELECTION DAYS</h1></div>
+              </div>
+              <div class="card1__back">
+                <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
+              </div>
+            </div> <!-- Blokje lang -->
+
+            <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item wetenschap"><h1 class="smalleTitel">HEALTHCARE</h1></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item wetenschap"><h1 class="smalleTitel">FALCK</h1></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card1 effect__click">
+              <div class="card1__front">
+                 <div class="grid-item grid-item--width2 grid-item--height2 vrijetijd"><h1 class="bredeTitel">HAPPY SUMMER FESTIVAL</h1></div>
+              </div>
+              <div class="card1__back">
+                 <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              </div>
+            </div> <!-- Blokje lang -->
+
+             <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item technologie"><h1 class="smalleTitel">FAULHABER</h1></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item creatief"><h1 class="smalleTitel">KONTUR</h1></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card1 effect__click">
+              <div class="card1__front">
+                 <div class="grid-item grid-item--width2 grid-item--height2 creatief"><h1 class="bredeTitel">THE DIGITAL FUTURE OF B2B</h1></div>
+              </div>
+              <div class="card1__back">
+                 <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              </div>
+            </div> <!-- Blokje lang -->
+
+             <div class="card1 effect__click verwijder">
+              <div class="card1__front">
+                 <div class="grid-item grid-item--width2 grid-item--height2 verwijder vrijetijd"><h1 class="bredeTitel">TOASTMASTERS</h1></div>
+              </div>
+              <div class="card1__back">
+                 <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
+              </div>
+            </div> <!-- Blokje lang -->
+
+          </div> <!-- /grid -->
+      </section>
+
+<?php 
+    }
+    else if(isset($_GET['district'])){
+           
+    
+
+?>
+<!--if district-->
+    
+    <section class="container">
+          <div class="grid">
+            <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item technologie"><h1 class="smalleTitel">PHILIPS</h1></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item draai"><img src="img/Philips-Logo.png" class="logo"><p class="smalleOnderschrift">With main focus on Health and Well-being, we serve professional and consumer markets through three overlapping sectors: Healthcare Lighting and Consumer Lifestyle.</p><p class="kleinOnderschrift">Here you can read some specific information about this company.</p><a href="pages/company.html" class="readMore1">[READ MORE ...]</a>
+              </div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card1 effect__click verwijder">
+              <div class="card1__front">
+                <div class="grid-item grid-item--width2 grid-item--height2 verwijder vrijetijd"><h1 class="bredeTitel">CYCLING LANE FOR SMART GUYS OPEN</h1></div>
+              </div>
+              <div class="card1__back">
+                <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
+              </div>
+            </div> <!-- Blokje lang -->
+
+            <div class="card effect__click verwijder">
+              <div class="card__front">
+                <div class="grid-item technologie"><h1 class="smalleTitel">ANALOG DEVICES</h1></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item verwijder"></a>
+              </div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card1 effect__click">
+              <div class="card1__front">
+                <div class="grid-item grid-item--width2 grid-item--height2 persoon"><h1 class="bredeTitel">CAMPUS INDUSTRY CONNECTION</h1></div>
               </div>
               <div class="card1__back">
                 <div class="grid-item grid-item--width2 grid-item--height2 draai"><h1 class="bredeTitel1">CAMPUS INDUSTRY CONNECTION</h1><p class="smalleOnderschrift">Campus Connection Industry has shown a unique network which R & D engineers working on campus or in the industry meet. Knowledge exchange of technology to foster collaboration and business development in the broadest sense is key.</p><p class="kleinOnderschrift">Here you can read some specific information about this company.</p><a href="pages/company.html" class="readMore">[READ MORE ...]</a>
@@ -347,7 +677,7 @@ else{
 
             <div class="card effect__click verwijder">
               <div class="card__front">
-                <div class="grid-item verwijder"><h1 class="smalleTitel">CANON</h1></div>
+                <div class="grid-item verwijder technologie"><h1 class="smalleTitel">CANON</h1></div>
               </div>
               <div class="card__back">
                 <div class="grid-item verwijder"></div>
@@ -356,7 +686,7 @@ else{
 
             <div class="card effect__click verwijder">
               <div class="card__front">
-                <div class="grid-item verwijder"><h1 class="smalleTitel">NXP SOFTWARE</h1></div>
+                <div class="grid-item verwijder technologie"><h1 class="smalleTitel">NXP SOFTWARE</h1></div>
               </div>
               <div class="card__back">
                 <div class="grid-item verwijder"></div>
@@ -365,7 +695,7 @@ else{
 
             <div class="card2 effect__click">
               <div class="card2__front">
-                <div class="grid-item grid-item--width3 grid-item--height2"><h1 class="bredeTitel">VAN DER LANDEN</h1></div>
+                <div class="grid-item grid-item--width3 grid-item--height2 technologie"><h1 class="bredeTitel">VAN DER LANDEN</h1></div>
               </div>
               <div class="card2__back">
                 <div class="grid-item grid-item--width3 grid-item--height2 draai"><h1 class="bredeTitel1">VAN DER LANDEN</h1><p class="smalleOnderschrift">As a tier-1 contract manufacturing partner, we at VDL ETG (Enabling Technologies Group), believe that with support of our work the world can create breakthroughs in fighting diseases, develop new energy solutions, study space, understand details of cells and molecules, increase power of communication and even research where it all began with a Big-Bang.</p><p class="kleinOnderschrift">Here you can read some specific information about this company.</p><a href="pages/company.html" class="readMore">[READ MORE ...]</a>
@@ -376,7 +706,7 @@ else{
 
             <div class="card2 effect__click verwijder">
               <div class="card2__front">
-                <div class="grid-item grid-item--width3 grid-item--height2 verwijder"><h1 class="bredeTitel">INTEL</h1></div>
+                <div class="grid-item grid-item--width3 grid-item--height2 verwijder technologie"><h1 class="bredeTitel">INTEL</h1></div>
               </div>
               <div class="card2__back">
                 <div class="grid-item grid-item--width3 grid-item--height2 verwijder"></div>
@@ -385,7 +715,7 @@ else{
 
             <div class="card1 effect__click verwijder">
               <div class="card1__front">
-                <div class="grid-item grid-item--width2 grid-item--height2 verwijder"><h1 class="bredeTitel">STARTUPBOOTCAMP HIGHTECHXL SELECTION DAYS</h1></div>
+                <div class="grid-item grid-item--width2 grid-item--height2 verwijder persoon"><h1 class="bredeTitel">STARTUPBOOTCAMP HIGHTECHXL SELECTION DAYS</h1></div>
               </div>
               <div class="card1__back">
                 <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
@@ -394,7 +724,7 @@ else{
 
             <div class="card effect__click">
               <div class="card__front">
-                <div class="grid-item"><h1 class="smalleTitel">HEALTHCARE</h1></div>
+                <div class="grid-item wetenschap"><h1 class="smalleTitel">HEALTHCARE</h1></div>
               </div>
               <div class="card__back">
                 <div class="grid-item"></div>
@@ -403,7 +733,7 @@ else{
 
             <div class="card effect__click">
               <div class="card__front">
-                <div class="grid-item"><h1 class="smalleTitel">FALCK</h1></div>
+                <div class="grid-item wetenschap"><h1 class="smalleTitel">FALCK</h1></div>
               </div>
               <div class="card__back">
                 <div class="grid-item"></div>
@@ -412,7 +742,7 @@ else{
 
             <div class="card1 effect__click">
               <div class="card1__front">
-                 <div class="grid-item grid-item--width2 grid-item--height2"><h1 class="bredeTitel">HAPPY SUMMER FESTIVAL</h1></div>
+                 <div class="grid-item grid-item--width2 grid-item--height2 vrijetijd"><h1 class="bredeTitel">HAPPY SUMMER FESTIVAL</h1></div>
               </div>
               <div class="card1__back">
                  <div class="grid-item grid-item--width2 grid-item--height2"></div>
@@ -421,7 +751,7 @@ else{
 
              <div class="card effect__click">
               <div class="card__front">
-                <div class="grid-item"><h1 class="smalleTitel">FAULHABER</h1></div>
+                <div class="grid-item technologie"><h1 class="smalleTitel">FAULHABER</h1></div>
               </div>
               <div class="card__back">
                 <div class="grid-item"></div>
@@ -430,7 +760,7 @@ else{
 
             <div class="card effect__click">
               <div class="card__front">
-                <div class="grid-item"><h1 class="smalleTitel">KONTUR</h1></div>
+                <div class="grid-item creatief"><h1 class="smalleTitel">KONTUR</h1></div>
               </div>
               <div class="card__back">
                 <div class="grid-item"></div>
@@ -439,7 +769,7 @@ else{
 
             <div class="card1 effect__click">
               <div class="card1__front">
-                 <div class="grid-item grid-item--width2 grid-item--height2"><h1 class="bredeTitel">THE DIGITAL FUTURE OF B2B</h1></div>
+                 <div class="grid-item grid-item--width2 grid-item--height2 creatief"><h1 class="bredeTitel">THE DIGITAL FUTURE OF B2B</h1></div>
               </div>
               <div class="card1__back">
                  <div class="grid-item grid-item--width2 grid-item--height2"></div>
@@ -448,7 +778,7 @@ else{
 
              <div class="card1 effect__click verwijder">
               <div class="card1__front">
-                 <div class="grid-item grid-item--width2 grid-item--height2 verwijder"><h1 class="bredeTitel">TOASTMASTERS</h1></div>
+                 <div class="grid-item grid-item--width2 grid-item--height2 verwijder vrijetijd"><h1 class="bredeTitel">TOASTMASTERS</h1></div>
               </div>
               <div class="card1__back">
                  <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
@@ -457,6 +787,8 @@ else{
 
           </div> <!-- /grid -->
       </section>
+
+<?php } ?>
         <script src="js/demo.js"></script>
                
            </body>
@@ -471,8 +803,8 @@ else{
             <header>
                 <nav>
                     <ul>
-                        <li class="menu1"><a href="index.php" class="knop"><h1 class="tekstHeader3">FEED</h1></a></li>
-                        <li class="menu2"><a href="pages.company.html" class="knop"><h1 class="tekstHeader2">DISTRICT</h1></a></li>
+                <li class="menu1"><a href="index.php" class="knop"><h1 class="tekstHeader3">FEED</h1></a></li>
+                <li class="menu2"><a href="index.php?district=true" class="knop"><h1 class="tekstHeader2">DISTRICT</h1></a></li>
                         <li class="menu3"><a href="#" class="knop"><h1 class="tekstHeader"></h1></a></li>
                         <li class="menu4">
                             <a href="assets/admin.php" class="knop">
@@ -499,52 +831,52 @@ else{
                 </div>              
 -->
 
+<?php if(!isset($_GET['district'])){ ?>    
 <!--    start grid   -->   
-        <section class="container">
+         <section class="container">
           <div class="grid">
             <div class="card effect__click">
               <div class="card__front">
-                <div class="grid-item"><h1 class="smalleTitel">PHILIPS</h1></div>
+                <div class="grid-item technologie"><h1 class="smalleTitel">MEDTRONIC</h1></div>
               </div>
               <div class="card__back">
-                                   <div class="grid-item draai"><img src="img/philips3.png" class="logo"><p class="smalleOnderschrift">With main focus on Health and Well-being, we serve professional and consumer markets through three overlapping sectors:
-                Healthcare Lighting and Consumer Lifestyle.</p><a href="pages/company.html" class="readMore">Read more...</a>
-
-                  </div>
+                <div class="grid-item">
+              </div>
               </div>
             </div> <!-- Blokje vierkant -->
 
             <div class="card1 effect__click verwijder">
               <div class="card1__front">
-                <div class="grid-item grid-item--width2 grid-item--height2 verwijder"><h1 class="bredeTitel">CYCLING LANE FOR SMART GUYS OPEN</h1></div>
+                <div class="grid-item grid-item--width2 grid-item--height2 verwijder vrijetijd"><h1 class="bredeTitel">CYCLING LANE FOR SMART GUYS OPEN</h1></div>
               </div>
               <div class="card1__back">
-                <div class="grid-item grid-item--width2 grid-item--height2 verwijder draai"><p class="smalleOnderschrift">EINDHOVEN - A new bicycle lanes around Eindhoven opened Thursday. The Slow Lane, as the cycle is called a cycle connection must be for knowledge among the various high-tech industrial parks in the region.</p><a href="http://www.omroepbrabant.nl/?news/231693982/Fietspad+voor+slimmeriken+geopend+Slowlane+verbindt+hightechbedrijven+rond+Eindhoven.aspx" class="readMore">Read more...</a></div>
+                <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
               </div>
             </div> <!-- Blokje lang -->
 
             <div class="card effect__click verwijder">
               <div class="card__front">
-                <div class="grid-item"><h1 class="smalleTitel">ANALOG DEVICES</h1></div>
+                <div class="grid-item creatief"><h1 class="smalleTitel">TAC EINDHOVEN</h1></div>
               </div>
               <div class="card__back">
-                <div class="grid-item verwijder draai"><img src="img/analog1.png" class="logo"><p class="smalleOnderschrift">A better design experience. A more dynamic automotive experience. ADI Automotive Audio Bus (A2B) technology delivers </p><a href="http://www.analog.com/en/index.html" class="readMore">Read more...</a>
+                <div class="grid-item verwijder"></a>
               </div>
               </div>
             </div> <!-- Blokje vierkant -->
 
             <div class="card1 effect__click">
               <div class="card1__front">
-                <div class="grid-item grid-item--width2 grid-item--height2"><h1 class="bredeTitel">CAMPUS INDUSTRY CONNECTION</h1></div>
+                <div class="grid-item vrijetijd grid-item--width2 grid-item--height2 persoon"><h1 class="bredeTitel">CAMPUS INDUSTRY CONNECTION</h1></div>
               </div>
               <div class="card1__back">
-                <div class="grid-item grid-item--width2 grid-item--height2"></div>
+                <div class="grid-item grid-item--width2 grid-item--height2">
+                </div>
               </div>
             </div> <!-- Blokje lang -->
 
             <div class="card effect__click verwijder">
               <div class="card__front">
-                <div class="grid-item verwijder"><h1 class="smalleTitel">CANON</h1></div>
+                <div class="grid-item verwijder technologie"><h1 class="smalleTitel">CANON</h1></div>
               </div>
               <div class="card__back">
                 <div class="grid-item verwijder"></div>
@@ -553,7 +885,7 @@ else{
 
             <div class="card effect__click verwijder">
               <div class="card__front">
-                <div class="grid-item verwijder"><h1 class="smalleTitel">NXP SOFTWARE</h1></div>
+                <div class="grid-item verwijder technologie"><h1 class="smalleTitel">NXP SOFTWARE</h1></div>
               </div>
               <div class="card__back">
                 <div class="grid-item verwijder"></div>
@@ -562,25 +894,26 @@ else{
 
             <div class="card2 effect__click">
               <div class="card2__front">
-                <div class="grid-item grid-item--width3 grid-item--height2"><h1 class="bredeTitel">VAN DER LANDEN</h1></div>
+                <div class="grid-item grid-item--width3 grid-item--height2 technologie"><h1 class="bredeTitel">VAN DER LANDEN</h1></div>
               </div>
               <div class="card2__back">
-                <div class="grid-item grid-item--width3 grid-item--height2"></div>
+                <div class="grid-item grid-item--width3 grid-item--height2">
+                </div>
               </div>
             </div> <!-- Blokje groot -->
 
             <div class="card2 effect__click verwijder">
               <div class="card2__front">
-                <div class="grid-item grid-item--width3 grid-item--height2 verwijder"><h1 class="bredeTitel">INTEL</h1></div>
+                <div class="grid-item grid-item--width3 grid-item--height2 verwijder technologie"><h1 class="bredeTitel">INTEL</h1></div>
               </div>
               <div class="card2__back">
-                <div class="grid-item grid-item--width3 grid-item--height2"></div>
+                <div class="grid-item grid-item--width3 grid-item--height2 verwijder"></div>
               </div>
             </div> <!-- Blokje groot -->
 
             <div class="card1 effect__click verwijder">
               <div class="card1__front">
-                <div class="grid-item grid-item--width2 grid-item--height2 verwijder"><h1 class="bredeTitel">STARTUPBOOTCAMP HIGHTECHXL SELECTION DAYS</h1></div>
+                <div class="grid-item grid-item--width2 grid-item--height2 verwijder persoon"><h1 class="bredeTitel">STARTUPBOOTCAMP HIGHTECHXL SELECTION DAYS</h1></div>
               </div>
               <div class="card1__back">
                 <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
@@ -589,7 +922,7 @@ else{
 
             <div class="card effect__click">
               <div class="card__front">
-                <div class="grid-item"><h1 class="smalleTitel">HEALTHCARE</h1></div>
+                <div class="grid-item wetenschap"><h1 class="smalleTitel">HEALTHCARE</h1></div>
               </div>
               <div class="card__back">
                 <div class="grid-item"></div>
@@ -598,7 +931,7 @@ else{
 
             <div class="card effect__click">
               <div class="card__front">
-                <div class="grid-item"><h1 class="smalleTitel">FALCK</h1></div>
+                <div class="grid-item wetenschap"><h1 class="smalleTitel">FALCK</h1></div>
               </div>
               <div class="card__back">
                 <div class="grid-item"></div>
@@ -607,7 +940,7 @@ else{
 
             <div class="card1 effect__click">
               <div class="card1__front">
-                 <div class="grid-item grid-item--width2 grid-item--height2"><h1 class="bredeTitel">HAPPY SUMMER FESTIVAL</h1></div>
+                 <div class="grid-item grid-item--width2 grid-item--height2 vrijetijd"><h1 class="bredeTitel">HAPPY SUMMER FESTIVAL</h1></div>
               </div>
               <div class="card1__back">
                  <div class="grid-item grid-item--width2 grid-item--height2"></div>
@@ -616,7 +949,7 @@ else{
 
              <div class="card effect__click">
               <div class="card__front">
-                <div class="grid-item"><h1 class="smalleTitel">FAULHABER</h1></div>
+                <div class="grid-item technologie"><h1 class="smalleTitel">FAULHABER</h1></div>
               </div>
               <div class="card__back">
                 <div class="grid-item"></div>
@@ -625,7 +958,7 @@ else{
 
             <div class="card effect__click">
               <div class="card__front">
-                <div class="grid-item"><h1 class="smalleTitel">KONTUR</h1></div>
+                <div class="grid-item creatief"><h1 class="smalleTitel">KONTUR</h1></div>
               </div>
               <div class="card__back">
                 <div class="grid-item"></div>
@@ -634,7 +967,7 @@ else{
 
             <div class="card1 effect__click">
               <div class="card1__front">
-                 <div class="grid-item grid-item--width2 grid-item--height2"><h1 class="bredeTitel">THE DIGITAL FUTURE OF B2B</h1></div>
+                 <div class="grid-item grid-item--width2 grid-item--height2 creatief"><h1 class="bredeTitel">THE DIGITAL FUTURE OF B2B</h1></div>
               </div>
               <div class="card1__back">
                  <div class="grid-item grid-item--width2 grid-item--height2"></div>
@@ -643,15 +976,180 @@ else{
 
              <div class="card1 effect__click verwijder">
               <div class="card1__front">
-                 <div class="grid-item grid-item--width2 grid-item--height2 verwijder"><h1 class="bredeTitel">TOASTMASTERS</h1></div>
+                 <div class="grid-item grid-item--width2 grid-item--height2 verwijder vrijetijd"><h1 class="bredeTitel">TOASTMASTERS</h1></div>
               </div>
               <div class="card1__back">
                  <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
               </div>
             </div> <!-- Blokje lang -->
-            
+
           </div> <!-- /grid -->
       </section>
+
+<?php 
+    }
+    else if(isset($_GET['district'])){
+           
+    
+
+?>
+<!--if district-->
+    
+    <section class="container">
+          <div class="grid">
+            <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item technologie"><h1 class="smalleTitel">PHILIPS</h1></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item draai"><img src="img/Philips-Logo.png" class="logo"><p class="smalleOnderschrift">With main focus on Health and Well-being, we serve professional and consumer markets through three overlapping sectors: Healthcare Lighting and Consumer Lifestyle.</p><p class="kleinOnderschrift">Here you can read some specific information about this company.</p><a href="pages/company.html" class="readMore1">[READ MORE ...]</a>
+              </div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card1 effect__click verwijder">
+              <div class="card1__front">
+                <div class="grid-item grid-item--width2 grid-item--height2 verwijder vrijetijd"><h1 class="bredeTitel">CYCLING LANE FOR SMART GUYS OPEN</h1></div>
+              </div>
+              <div class="card1__back">
+                <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
+              </div>
+            </div> <!-- Blokje lang -->
+
+            <div class="card effect__click verwijder">
+              <div class="card__front">
+                <div class="grid-item technologie"><h1 class="smalleTitel">ANALOG DEVICES</h1></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item verwijder"></a>
+              </div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card1 effect__click">
+              <div class="card1__front">
+                <div class="grid-item grid-item--width2 grid-item--height2 persoon"><h1 class="bredeTitel">CAMPUS INDUSTRY CONNECTION</h1></div>
+              </div>
+              <div class="card1__back">
+                <div class="grid-item grid-item--width2 grid-item--height2 draai"><h1 class="bredeTitel1">CAMPUS INDUSTRY CONNECTION</h1><p class="smalleOnderschrift">Campus Connection Industry has shown a unique network which R & D engineers working on campus or in the industry meet. Knowledge exchange of technology to foster collaboration and business development in the broadest sense is key.</p><p class="kleinOnderschrift">Here you can read some specific information about this company.</p><a href="pages/company.html" class="readMore">[READ MORE ...]</a>
+                </div>
+              </div>
+            </div> <!-- Blokje lang -->
+
+            <div class="card effect__click verwijder">
+              <div class="card__front">
+                <div class="grid-item verwijder technologie"><h1 class="smalleTitel">CANON</h1></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item verwijder"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card effect__click verwijder">
+              <div class="card__front">
+                <div class="grid-item verwijder technologie"><h1 class="smalleTitel">NXP SOFTWARE</h1></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item verwijder"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card2 effect__click">
+              <div class="card2__front">
+                <div class="grid-item grid-item--width3 grid-item--height2 technologie"><h1 class="bredeTitel">VAN DER LANDEN</h1></div>
+              </div>
+              <div class="card2__back">
+                <div class="grid-item grid-item--width3 grid-item--height2 draai"><h1 class="bredeTitel1">VAN DER LANDEN</h1><p class="smalleOnderschrift">As a tier-1 contract manufacturing partner, we at VDL ETG (Enabling Technologies Group), believe that with support of our work the world can create breakthroughs in fighting diseases, develop new energy solutions, study space, understand details of cells and molecules, increase power of communication and even research where it all began with a Big-Bang.</p><p class="kleinOnderschrift">Here you can read some specific information about this company.</p><a href="pages/company.html" class="readMore">[READ MORE ...]</a>
+                  <img src="img/maps.png" class="maps">
+                </div>
+              </div>
+            </div> <!-- Blokje groot -->
+
+            <div class="card2 effect__click verwijder">
+              <div class="card2__front">
+                <div class="grid-item grid-item--width3 grid-item--height2 verwijder technologie"><h1 class="bredeTitel">INTEL</h1></div>
+              </div>
+              <div class="card2__back">
+                <div class="grid-item grid-item--width3 grid-item--height2 verwijder"></div>
+              </div>
+            </div> <!-- Blokje groot -->
+
+            <div class="card1 effect__click verwijder">
+              <div class="card1__front">
+                <div class="grid-item grid-item--width2 grid-item--height2 verwijder persoon"><h1 class="bredeTitel">STARTUPBOOTCAMP HIGHTECHXL SELECTION DAYS</h1></div>
+              </div>
+              <div class="card1__back">
+                <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
+              </div>
+            </div> <!-- Blokje lang -->
+
+            <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item wetenschap"><h1 class="smalleTitel">HEALTHCARE</h1></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item wetenschap"><h1 class="smalleTitel">FALCK</h1></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card1 effect__click">
+              <div class="card1__front">
+                 <div class="grid-item grid-item--width2 grid-item--height2 vrijetijd"><h1 class="bredeTitel">HAPPY SUMMER FESTIVAL</h1></div>
+              </div>
+              <div class="card1__back">
+                 <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              </div>
+            </div> <!-- Blokje lang -->
+
+             <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item technologie"><h1 class="smalleTitel">FAULHABER</h1></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card effect__click">
+              <div class="card__front">
+                <div class="grid-item creatief"><h1 class="smalleTitel">KONTUR</h1></div>
+              </div>
+              <div class="card__back">
+                <div class="grid-item"></div>
+              </div>
+            </div> <!-- Blokje vierkant -->
+
+            <div class="card1 effect__click">
+              <div class="card1__front">
+                 <div class="grid-item grid-item--width2 grid-item--height2 creatief"><h1 class="bredeTitel">THE DIGITAL FUTURE OF B2B</h1></div>
+              </div>
+              <div class="card1__back">
+                 <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              </div>
+            </div> <!-- Blokje lang -->
+
+             <div class="card1 effect__click verwijder">
+              <div class="card1__front">
+                 <div class="grid-item grid-item--width2 grid-item--height2 verwijder vrijetijd"><h1 class="bredeTitel">TOASTMASTERS</h1></div>
+              </div>
+              <div class="card1__back">
+                 <div class="grid-item grid-item--width2 grid-item--height2 verwijder"></div>
+              </div>
+            </div> <!-- Blokje lang -->
+
+          </div> <!-- /grid -->
+      </section>
+
+<?php } ?>
         <script src="js/demo.js"></script>
                
            </body>

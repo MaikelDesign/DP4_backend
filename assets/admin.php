@@ -35,10 +35,10 @@
     <header>
         <nav>
             <ul>
-                 <li class="menu1"><a href="../index.php" class="knop"><h1 class="tekstHeader3">FEED</h1></a></li>
-                <li class="menu2"><a href="pages.company.html" class="knop"><h1 class="tekstHeader2">DISTRICT</h1></a></li>
+                <li class="menu1"><a href="../index.php" class="knop"><h1 class="tekstHeader3">FEED</h1></a></li>
+                <li class="menu2"><a href="../index.php?district=true" class="knop"><h1 class="tekstHeader2">DISTRICT</h1></a></li>
                 <li class="menu3"><a href="#" class="knop"><h1 class="tekstHeader"></h1></a></li>
-                <li class="menu4"><h1 class="tekstHeader1"><a href="assets/admin.php" class="knop"><img src="../img/profiel2.jpg" class="profielfoto"></a><a href="assets/logout.php">LOGOUT</a></h1></a></li>
+                <li class="menu4"><h1 class="tekstHeader1"><a href="admin.php" class="logimg"><img src="../img/profiel2.jpg" class="profielfoto" ></a><a href="logout.php" class='logknop tekstHeader1'>LOGOUT</a></h1></a></li>
             </ul>
         </nav>
     </header>  
@@ -51,96 +51,141 @@
                 <div>
                     <h4>Beheer Profiel</h4><a href="admin.php?edit=true" >Edit</a>
                 </div>
-                <?php checkUser();?>
             </div> -->	
 
 
 
-<section class="container">
-            <div class="grid">
-              <div class="profiel">
-                <?php checkUser();?>
-                <div class="drie">
-                    <div class="blogs">
-                            <div class="tabs">
-        
-                               <div class="tab">
-                                   <input type="radio" id="tab-1" name="tab-group-1" checked>
-                                   <label for="tab-1">ICT</label>
-                                   
-                                   <div class="content">
-                                       <p>Blogs Items</p>
-                                        <p>You will find blog items here.</p>
-                                   </div> 
-                               </div>
-                                
-                               <div class="tab">
-                                   <input type="radio" id="tab-2" name="tab-group-1">
-                                   <label for="tab-2">ABN AMRO</label>
-                                   
-                                   <div class="content">
-                                       <p>tab 2</p>
-                                       
-                                   </div> 
-                               </div>
-                                
-                                <div class="tab">
-                                   <input type="radio" id="tab-3" name="tab-group-1">
-                                   <label for="tab-3">PHILIPS</label>
-                                 
-                                   <div class="content">
-                                       <p>tab 3</p>
-                                   </div> 
-                               </div>
-                                
-                            </div>
-
-                    </div>
-                    <div class="blogs">
-                            <div class="tabs">
-        
-                               <div class="tab">
-                                   <input type="radio" id="tab-4" name="tab-group-4" checked>
-                                   <label for="tab-4">Martin L.</label>
-                                   
-                                   <div class="content">
-                                       <p>Chat Window</p>
-                                        <p>Hello Martin, are you available?</p>
-                                   </div> 
-                               </div>
-                                
-                               <div class="tab">
-                                   <input type="radio" id="tab-5" name="tab-group-5">
-                                   <label for="tab-5">Pete S.</label>
-                                   
-                                   <div class="content">
-                                       <p>tab 2</p>
-                                       
-                                   </div> 
-                               </div>
-                                
-                                <div class="tab">
-                                   <input type="radio" id="tab-6" name="tab-group-6">
-                                   <label for="tab-6">Dave P.</label>
-                                 
-                                   <div class="content">
-                                       <p>tab 3</p>
-                                   </div> 
-                               </div>
-                                
-                            </div>
-
-                    </div>
-                    <div class="input">
-                        <input type="text" name="message">
-                    </div>
-
+    <section class="container">
+        <div class="grid">
+          <div class="profiel">
+            <?php 
+                checkUser();
+                if($_SESSION['user-type'] == 'company'){
+            ?>
+            <div class="drie">
+              <div class="blogs">
+                <div class="tabs">
+                   <div class="tab">
+                       <input type="radio" id="tab-1" name="tab-group-1" checked>
+                       <label for="tab-1">Medtronics</label>
+                       <div class="content">
+                            <p>Als accountmanager voor medici en vrije beroepen ben ik partner in business, waarbij de wensen en behoefte van de cliënt als uitgangspunt worden </p>
+                       </div> 
+                   </div>
+                   <div class="tab">
+                       <input type="radio" id="tab-2" name="tab-group-1">
+                       <label for="tab-2">PHilips</label>
+                       <div class="content">
+                           <p>tab 2</p>    
+                       </div> 
+                   </div>
+                    <div class="tab">
+                       <input type="radio" id="tab-3" name="tab-group-1">
+                       <label for="tab-3">Campus</label>
+                       <div class="content">
+                           <p>tab 3</p>
+                       </div> 
+                   </div>    
                 </div>
-
+              </div>
+              <div class="blogs">
+                <div class="tabs">
+                  <div class="tab">
+                    <input type="radio" id="tab-4" name="tab-group-4" checked>
+                    <label for="tab-4">Rajive Puang</label>
+                    <div class="content">
+                      <p>Dear Rajive,</p>
+                      <p> Last week when we met at the meeting, I was quiete intrested what you had to tell me. Where you able to find some time in your agenda?</p>
+                      <p>Nice finding you on BYOC </p>
+                      <p> sincerly,</p>
+                      <p> Freek van Vliet </p>
+                      <input value = "type message..."type="text" name="message">
+                    </div> 
+                  </div>                   
+                  <div class="tab">
+                    <input type="radio" id="tab-5" name="tab-group-5">
+                    <label for="tab-5">William Alberichts</label>
+                    <div class="content">
+                      <p>tab 2</p>  
+                    </div> 
+                  </div>
+                  <div class="tab">
+                    <input type="radio" id="tab-6" name="tab-group-6">
+                    <label for="tab-6">Leonardo Ferrari</label>                            
+                      <div class="content">
+                        <p>tab 3</p>
+                      </div> 
+                  </div>
+                </div>
               </div>
             </div>
+              <?PHP 
+                }
+                else if($_SESSION['user-type'] == 'user'){
+              ?>
+              <div class="drie">
+              <div class="blogs">
+                <div class="tabs">
+                   <div class="tab">
+                       <input type="radio" id="tab-1" name="tab-group-1" checked>
+                       <label for="tab-1">Medtronics</label>
+                       <div class="content">
+                            <p>Als accountmanager voor medici en vrije beroepen ben ik partner in business, waarbij de wensen en behoefte van de cliënt als uitgangspunt worden </p>
+                       </div> 
+                   </div>
+                   <div class="tab">
+                       <input type="radio" id="tab-2" name="tab-group-1">
+                       <label for="tab-2">Nano Tech</label>
+                       <div class="content">
+                           <p>tab 2</p>    
+                       </div> 
+                   </div>
+                    <div class="tab">
+                       <input type="radio" id="tab-3" name="tab-group-1">
+                       <label for="tab-3">Ketelhuis</label>
+                       <div class="content">
+                           <p>tab 3</p>
+                       </div> 
+                   </div>    
+                </div>
+              </div>
+              <div class="blogs">
+                <div class="tabs">
+                  <div class="tab">
+                    <input type="radio" id="tab-4" name="tab-group-4" checked>
+                    <label for="tab-4">Rajive Puang</label>
+                    <div class="content">
+                      <p>Dear Rajive,</p>
+                      <p> Last week when we met at the meeting, I was quiete intrested what you had to tell me. Where you able to find some time in your agenda?</p>
+                      <p>Nice finding you on BYOC </p>
+                      <p> sincerly,</p>
+                      <p> Freek van Vliet </p>
+                      <input value = "type message..."type="text" name="message">
+                    </div> 
+                  </div>                   
+                  <div class="tab">
+                    <input type="radio" id="tab-5" name="tab-group-5">
+                    <label for="tab-5">William Alberichts</label>
+                    <div class="content">
+                      <p>tab 2</p>  
+                    </div> 
+                  </div>
+                  <div class="tab">
+                    <input type="radio" id="tab-6" name="tab-group-6">
+                    <label for="tab-6">Leonardo Ferrari</label>                            
+                      <div class="content">
+                        <p>tab 3</p>
+                      </div> 
+                  </div>
+                </div>
+              </div>
+            </div>
+              
+              <?php } ?>            
           </div>
-      </section>
+        </div>
+      </div>
+  </section>
     <script src="../js/demo.js"></script>
     </body>
 </html>

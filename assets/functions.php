@@ -29,122 +29,45 @@ function checkUser() {
 
 		while ($row = mysqli_fetch_array($result)) {
 
-			//Make up div's.
-			// echo "	<div class='userItem'>
-			// 		<div><b>ID</b></div>
-			// 		<div><b>Gebruikersnaam</b></div>
-			// 		<div><b>Voornaam</b></div>
-			// 		<div><b>Achternaam</b></div>
-			// 		<div><b>E-mail Adres</b></div>
-			// 		<div><b>Locatie</b></div>
-			// 		<div><b>Bedrijf Foto</b></div>
-			// 		<div><b>Bedrijf CV</b></div>
-			// 		<div><b>Bedrijf raam Foto</b></div>
-			// 		<div><b>Sector</b></div>
-			// 		</div>
-			// 	";
             
             // check if edit button is clicked
             if($edit == ''){
-             //company data
-			// echo "<div class='userItem'>" . $edit . "<div>" . $row['company_id'] . "</div><div>" . $row['company_name'] . "</div><div>" . $row['company_contact_firstname'] . "</div><div>" . $row['company_contact_lastname'] . "</div><div>" . $row['company_mail'] . "</div><div>" . $row['company_location'] . "</div><div>" . $row['company_picture'] . "</div><div>" . $row['company_cv'] . "</div><div>" . $row['company_window_pic'] . "</div><div>" . $row['company_sector'] . "</div></div>";
-
-                echo "
-                        <div class='een'>
-                            <img src='../img/gebouw1.jpg' width='100%''>
-                            <a href='admin.php?edit=true' >Edit Profile</a>
-                            <p>" . $row['company_name'] . "</p>
-                            <p>" . $row['company_location'] . "</p>
-                            <p><a href='http://" . $row['company_cv'] . "' target='_blank'>Website</a></p>
+                
+                echo '
+                      <div class="een">
+                        <img src="../img/medtronic.jpeg">
+                        <a href="admin.php?edit=true" >Edit Profile</a>
+                        <ul class = "profielList">
+                              <li>' . $row['company_name'] .' </li>
+                              <li>' . $row['company_sector'] . '</li>
+                              <li>' . $row['company_location'] . '</li>
+                        </ul>
                         </div>
-
-                        <div class='twee'>
-                            <p>" . $row['company_sector'] . "</p>
-                            <p>" . $row['company_info'] . "</p>                            
-                        </div>
-                    ";
+                        <div class="twee profielOmschrijving">
+                            <p><span>' . $row['company_name'] . '</span> '. $row['company_info'] . '</p>
+                    </div>
+                    ';
             }
             else if($edit != ''){
-                // Set values in edit form
-//<<<<<<< HEAD
-                // echo "<div class='userItem'>
-                //         <div>" . $row['company_id'] . "</div>
-                //         <img src='../img/profiel2.jpg' width='100%'>
-                //         <img scr='../img/" . $row['company_picture'] . "' alt='company profile pic' /><br/>
-                //         Profile image<br/>
-                //         <img scr='../img/" . $row['company_window_pic'] . "' alt='company window pic' /><br/>
-                //         Window image<br/>
-                //         <form action='profile_edit.php' method='post' name='edit-form'><br/>
-                //             <input type='number' name='user-id' value='" . $userId . "' hidden/>
-                //             Company name: <input type='text' name='cUsername' width='50' value='" . $row['company_name'] . "'/><br/>
-                //             Contact first name: <input type='text' name='cFirstName' width='50' value='" . $row['company_contact_firstname'] . "'/><br/>
-                //             Contact last name: <input type='text' name='cLastName' width='50' value='" . $row['company_contact_lastname'] . "'/><br/>
-                //             e-mail: <input type='text' name='email' width='50' value='" . $row['company_mail'] . "'/><br/>
-                //             Location: <input type='text' name='location' width='50' value='" . $row['company_location'] . "'/><br/> 
-                //             CV: <input type='text' name='cv' width='50' value='" . $row['company_cv'] . "'/><br/>
-                //             Sector: <input type='text' name='sector' width='50' value='" . $row['company_sector'] . "'/><br/>
-                //             <input type='submit' value='Submit'/>
-                //         </form>
-                //     </div>";
 
-                echo "
-                        <div class='een'>
-                            <img src='../img/gebouw1.jpg' width='100%''>
-                            <a href='admin.php' >Exit edit</a>
-                            <form action='profile_edit.php' method='post' name='edit-form'><br/>
-                                <input type='number' name='user-id' value='" . $userId . "' hidden/><br/>
-                                <input type='text' name='firstName' value='" . $row['company_name'] .  "' ><br/>
-                                <input type='text' name='location' value='"  . $row['company_location'] . "'><br/>
-                                <input type='text' name='cv' value='http://" . $row['company_cv'] . "'>'<br/>
-                        </div>
-
-                        <div class='twee'>
-                                <input type='text' name='sector' value='" . $row['company_sector'] .  "' ><br/>
-                                <input type='text' name='info' value='" . $row['company_contact_info'] . "'/><br/>
-                                <input type='submit' value='submit'/>
-                        </div>";
-
-//                echo "<div class='userItem'>
-////                        <img scr='../img/" . $row['company_picture'] . "' alt='company profile pic' /><br/>
-//                        Profile image<br/>
-//                        <img scr='../img/" . $row['company_window_pic'] . "' alt='company window pic' /><br/>
-//                        Window image<br/>
-//                        <form action='profile_edit.php' method='post' name='edit-form'><br/>
-//                            <input type='number' name='user-id' value='" . $userId . "' hidden/>
-//                            Company name: <input type='text' name='cUsername' width='50' value='" . $row['company_name'] . "'/><br/>
-//                            Contact first name: <input type='text' name='cFirstName' width='50' value='" . $row['company_contact_firstname'] . "'/><br/>
-//                            Contact last name: <input type='text' name='cLastName' width='50' value='" . $row['company_contact_lastname'] . "'/><br/>
-//                            e-mail: <input type='text' name='email' width='50' value='" . $row['company_mail'] . "'/><br/>
-//                            Location: <input type='text' name='location' width='50' value='" . $row['company_location'] . "'/><br/> 
-//                            CV: <input type='text' name='cv' width='50' value='" . $row['company_cv'] . "'/><br/>
-//                            Sector: <input type='text' name='sector' width='50' value='" . $row['company_sector'] . "'/><br/>
-//                            Company info: <input type='text' name='info' width='50' value='" . $row['company_info'] . "'/><br/>
-//                            <input type='submit' value='Submit'/>
-//                        </form>
-//                    </div>";
-                
-//                  echo "
-//                         <div class='een'>
-//                             <img src='../img/profiel2.jpg' width='100%''>
-//                             <a href='admin.php' >Exit edit</a>
-//                             <form action='profile_edit.php' method='post' name='edit-form'><br/>
-//                                 Company name: <input type='text' name='cUsername' width='50' value='" . $row['company_name'] . "'/><br/>
-//                                 Contact first name: <input type='text' name='cFirstName' width='50' value='" . $row['company_contact_firstname'] . "'/><br/>
-//                                 Contact last name: <input type='text' name='cLastName' width='55' value='" . $row['company_contact_lastname'] . "'/><br/>
-//                                 e-mail: <input type='text' name='email' width='50' value='" . $row['company_mail'] . "'/><br/>   
-//                         </div>
-
-//                         <div class='twee'>
-//                                 Location: <input type='text' name='location' width='50' value='" . $row['company_location'] . "'/><br/> 
-//                                 CV: <input type='text' name='cv' width='50' value='" . $row['company_cv'] . "'/><br/>
-//                                 Sector: <input type='text' name='sector' width='50' value='" . $row['company_sector'] . "'/><br/>
-//                                 Company info: <input type='text' name='info' width='50' value='" . $row['company_info'] . "'/><br/>
-//                                 <input type='submit' value='Submit'/>
-// >>>>>>> 1dce1980875b3c9c1ea0119aa5d0325a56b835d1
-//                             </form>
-                            
-//                         </div>
-//                     ";
+                echo '
+                      <div class="een">
+                        <img src="../img/medtronic.jpeg">
+                        <a href="admin.php" >Exit edit</a>
+                        <form action="profile_edit.php" method="post" name"edit-form"><br/>
+                            <input type="number" name="user-id" value="' . $userId . '" hidden/><br/>                        
+                            <ul class = "profielList">
+                                  <li><input type="text" name="firstName" value="' . $row['company_name'] .'"/></li>
+                                  <li><input type="text" name="sector" value="' . $row['company_sector'] . '"/></li>
+                                  <li><input type="text" name="location" value="' . $row['company_location'] . '"/></li>
+                            </ul>
+                            </div>
+                            <div class="twee profielOmschrijving">
+                            <p><span>' . $row['company_name'] . '</span><br/><textarea rows="10" cols="30" name="info">'. $row['company_info'] . '</textarea></p>
+                            <input type="submit" value="submit"/>
+                        </form>
+                    </div>
+                    ';
             }
 
 		
@@ -156,41 +79,29 @@ function checkUser() {
 
         while ($row = mysqli_fetch_array($result)) {
 
-			 //     echo "	<div class='userItem'>
-				// 		<div><b>ID</b></div>
-				// 		<div><b>Gebruikersnaam</b></div>
-				// 		<div><b>Voornaam</b></div>
-				// 		<div><b>Achternaam</b></div>
-				// 		<div><b>E-mail Adres</b></div>
-				// 		<div><b>Contact Info</b></div>
-				// 		<div><b>Locatie</b></div>
-				// 		<div><b>Profiel Foto</b></div>
-				// 		<div><b>CV</b></div>
-				// 		<div><b>Interesses</b></div>
-				// 		<div><b>Sector</b></div>
-				// 		<div><a href='edit.php'><b>Aanpassen</b></a></div>
-				// 	</div>
 
-				// ";
 
             // check if edit button is clicked
             if($edit == ''){
-             //user data
-	 //          echo "<div class='userItem'><div>" . $row['user_id'] . "</div><div>" . $row['user_name'] . "</div><div>" . $row['user_firstname'] . "</div><div>" . $row['user_lastname'] . "</div><div>" . $row['user_mail'] . "</div><div>" . $row['user_contact_info'] . "</div><div>" . $row['user_location'] . "</div><div>" . $row['user_picture'] . "</div><div>" . $row['user_cv'] . "</div><div>" . $row['user_interests'] . "</div><div>" . $row['user_sector'] . "</div></div>";
+
 
                echo "
                         <div class='een'>
                             <img src='../img/profiel2.jpg' width='100%''>
                             <a href='admin.php?edit=true' >Edit Profile</a>
-                            <p>" . $row['user_firstname'] .  " " . $row['user_lastname'] . "</p>
-                            <p>" . $row['user_location'] . "</p>
-                            <p><a href='http://" . $row['user_cv'] . "' target='_blank'>LinkedIn</a></p>
+                            <ul class = 'profielList'>
+                            <li>" . $row['user_firstname'] .  " " . $row['user_lastname'] . "</li>
+                            <li>" . $row['user_location'] . "</li>
+                            <li><a href='http://" . $row['user_cv'] . "' target='_blank'>LinkedIn</a></li>
+                            </ul>
                         </div>
 
-                        <div class='twee'>
+                        <div class='twee profielOmschrijving'>
                             <p>" . $row['user_contact_info'] . "</p>
                         </div>
                     ";
+                
+                
             }
             else if($edit != ''){
                 // Set values in edit form
@@ -216,23 +127,28 @@ function checkUser() {
                         </div>
                     ";
                 
-//                echo "<div class='userItem'>
-//                        <div>" . $row['user_id'] . "</div>
-//                        <img scr='../img/" . $row['user_picture'] . "' alt='company profile pic' /><br/>
-//                        Profile image<br/>
-//                        <form action='profile_edit.php' method='post' name='edit-form'><br/>
-//                            <input type='number' name='user-id' value='" . $userId . "' hidden/>
-//                            Username: <input type='text' name='username' width='50' value='" . $row['user_name'] . "'/><br/>
-//                            First name: <input type='text' name='firstName' width='50' value='" . $row['user_firstname'] . "'/><br/>
-//                            Last name: <input type='text' name='lastName' width='50' value='" . $row['user_lastname'] . "'/><br/>
-//                            e-mail: <input type='text' name='email' width='50' value='" . $row['user_mail'] . "'/><br/>
-//                            Location: <input type='text' name='location' width='50' value='" . $row['user_location'] . "'/><br/> 
-//                            CV: <input type='text' name='LinkedIn Profile' width='50' value='" . $row['user_cv'] . "'/><br/>
-//                            Sector: <input type='text' name='sector' width='50' value='" . $row['user_sector'] . "'/><br/>
-//                            Info: <input type='text' name='info' width='50' value='" . $row['user_contact_info'] . "'/><br/>
-//                            <input type='submit' value='Submit'/>
-//                        </form>
-//                    </div>";
+                echo "
+                        <div class='een'>
+                            <img src='../img/profiel2.jpg' width='100%''>
+                            <a href='admin.php?edit=true' >Edit Profile</a>
+                            <form action='profile_edit.php' method='post' name='edit-form'><br/>
+                                <input type='number' name='user-id' value='" . $userId . "' hidden/><br/>
+                                <ul class = 'profielList'>
+                                    <li><input type='text' name='firstName' value='" . $row['user_firstname'] . "'/></li>
+                                    <li><input type='text' name='lastName' value='" . $row['user_lastname'] . "'/></li>
+                                    <li><input type='text' name='location' value='" . $row['user_location'] . "'</li>
+                                    <li><input type='text' name='cv' value='http://" . $row['user_cv'] . "'/></li>
+                                </ul>    
+                        </div>
+
+                        <div class='twee profielOmschrijving'>
+                            <textarea rows='10' cols='30' name='info'>". $row['user_contact_info'] . "</textarea></p>
+                            <input type='submit' value='submit'/>
+                            </form>
+                        </div>
+                    ";
+                
+                
             }
             
 		}
