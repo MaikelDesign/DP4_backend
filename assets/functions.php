@@ -107,30 +107,10 @@ function checkUser() {
                 // Set values in edit form
                 
                 
-                   echo "
-                        <div class='een'>
-                            <img src='../img/profiel2.jpg' width='100%''>
-                            <a href='admin.php' >Exit edit</a>
-                            <form action='profile_edit.php' method='post' name='edit-form'><br/>
-                                <input type='number' name='user-id' value='" . $userId . "' hidden/><br/>
-                                <input type='text' name='firstName' value='" . $row['user_firstname'] .  "' ><br/>
-                                <input type='text' name='lastName' value='" . $row['user_lastname'] . "' ><br/>
-                                <input type='text' name='location' value='"  . $row['user_location'] . "'><br/>
-                                <input type='text' name='cv' value='http://" . $row['user_cv'] . "'>'<br/>
-                        </div>
-
-                        <div class='twee'>
-                                <input type='text' name='info' value='" . $row['user_contact_info'] . "'/><br/>
-                                <input type='submit' value='submit'/>
-                            </form>
-                            
-                        </div>
-                    ";
-                
                 echo "
                         <div class='een'>
                             <img src='../img/profiel2.jpg' width='100%''>
-                            <a href='admin.php?edit=true' >Edit Profile</a>
+                            <a href='admin.php' >Exit edit</a>
                             <form action='profile_edit.php' method='post' name='edit-form'><br/>
                                 <input type='number' name='user-id' value='" . $userId . "' hidden/><br/>
                                 <ul class = 'profielList'>

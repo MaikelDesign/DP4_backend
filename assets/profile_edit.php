@@ -11,41 +11,39 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     //if form-type is user
     if($_SESSION['user-type'] == 'user'){
 
-//        if(isset($_POST['user-id']) 
-//               && isset($_POST['firstName']) 
-//               && isset($_POST['lastName']) 
-//               && isset($_POST['email']) 
-//               && isset($_POST['location']) 
-//               && isset($_POST['cv']) 
-//               && isset($_POST['info']) 
-//               && $_POST['user-id'] != '' 
-//               && $_POST['firstName'] != ''
-//               && $_POST['lastName'] != ''
-//               && $_POST['email'] != ''
-//               && $_POST['location'] != ''
-//               && $_POST['cv'] != ''
-//               && $_POST['info'] != ''
-//            ){
-//                // set variables
-////                $username  = $_POST['username'];
-//                $firstName = $_POST['firstName'];
-//                $lastName = $_POST['lastName'];
+        if(isset($_POST['user-id']) 
+               && isset($_POST['firstName']) 
+               && isset($_POST['lastName']) 
+               && isset($_POST['location']) 
+               && isset($_POST['cv']) 
+               && isset($_POST['info']) 
+               && $_POST['user-id'] != '' 
+               && $_POST['firstName'] != ''
+               && $_POST['lastName'] != ''
+               && $_POST['location'] != ''
+               && $_POST['cv'] != ''
+               && $_POST['info'] != ''
+            ){
+                // set variables
+//                $username  = $_POST['username'];
+                $firstName = $_POST['firstName'];
+                $lastName = $_POST['lastName'];
 //                $email = $_POST['email'];
-//                $location = $_POST['location'];
-//                $cv = $_POST['cv'];
+                $location = $_POST['location'];
+                $cv = $_POST['cv'];
 //                $sector = $_POST['sector'];
-//                $info = $_POST['info'];
-//                $id = $_POST['user-id'];
-//                $tbl_name = 'users';
-//                
-//                $sql = "UPDATE $tbl_name SET user_mail='$email', user_location='$location', user_contact_info='$info', user_firstname='$firstName', user_lastname='$lastName', user_cv='$cv', user_sector='$sector' WHERE user_id='$id'";                
-////                $sql = "UPDATE $tbl_name SET user_name='$username', user_mail='$email', user_location='$location', user_contact_info='$info', user_firstname='$firstName', user_lastname='$lastName', user_cv='$cv', user_sector='$sector' WHERE user_id='$id'";
-//                $result=mysqli_query($con, $sql);
-//
-//                if($result){
-//                    header('location:admin.php');
-//                }
-//           }      
+                $info = mysqli_real_escape_string($con, nl2br($_POST['info']));
+                $id = $_POST['user-id'];
+                $tbl_name = 'users';
+                
+                $sql = "UPDATE `users` SET user_location='$location', user_contact_info='$info', user_firstname='$firstName', user_lastname='$lastName', user_cv='$cv' WHERE user_id='$id'";                
+//                $sql = "UPDATE $tbl_name SET user_name='$username', user_mail='$email', user_location='$location', user_contact_info='$info', user_firstname='$firstName', user_lastname='$lastName', user_cv='$cv', user_sector='$sector' WHERE user_id='$id'";
+                $result=mysqli_query($con, $sql);
+
+                if($result){
+                    header('location:admin.php');
+                }
+           }      
         
     }
     else if($_SESSION['user-type'] == 'company'){
